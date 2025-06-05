@@ -6,10 +6,14 @@ using NetCoreServer;
 
 namespace MSGO.AuthServer;
 
-class AuthServer : TcpServer
+sealed class AuthServer : TcpServer
 {
-    public AuthServer(IPAddress address, int port) : base(address, port) =>
+    public AuthServer(IPAddress address, int port) : base(address, port)
+    {
+        Start();
         Logger.Information("Authentication Server started on {Address}:{Port}", address, port);
+    }
+
     protected override TcpSession CreateSession() => new AuthSession(this);
     protected override void OnError(SocketError error) =>
         Logger.Error($"Auth Server caught an error with code {error}");

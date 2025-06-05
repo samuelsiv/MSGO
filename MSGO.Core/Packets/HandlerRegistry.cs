@@ -12,6 +12,20 @@ public class PacketHandlerRegistry
     public static void RegisterHandler<TPacket>(IPacketHandler<TPacket> handler) where TPacket : BasePacket =>
         _handlers.Add(new PacketHandlerWrapper<TPacket>(handler));
     
+    public static void RegisterHandlersFromAssembly(Assembly assembly)
+    {
+        foreach (var type in assembly.GetTypes())
+        {
+            if (!type.IsAbstract && !type.IsGenericTypeDefinition && type.GetInterfaces().Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IPacketHandler<>)))
+            {
+                var handler = Activator.CreateInstance(type);
+                var packetType = type.GetInterfaces().First(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IPacketHandler<>)).GetGenericArguments()[0];
+                typeof(PacketHandlerRegistry).GetMethod(nameof(RegisterHandler))!.MakeGenericMethod(packetType).Invoke(null, [handler]);
+                Logger.Debug($"Registering handler for packet type: {packetType.Name}");
+            }
+        }
+    }
+    
     public static void HandlePacket(BaseSession session, BasePacket packet, PacketRequest packetRequest, byte[] rawData)
     {
         var allowedHandlers = _handlers

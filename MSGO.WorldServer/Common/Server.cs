@@ -6,10 +6,14 @@ using NetCoreServer;
 
 namespace MSGO.WorldServer;
 
-class WorldServer : TcpServer
+sealed class WorldServer : TcpServer
 {
-    public WorldServer(IPAddress address, int port) : base(address, port) => 
+    public WorldServer(IPAddress address, int port) : base(address, port)
+    {
+        Start();
         Logger.Information("World Server started on {Address}:{Port}", address, port);
+    }
+
     protected override TcpSession CreateSession() => 
         new WorldSession(this);
     protected override void OnError(SocketError error) =>
