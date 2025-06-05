@@ -1,10 +1,4 @@
-﻿// static calss Starter
-
-using System;
-using System.Reflection;
-using MSGO.Core.Packets.Handlers;
-using MSGO.Core.Types.Interfaces;
-using NetCoreServer;
+﻿using NetCoreServer;
 
 namespace MSGO.Core.Utils;
 
