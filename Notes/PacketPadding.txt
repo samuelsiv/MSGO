@@ -1,0 +1,24 @@
+Start encoding size (v31 = 380) little-endian into packetstuff + 1.
+
+Encoding 380 (0x017C) byte-by-byte:
+v31 = 380
+v30[0] = 0x7C       // 380 & 0xFF
+v31 >>= 8 => 1
+v30[1] = 0x01       // now 1
+v31 >>= 8 => 0      // done
+v32 = 1             // used 2 bytes
+LOBYTE(packetstuff) = v32 = 1 (means 2 size bytes follow)
+
+padding = (v32 & 3) + 2 = (1 & 3) + 2 = 3
+
+Final packetstuff (3 bytes):
+Byte 0: 01   // size takes 2 bytes
+Byte 1: 7C   // LSB
+Byte 2: 01   // MSB
+Now you write this header first:
+
+01 7C 01
+Then the actual packet (380 bytes of payload)
+
+01 7C 01 [380 bytes of rawPacketBytes...]
+So for larger packets, the size field grows accordingly, but max is 8 bytes since it's a uint64_t.
