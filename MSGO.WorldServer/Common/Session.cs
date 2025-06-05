@@ -3,6 +3,7 @@ using MSGO.Core.Packets.Handlers;
 using MSGO.Core.Types.Network;
 using NetCoreServer;
 using System.Net.Sockets;
+using MSGO.Core;
 using MSGO.Core.Sessions;
 
 namespace MSGO.AuthServer;
@@ -13,5 +14,5 @@ public class WorldSession(TcpServer server) : BaseSession(server)
         PacketHandlerRegistry.HandlePacket(this, packet, (PacketRequest)packet.PacketId, rawData);
 
     protected override void OnError(SocketError error) =>
-        Console.WriteLine($"Auth Server session caught an error with code {error}");
+        Logger.Error("Auth Server session caught an error with code {Error}", error);
 }

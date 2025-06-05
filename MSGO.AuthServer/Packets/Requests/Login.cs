@@ -17,8 +17,6 @@ public class LoginRequest : BasePacket
         MacAddr = PacketBuffer.ReadCString();
     }
 
-    public override string ToString()
-    {
-        return $"LoginPacket - LoginId: {LoginId}, LoginPw: {LoginPw}, DiskUuid: {DiskUuid}, MacAddr: {MacAddr}";
-    }
+    public override string ToString() => 
+        $"LoginId: {LoginId}, LoginPw: {LoginPw}, DiskUuid: {DiskUuid}, MacAddr: {MacAddr}";
 }

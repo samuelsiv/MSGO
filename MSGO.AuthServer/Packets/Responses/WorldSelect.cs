@@ -22,15 +22,6 @@ public class SelectWorldResponse : BasePacket
         PacketBuffer.WriteCString(World.Host);
         PacketBuffer.WriteInt32(World.Port);
         PacketBuffer.WriteInt32(UserId);
-        PacketBuffer.WriteCString("1234");
-
-        /*
-        PacketBuffer.WriteInt32(0x00); // result
-        PacketBuffer.WriteCString("localhost"); // name
-        PacketBuffer.WriteCString("localhost");  // host
-        PacketBuffer.WriteInt32(6969); // port
-        PacketBuffer.WriteInt32(1337); // user id
-        PacketBuffer.WriteCString("1234"); // otp
-        */
+        PacketBuffer.WriteCString(otp);
     }
 }

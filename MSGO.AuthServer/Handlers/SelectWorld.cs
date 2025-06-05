@@ -12,10 +12,7 @@ public class SelectWorldHandler : PacketHandler<SelectWorldRequest>
 
     public override void Handle(BaseSession session, SelectWorldRequest packet)
     {
-        Console.WriteLine("SelectWorldHandler");
-
-        var world = new World(1, "test", "test", "test2", 1, 1, 12, 120, "localhost", 6969);
-
+        World world = new(1, "test", "test", "test2", 1, 1, 12, 120, "localhost", 6969);
         session.SendAsync(new SelectWorldResponse(0, world, 1, "1234").Write());
     }
 }

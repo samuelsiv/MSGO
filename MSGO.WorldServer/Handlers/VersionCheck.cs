@@ -1,16 +1,16 @@
-﻿using MSGO.AuthServer.Packets.Requests;
-using MSGO.AuthServer.Packets.Responses;
+﻿using MSGO.WorldServer.Packets.Requests;
+using MSGO.WorldServer.Packets.Responses;
 using MSGO.Core.Sessions;
 using MSGO.Core.Types.Network;
 using MSGO.Core.Utils;
 
-namespace MSGO.AuthServer.Handlers.Generic;
+namespace MSGO.WorldServer.Handlers;
+
 public class VersionCheckHandler : PacketHandler<VersionCheckRequest>
 {
     public override IEnumerable<PacketRequest> HandledPacketIds => [PacketRequest.AUTH_VersionCheck];
     public override void Handle(BaseSession session, VersionCheckRequest packet)
     {
-        Console.WriteLine("Version handler");
         SendAsync(session, new VersionCheckResponse());
     }
 }

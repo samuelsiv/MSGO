@@ -12,14 +12,20 @@ public class PacketHandlerRegistry
     public static void RegisterHandler<TPacket>(IPacketHandler<TPacket> handler) where TPacket : BasePacket =>
         _handlers.Add(new PacketHandlerWrapper<TPacket>(handler));
     
-
     public static void HandlePacket(BaseSession session, BasePacket packet, PacketRequest packetRequest, byte[] rawData)
     {
-        foreach (var handler in _handlers)
+        var allowedHandlers = _handlers
+            .Where(h => h.CanHandle(session, packetRequest))
+            .ToList();
+        
+        if (allowedHandlers.Count == 0)
         {
-            if (handler.CanHandle(session, packetRequest))
-                handler.Handle(session, packet);
+            Logger.Error("No handler found for packet {Packet}", packet);
+            return;
         }
+        
+        foreach (var handler in allowedHandlers)
+            handler.Handle(session, packet);
     }
 
     private class PacketHandlerWrapper<TPacket> : IPacketHandler<BasePacket> where TPacket : BasePacket
@@ -40,6 +46,8 @@ public class PacketHandlerRegistry
 
             TPacket typedPacket = (TPacket)constructor.Invoke([packet.PacketBuffer.GetAllBytes()]);
             _inner.Handle(session, typedPacket);
+            
+            Logger.Debug(typedPacket);
         }
 
         public bool CanHandle(BaseSession session) =>

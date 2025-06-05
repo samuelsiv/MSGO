@@ -9,5 +9,5 @@ public class SelectWorldRequest : BasePacket
         WorldNum = PacketBuffer.ReadUInt32();
 
     public override string ToString() =>
-        $"WorldSelectRequest - WorldNum: {WorldNum},";
+        $"WorldNum: {WorldNum}";
 }

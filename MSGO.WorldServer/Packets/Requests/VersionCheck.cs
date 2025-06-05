@@ -1,13 +1,13 @@
 ﻿using MSGO.Core.Packets;
 using MSGO.Core.Types.Game;
 
-namespace MSGO.AuthServer.Packets.Requests;
+namespace MSGO.WorldServer.Packets.Requests;
 
 public class VersionCheckRequest : BasePacket
 {
-    public uint Version { get; set; }
-    public uint Crc { get; set; }
-    public uint GenTime { get; set; }
+    uint Version { get; set; } 
+    uint Crc { get; set; } 
+    uint GenTime { get; set; }
 
     public VersionCheckRequest(byte[] data) : base(data)
     {
@@ -16,6 +16,6 @@ public class VersionCheckRequest : BasePacket
         GenTime = PacketBuffer.ReadUInt32();
     }
 
-    public override string ToString() =>
-        $" Version: {Version}, Crc: {Crc}, GenTime: {GenTime}";
+    public override string ToString() => 
+        $"VersionCheck - Version: {Version}, Crc: {Crc}, GenTime: {GenTime}";
 }

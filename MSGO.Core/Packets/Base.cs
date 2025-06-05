@@ -100,4 +100,6 @@ public class BasePacket
         mergedBuffer.WriteBytes(bufferTwo.GetAllBytes());
         return mergedBuffer;
     }
+    
+    public override string ToString() => $"PacketId: 0x{PacketId:X2}, FullPacketSize: {FullPacketSize}, PayloadLength: {PayloadLength}";
 }
