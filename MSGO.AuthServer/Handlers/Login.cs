@@ -7,7 +7,7 @@ using MSGO.Core.Utils;
 namespace MSGO.AuthServer.Handlers.Generic;
 public class LoginHandler : PacketHandler<LoginRequest>
 {
-    public override IEnumerable<PacketRequest> HandledPacketIds => [PacketRequest.AUTH_Login];
+    public override IEnumerable<PacketRequest> HandledPacketIds => [PacketRequest.Login];
     public override void Handle(BaseSession session, LoginRequest packet)
     {
         SendAsync(session, new LoginResponse());

@@ -8,7 +8,7 @@ namespace MSGO.WorldServer.Handlers;
 
 public class VersionCheckHandler : PacketHandler<VersionCheckRequest>
 {
-    public override IEnumerable<PacketRequest> HandledPacketIds => [PacketRequest.AUTH_VersionCheck];
+    public override IEnumerable<PacketRequest> HandledPacketIds => [PacketRequest.VersionCheck];
     public override void Handle(BaseSession session, VersionCheckRequest packet)
     {
         SendAsync(session, new VersionCheckResponse());

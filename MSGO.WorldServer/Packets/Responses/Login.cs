@@ -4,6 +4,9 @@ namespace MSGO.WorldServer.Packets.Responses;
 
 public class LoginResponse : BasePacket
 {
-    public LoginResponse() : base(0xA5DA) =>
+    public LoginResponse() : base(0xA5DA)
+    {
         PacketBuffer.WriteInt32(0x00);
+        PacketBuffer.WriteInt32(0x1); // admin
+    }
 }

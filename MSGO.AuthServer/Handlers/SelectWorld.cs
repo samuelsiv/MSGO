@@ -8,7 +8,7 @@ using MSGO.Core.Utils;
 namespace MSGO.AuthServer.Handlers.Auth;
 public class SelectWorldHandler : PacketHandler<SelectWorldRequest>
 {
-    public override IEnumerable<PacketRequest> HandledPacketIds => [PacketRequest.AUTH_SelectWorld];
+    public override IEnumerable<PacketRequest> HandledPacketIds => [PacketRequest.SelectWorld];
 
     public override void Handle(BaseSession session, SelectWorldRequest packet)
     {

@@ -2,10 +2,12 @@
 
 public enum PacketRequest : ushort
 {
-    AUTH_VersionCheck = 0x34A9,
-    AUTH_Login = 0xF24B,
-    AUTH_GetWorldList = 0x8288,
-    AUTH_SelectWorld = 0xA380,
+    VersionCheck = 0x34A9,
+    Login = 0xF24B, 
+    GetWorldList = 0x8288,
+    SelectWorld = 0xA380,
+    
+    DataFileDownload = 0xF86A,
 }
 
 public enum PacketResponse : ushort

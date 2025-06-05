@@ -17,5 +17,5 @@ public class VersionCheckRequest : BasePacket
     }
 
     public override string ToString() => 
-        $"VersionCheck - Version: {Version}, Crc: {Crc}, GenTime: {GenTime}";
+        $"Version: {Version}, Crc: {Crc}, GenTime: {GenTime}";
 }

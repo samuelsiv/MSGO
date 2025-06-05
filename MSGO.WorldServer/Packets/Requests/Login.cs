@@ -15,5 +15,5 @@ public class LoginRequest : BasePacket
     }
 
     public override string ToString() =>
-        $"LoginPacket - UserId: {UserId}, Otp: {Otp}";
+        $"UserId: {UserId}, Otp: {Otp}";
 }

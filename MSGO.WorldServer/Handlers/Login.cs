@@ -8,7 +8,7 @@ namespace MSGO.WorldServer.Handlers;
 
 public class LoginHandler : PacketHandler<LoginRequest>
 {
-    public override IEnumerable<PacketRequest> HandledPacketIds => [PacketRequest.AUTH_Login];
+    public override IEnumerable<PacketRequest> HandledPacketIds => [PacketRequest.Login];
     public override void Handle(BaseSession session, LoginRequest packet)
     {
         SendAsync(session, new LoginResponse());

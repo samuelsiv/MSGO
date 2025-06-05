@@ -9,7 +9,7 @@ namespace MSGO.AuthServer.Handlers.Auth;
 
 public class WorldListHandler : PacketHandler<WorldListRequest>
 {
-    public override IEnumerable<PacketRequest> HandledPacketIds => [PacketRequest.AUTH_GetWorldList];
+    public override IEnumerable<PacketRequest> HandledPacketIds => [PacketRequest.GetWorldList];
     public override void Handle(BaseSession session, WorldListRequest packet)
     {
         var world = new World(1, "test", "test", "test2", 1, 1, 12, 120, "localhost", 6969);

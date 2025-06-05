@@ -135,3 +135,4 @@ _NCrunch*
 .vs/
 .idea/
 .vscode/
+.venv/
