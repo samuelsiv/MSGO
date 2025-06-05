@@ -5,7 +5,7 @@ namespace MSGO.WorldServer.Packets.Requests;
 
 public class DataFileDownloadRequest : BasePacket
 {
-    string FilePath { get; }
+    public string FilePath { get; }
     int HashVal { get; }
 
     public DataFileDownloadRequest(byte[] data) : base(data)

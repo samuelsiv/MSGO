@@ -8,6 +8,8 @@ public enum PacketRequest : ushort
     SelectWorld = 0xA380,
     
     DataFileDownload = 0xF86A,
+    GetAdopIgnoreList = 0xA085,
+    GetPilotList = 0x60CD
 }
 
 public enum PacketResponse : ushort

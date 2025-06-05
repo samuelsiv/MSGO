@@ -11,6 +11,6 @@ public class DataFileDownload : PacketHandler<DataFileDownloadRequest>
     public override IEnumerable<PacketRequest> HandledPacketIds => [ PacketRequest.DataFileDownload ];
     public override void Handle(BaseSession session, DataFileDownloadRequest packet)
     {
-        SendAsync(session, new DataFileDownloadResponse());
+        SendAsync(session, new DataFileDownloadResponse(packet.FilePath));
     }
 }
