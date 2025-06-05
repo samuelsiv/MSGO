@@ -11,6 +11,6 @@ public class LoginHandler : PacketHandler<LoginRequest>
     public override IEnumerable<PacketRequest> HandledPacketIds => [PacketRequest.AUTH_Login];
     public override void Handle(BaseSession session, LoginRequest packet)
     {
-        session.SendAsync(new LoginResponse().Write());
+        SendAsync(session, new LoginResponse());
     }
 }

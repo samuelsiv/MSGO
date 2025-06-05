@@ -6,7 +6,7 @@ using MSGO.Core.Utils;
 using MSGO.WorldServer;
 
 Logger.Initialize();
-Logger.Information("Starting MSGO World Server...");
+Logger.Information("MSGO World Server starting...");
 
 PacketHandlerRegistry.RegisterHandlersFromAssembly(Assembly.GetExecutingAssembly());
 WorldServer server = new(IPAddress.Any, 6969);

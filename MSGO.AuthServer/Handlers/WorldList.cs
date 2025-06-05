@@ -13,6 +13,6 @@ public class WorldListHandler : PacketHandler<WorldListRequest>
     public override void Handle(BaseSession session, WorldListRequest packet)
     {
         var world = new World(1, "test", "test", "test2", 1, 1, 12, 120, "localhost", 6969);
-        session.SendAsync(new WorldListResponse(0, 0, [world]).Write());
+        SendAsync(session, new WorldListResponse(0, 0, [world]));
     }
 }

@@ -7,7 +7,7 @@ using MSGO.Core.Types.Interfaces;
 using MSGO.Core.Utils;
 
 Logger.Initialize();
-Logger.Information("Starting MSGO Authentication Server...");
+Logger.Information("MSGO Authentication Server starting...");
 
 PacketHandlerRegistry.RegisterHandlersFromAssembly(Assembly.GetExecutingAssembly());
 AuthServer server = new(IPAddress.Any, 50000);
