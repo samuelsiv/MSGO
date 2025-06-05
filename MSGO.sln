@@ -5,7 +5,11 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSGO.Server", "MSGO.Server\MSGO.Server.csproj", "{CA9E3B1B-CC8D-4848-B5D5-EC34C41C4945}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSGO.PacketHandlerGenerator", "MSGO.PacketHandlerGenerator\MSGO.PacketHandlerGenerator.csproj", "{F84A193D-609C-4CC3-8998-BADE9F4A0F81}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSGO.AuthServer", "MSGO.AuthServer\MSGO.AuthServer.csproj", "{16319E8F-8F0F-45C6-BD90-63E0F094ED14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSGO.WorldServer", "MSGO.WorldServer\MSGO.WorldServer.csproj", "{7A2CC469-FA52-4CFE-9BE5-C1E291A11992}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSGO.Core", "MSGO.Core\MSGO.Core.csproj", "{4350989E-A3CC-4469-B9AF-9524FAC03853}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +21,18 @@ Global
 		{CA9E3B1B-CC8D-4848-B5D5-EC34C41C4945}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA9E3B1B-CC8D-4848-B5D5-EC34C41C4945}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA9E3B1B-CC8D-4848-B5D5-EC34C41C4945}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F84A193D-609C-4CC3-8998-BADE9F4A0F81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F84A193D-609C-4CC3-8998-BADE9F4A0F81}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F84A193D-609C-4CC3-8998-BADE9F4A0F81}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F84A193D-609C-4CC3-8998-BADE9F4A0F81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16319E8F-8F0F-45C6-BD90-63E0F094ED14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16319E8F-8F0F-45C6-BD90-63E0F094ED14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16319E8F-8F0F-45C6-BD90-63E0F094ED14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16319E8F-8F0F-45C6-BD90-63E0F094ED14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A2CC469-FA52-4CFE-9BE5-C1E291A11992}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A2CC469-FA52-4CFE-9BE5-C1E291A11992}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A2CC469-FA52-4CFE-9BE5-C1E291A11992}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A2CC469-FA52-4CFE-9BE5-C1E291A11992}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4350989E-A3CC-4469-B9AF-9524FAC03853}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4350989E-A3CC-4469-B9AF-9524FAC03853}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4350989E-A3CC-4469-B9AF-9524FAC03853}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4350989E-A3CC-4469-B9AF-9524FAC03853}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

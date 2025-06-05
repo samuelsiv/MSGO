@@ -1,16 +1,11 @@
-﻿using MSGO.Server.Packets.Handlers;
-using MSGO.Server.Packets.Handlers.Auth;
-using MSGO.Server.Packets.Handlers.Generic;
-using MSGO.Server.Servers;
-using System.Net;
+﻿using System.Net;
+using MSGO.AuthServer;
+using MSGO.Core.Packets.Handlers;
 
 PacketHandlerRegistry.RegisterAll();
 
 AuthServer authServer = new(IPAddress.Any, 50000);
-WorldServer worldServer = new(IPAddress.Any, 6969);
-
 authServer.Start();
-worldServer.Start();
 
 while (true)
 {
@@ -20,10 +15,7 @@ while (true)
 
     Console.Write("Servers restarting...");
     authServer.Restart();
-    worldServer.Restart();
-    continue;
 }
 
 Console.Write("Server stopping...");
 authServer.Stop();
-worldServer.Stop();
