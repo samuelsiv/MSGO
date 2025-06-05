@@ -37,11 +37,11 @@ public class PacketHandlerRegistry
 
         public void Handle(BaseSession session, BasePacket packet)
         {
-            ConstructorInfo constructor = typeof(TPacket).GetConstructor(new[] { typeof(byte[]) });
+            ConstructorInfo? constructor = typeof(TPacket).GetConstructor([typeof(byte[])]);
             if (constructor == null)
                 throw new InvalidOperationException($"Type {typeof(TPacket).Name} does not have a constructor that takes a single byte[] argument.");
 
-            TPacket typedPacket = (TPacket)constructor.Invoke(new object[] { packet.PacketBuffer.GetAllBytes() });
+            TPacket typedPacket = (TPacket)constructor.Invoke([packet.PacketBuffer.GetAllBytes()]);
             _inner.Handle(session, typedPacket);
         }
 
