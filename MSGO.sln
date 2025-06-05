@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSGO.WorldServer", "MSGO.Wo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSGO.Core", "MSGO.Core\MSGO.Core.csproj", "{4350989E-A3CC-4469-B9AF-9524FAC03853}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{E70C018E-7053-4D97-BC87-9B90047B348D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Servers", "Servers", "{E7E651C7-6CB5-4D96-9F90-10033228F481}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,5 +37,10 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3F99D206-D4DD-49D6-A14A-66208AA587D0}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4350989E-A3CC-4469-B9AF-9524FAC03853} = {E70C018E-7053-4D97-BC87-9B90047B348D}
+		{16319E8F-8F0F-45C6-BD90-63E0F094ED14} = {E7E651C7-6CB5-4D96-9F90-10033228F481}
+		{7A2CC469-FA52-4CFE-9BE5-C1E291A11992} = {E7E651C7-6CB5-4D96-9F90-10033228F481}
 	EndGlobalSection
 EndGlobal
