@@ -10,22 +10,29 @@ public class GetPilotListResponse : BasePacket
     {
         PacketBuffer.WriteUInt32(0); // result
         
-        // EFF pilots list
-        PacketBuffer.WriteUInt32(0); // pilots_eff count
-        // write 14 bytes for each pilot 00
-        //PacketBuffer.WriteBytes(new byte[420]);
+        // write 424 bytes of zeroes
+        for (int i = 0; i < 424; i++)
+        {
+            PacketBuffer.WriteByte(0);
+        }
         
-        // Zeon pilots list  
-        PacketBuffer.WriteUInt32(0); // pilots_zeon count
-        //PacketBuffer.WriteBytes(new byte[420]);
-        // Write pilot data here if count > 0
+        for (int i = 0; i < 424; i++)
+        {
+            PacketBuffer.WriteByte(0);
+        }
+
+        PacketBuffer.WriteInt32(0); // del_remain_sec_eff
+        PacketBuffer.WriteInt32(0); // del_remain_sec_zeon
+        PacketBuffer.WriteInt32(0); // pilot_rename_remaintime_eff
+        PacketBuffer.WriteInt32(0); // pilot_rename_remaintime_zeon
+        PacketBuffer.WriteInt32(0); // charge_point
         
-        PacketBuffer.WriteUInt32(0); // del_remain_sec_eff
-        PacketBuffer.WriteUInt32(0); // del_remain_sec_zeon
-        PacketBuffer.WriteUInt32(0); // pilot_rename_remaintime_eff
-        PacketBuffer.WriteUInt32(0); // pilot_rename_remaintime_zeon
-        PacketBuffer.WriteUInt32(0); // charge_point
-        PacketBuffer.WriteUInt32(1); // bmgpack_count
+        PacketBuffer.WriteInt32(1); // bmgpack_count
+        for (int i = 0; i < 36; i++)
+        {
+            PacketBuffer.WriteByte(0);
+        }
+        
         PacketBuffer.WriteByte(0); // is_tutorial_end
         PacketBuffer.WriteUInt32(0); // pilot_rename_price
         PacketBuffer.WriteUInt32(0); // pilot_rename_time_efsf
