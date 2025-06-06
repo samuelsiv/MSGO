@@ -1,0 +1,6264 @@
+proto_auth_client::recv_overplay_resettime_get_r (0xbabe) (0x7ff759fa7f3c)
+  int32 reset_sec;
+
+proto_auth_client::recv_worldlist_get_r (0xbabe) (0x7ff759fa8126)
+  int32 result;
+  int32 last_world;
+  struct worlds -> [
+    int32 worldid;
+    string name;
+    string name_en;
+    string desc;
+    int32 stat;
+    uint16 icon_id;
+    int32 client_now;
+    int32 client_max;
+  ]
+
+proto_auth_client::recv_worldlist_select_r (0xbabe) (0x7ff759fa83e9)
+  int32 result;
+  string world_name_en;
+  string loungesv_host;
+  int32 loungesv_port;
+  int32 userid;
+  string otp;
+
+proto_auth_client::recv_authenticate_you9otp_input (0xbabe) (0x7ff759fa8683)
+  int32 otp_type;
+  string otp_matrix_code;
+
+proto_auth_client::recv_proto_version_check_r (0xbabe) (0x7ff759fa8859)
+  int32 version;
+  uint32 crc;
+  uint32 gentime;
+
+proto_auth_client::recv_authenticate_r (0xbabe) (0x7ff759fa8a11)
+  int32 result;
+
+proto_auth_client::recv_authenticate_bnpotp_input (0xbabe) (0x7ff759fa8b40)
+
+proto_battle::recv_entity_msma_fix (0xbabe) (0x7ff759fae7e8)
+  uint16 ent_id;
+  uint16 pos_x;
+  uint16 pos_y;
+  uint16 pos_z;
+  uint16 attach_parent_ent_id;
+  int32 is_using_ss;
+
+proto_battle_client::recv_proto_version_check_r (0xbabe) (0x7ff759fafd69)
+  int32 version;
+  uint32 crc;
+  uint32 gentime;
+
+proto_battle_client::recv_authenticate_r (0xbabe) (0x7ff759fb179d)
+  int32 result;
+  int32 room_id;
+  string room_name;
+  int32 mission_id;
+  int32 extrule_id;
+  int32 dc_node_id;
+  int32 is_rankerbattle;
+  int32 cb_node_id;
+  int32 is_onlineevent;
+  struct custommatch_info -> [
+    int32 is_custommatch;
+    int32 owner_world_id;
+    int32 owner_pilot_id;
+    int32 flag_levellimit;
+  ]
+  int32 map_id;
+  int32 is_vsclan;
+  int32 comeback_stat;
+  int32 is_playing;
+  int32 is_netcafe;
+  int32 team;
+  int32 is_practice;
+  struct config -> [
+    uint16 troops_match_type;
+    uint16 A_troops;
+    int32 A_point_max;
+    int32 A_win_cnt;
+    uint16 B_troops;
+    int32 B_point_max;
+    int32 B_win_cnt;
+    int32 dotdmg_min;
+    uint16 atk_team;
+    int32 round_now;
+    int32 round_max;
+  ]
+  struct progress -> [
+    int32 remain_msec;
+    int32 coop_step;
+    int32 A_point_now;
+    int32 B_point_now;
+    uint16 A_gauge_dmg_scale;
+    uint16 B_gauge_dmg_scale;
+    int32 coop_dead_remain;
+    int32 is_prestart;
+    int32 rule_status;
+    int32 rule_timer_msec;
+    int32 rule_param1;
+    int32 rule_param2;
+    int32 A_dot_dmg;
+    int32 B_dot_dmg;
+  ]
+  uint16 expup_fgauge;
+  int32 is_ev_caravan;
+  int32 flag_wideuse;
+
+proto_battle_client::recv_roomlobby_pilot_add (0xbabe) (0x7ff759fb2db2)
+  int32 team;
+  int32 troops;
+  int32 world_id;
+  struct pilot -> [
+    int32 pilot_id;
+    string name;
+    int32 troops;
+    int32 level;
+    int32 mil_class;
+    uint16 byword;
+    int32 cmdr_fame;
+    uint16 rate_vslocal;
+    uint16 rate_vslocal_4ev;
+    uint16 rate_vslocal_clan;
+    int32 level_point;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+    int32 clan_id;
+    string clan_name;
+    int32 clan_emb_base;
+    int32 clan_emb_parts1;
+    int32 clan_emb_parts2;
+    int32 cupteam_id;
+    string cupteam_name;
+    int32 accum_point;
+    int32 rank;
+    int32 base_accump;
+    int32 req_accump;
+    int32 penalty;
+  ]
+  int32 stat;
+  int32 is_commander;
+  int32 is_audience;
+  int32 member_index;
+  int32 dtaskf_order_number;
+  int32 kill_count;
+  int32 death_count;
+
+proto_battle_client::recv_roomlobby_pilot_add_npc (0xbabe) (0x7ff759fb3f0a)
+  int32 team;
+  int32 troops;
+  int32 pilot_id;
+  uint16 level;
+  int32 cutin_id;
+  string name;
+  int32 gender;
+  int32 platoon;
+  int32 platoon_slot;
+  int32 is_platoon_leader;
+  int32 dtaskf_order_number;
+  int32 is_disable_scoreboard;
+
+proto_battle_client::recv_roomlobby_pilot_del (0xbabe) (0x7ff759fb4892)
+  int32 world_id;
+  int32 pilot_id;
+
+proto_battle_client::recv_roomlobby_pilot_msdeck (0xbabe) (0x7ff759fb5010)
+  int32 world_id;
+  int32 pilot_id;
+  int32 deck_msid;
+  int32 deck_mscolor;
+
+proto_battle_client::recv_roomlobby_pilot_leave_appeal (0xbabe) (0x7ff759fb5554)
+
+proto_battle_client::recv_roomlobby_pilot_level_update (0xbabe) (0x7ff759fb59f2)
+  int32 world_id;
+  int32 pilot_id;
+  uint16 lv_old;
+  uint16 lv_new;
+
+proto_battle_client::recv_roomlobby_pilot_mindex_update_r (0xbabe) (0x7ff759fb616d)
+  int32 result;
+  int32 world_id;
+  int32 pilot_id;
+  int32 member_index;
+  int32 is_commander;
+
+proto_battle_client::recv_roomlobby_roommaster_notice (0xbabe) (0x7ff759fb676d)
+  int32 world_id;
+  int32 pilot_id;
+
+proto_battle_client::recv_roomlobby_xwar_countdown (0xbabe) (0x7ff759fb6b46)
+  int32 sec;
+
+proto_battle_client::recv_roomlobby_xwar_commander_lot_r (0xbabe) (0x7ff759fb6fca)
+  int32 result;
+  int32 is_lot;
+  uint16 lot_count;
+
+proto_battle_client::recv_roomlobby_clan_notice (0xbabe) (0x7ff759fb7830)
+  int32 team;
+  int32 troops;
+  int32 clan_id;
+  string clan_name;
+  int32 clan_emb_base;
+  int32 clan_emb_parts1;
+  int32 clan_emb_parts2;
+
+proto_battle_client::recv_roomlobby_cupteam_notice (0xbabe) (0x7ff759fb8055)
+  int32 team;
+  int32 cupteam_id;
+  int32 cupteam_rate;
+  int32 tournament_vs_type;
+
+proto_battle_client::recv_roomlobby_game_ready_r (0xbabe) (0x7ff759fb8715)
+  int32 result;
+  int32 world_id;
+  int32 pilot_id;
+  int32 stat;
+
+proto_battle_client::recv_roomlobby_game_start_r (0xbabe) (0x7ff759fb8e8b)
+  int32 result;
+  int32 elapsed_sec;
+  int32 limit_sec;
+  int32 kill_count;
+  int32 death_count;
+
+proto_battle_client::recv_roomlobby_exit_r (0xbabe) (0x7ff759fb9311)
+
+proto_battle_client::recv_room_chat_down (0xbabe) (0x7ff759fb9b72)
+  int32 team;
+  int32 troops;
+  int32 world_id;
+  int32 pilot_id;
+  string pilot_name;
+  string msg;
+  int32 is_all;
+  int32 is_party;
+  int32 is_audience;
+
+proto_battle_client::recv_room_chat_editing_r (0xbabe) (0x7ff759fba3c2)
+  int32 world_id;
+  int32 pilot_id;
+  int32 is_editing;
+
+proto_battle_client::recv_room_kick_master_r (0xbabe) (0x7ff759fba821)
+  int32 result;
+
+proto_battle_client::recv_room_kick_to (0xbabe) (0x7ff759fbaa91)
+
+proto_battle_client::recv_room_kick_vote_r (0xbabe) (0x7ff759fbad55)
+  int32 result;
+
+proto_battle_client::recv_room_kick_vote_get_enable_pilots_r (0xbabe) (0x7ff759fbb370)
+  int32 enable_worlds;
+  int32 enable_pilots;
+  int32 result;
+
+proto_battle_client::recv_game_begin (0xbabe) (0x7ff759fbd19f)
+  int32 snapshot_int_msec;
+  int32 snapshot_res_msec;
+  int32 pos_factor;
+  int32 map_id;
+  int32 btlfield;
+  int32 clear_remain_msec;
+  int32 is_disable_conq_sp;
+  int32 is_room_suspend;
+  int32 mission_id;
+  int32 sudden_type;
+  int32 sudden_bonus_target;
+  int32 exp_min;
+  int32 exp_max;
+  struct config -> [
+    uint16 troops_match_type;
+    uint16 A_troops;
+    int32 A_point_max;
+    int32 A_win_cnt;
+    uint16 B_troops;
+    int32 B_point_max;
+    int32 B_win_cnt;
+    int32 dotdmg_min;
+    uint16 atk_team;
+    int32 round_now;
+    int32 round_max;
+  ]
+  struct progress -> [
+    int32 remain_msec;
+    int32 coop_step;
+    int32 A_point_now;
+    int32 B_point_now;
+    uint16 A_gauge_dmg_scale;
+    uint16 B_gauge_dmg_scale;
+    int32 coop_dead_remain;
+    int32 is_prestart;
+    int32 rule_status;
+    int32 rule_timer_msec;
+    int32 rule_param1;
+    int32 rule_param2;
+    int32 A_dot_dmg;
+    int32 B_dot_dmg;
+  ]
+  struct respawn_posts -> [
+    int32 type;
+    uint16 ini_team;
+    uint16 ini_troops;
+    string name;
+    int32 gauge_max;
+    int32 post_chara_id;
+    uint16 pos_x;
+    uint16 pos_y;
+    uint16 pos_z;
+    uint16 dir;
+    int32 cmdr_sptype;
+    int32 group_id;
+    int32 npc_ba_point_ent_id;
+    int32 npc_ba_point_move_range_abs_x;
+    int32 param1;
+    int32 param2;
+  ]
+  struct mapgimmicks -> [
+    int32 type;
+    int32 stat;
+    uint16 ent_id;
+    int32 gauge_max;
+    int32 msma_id;
+    int32 msma_id2;
+    uint16 pos_x;
+    uint16 pos_y;
+    uint16 pos_z;
+    uint16 dir;
+    uint16 pos2_x;
+    uint16 pos2_y;
+    uint16 pos2_z;
+    uint16 ctrl_ent_id;
+    uint16 ctrl_count;
+    uint16 route_number;
+    uint16 route_initial_index;
+    uint16 move_speed;
+    uint16 rot_speed;
+    uint16 door_auto_sensor_height;
+    uint16 door_auto_sensor_radius;
+    uint16 attach_barrier_npc_ent_id;
+    uint16 local_ctrl_id;
+  ]
+  struct bgm_desc -> [
+    int32 is_final_phase;
+    int32 field_bgm_id;
+    int32 ace_bgm_id;
+    int32 force_bgm_id;
+    int32 is_one_shot;
+  ]
+  int32 missionunit_set;
+  int32 mission_phase;
+
+proto_battle_client::recv_game_btlfield_change (0xbabe) (0x7ff759fbe0b1)
+  int32 btlfield;
+
+proto_battle_client::recv_game_read_ahead_route_notice (0xbabe) (0x7ff759fbe4cb)
+  int32 read_ahead_route;
+
+proto_battle_client::recv_game_coopwave_result (0xbabe) (0x7ff759fbe8c0)
+  struct wave_res -> [
+    int32 wave;
+    int32 wave_rank;
+    int32 result_coop;
+    int32 cleartime_sec;
+    int32 cleartime_rank;
+    int32 cleartime_score;
+    uint16 container_num;
+    uint16 container_max;
+    int32 container_rank;
+    int32 container_score;
+    uint16 enemybase_num;
+    uint16 enemybase_max;
+    int32 enemybase_rank;
+    int32 enemybase_score;
+    int32 total_score;
+  ]
+
+proto_battle_client::recv_game_round_end (0xbabe) (0x7ff759fbed2e)
+  int32 win_team;
+  int32 win_troops;
+  struct progress -> [
+    int32 remain_msec;
+    int32 coop_step;
+    int32 A_point_now;
+    int32 B_point_now;
+    uint16 A_gauge_dmg_scale;
+    uint16 B_gauge_dmg_scale;
+    int32 coop_dead_remain;
+    int32 is_prestart;
+    int32 rule_status;
+    int32 rule_timer_msec;
+    int32 rule_param1;
+    int32 rule_param2;
+    int32 A_dot_dmg;
+    int32 B_dot_dmg;
+  ]
+
+proto_battle_client::recv_game_suspend (0xbabe) (0x7ff759fbf093)
+
+proto_battle_client::recv_game_resume (0xbabe) (0x7ff759fbf272)
+
+proto_battle_client::recv_game_client_signal_r (0xbabe) (0x7ff759fbf536)
+  int32 sigval;
+
+proto_battle_client::recv_game_script_play (0xbabe) (0x7ff759fbf99b)
+  string src;
+  int32 is_with_resume;
+  int32 script_thread;
+
+proto_battle_client::recv_game_script_play_also_replay (0xbabe) (0x7ff759fbfe42)
+  string src;
+  int32 script_thread;
+
+proto_battle_client::recv_game_mission_progress_update (0xbabe) (0x7ff759fc01e4)
+  struct mprogress -> [
+    int32 remain_msec;
+    int32 coop_step;
+    int32 A_point_now;
+    int32 B_point_now;
+    uint16 A_gauge_dmg_scale;
+    uint16 B_gauge_dmg_scale;
+    int32 coop_dead_remain;
+    int32 is_prestart;
+    int32 rule_status;
+    int32 rule_timer_msec;
+    int32 rule_param1;
+    int32 rule_param2;
+    int32 A_dot_dmg;
+    int32 B_dot_dmg;
+  ]
+
+proto_battle_client::recv_game_respawn_post_update (0xbabe) (0x7ff759fc05e8)
+  struct post_progress -> [
+    uint16 team;
+    uint16 troops;
+    int32 gauge_A;
+    int32 gauge_B;
+    int32 is_visible;
+    int32 is_lock;
+    int32 is_keep;
+    string near_ms_num;
+    unknown-string2 conquer_remain_sec;
+  ]
+
+proto_battle_client::recv_game_mapgimmick_update (0xbabe) (0x7ff759fc0aa4)
+  struct gimmick_progress -> [
+    int32 gauge_now;
+    int32 stat;
+    uint16 access_ent_id;
+  ]
+
+proto_battle_client::recv_game_mapeffect_update (0xbabe) (0x7ff759fc0f2c)
+  int32 fx_id;
+  int32 is_scale;
+
+proto_battle_client::recv_game_score_ranker_notice (0xbabe) (0x7ff759fc1222)
+
+proto_battle_client::recv_game_replay_result (0xbabe) (0x7ff759fc14e6)
+  int32 win_team;
+
+proto_battle_client::recv_msma_spawn_list_get_r_begin (0xbabe) (0x7ff759fc18ce)
+  int32 spawn1st_post;
+  int32 is_1st;
+
+proto_battle_client::recv_msma_spawn_list_get_r_one (0xbabe) (0x7ff759fc1d38)
+  int32 index;
+  struct ms -> [
+    unknown-string uniqid;
+    int32 msma_id;
+    int32 crew_msma_id;
+    int32 decal;
+    int32 color;
+    int32 deck_index;
+    int32 cost;
+    int32 is_costover;
+    int32 energy_now;
+    uint16 weight_balance;
+    uint16 shield_weight;
+    int32 sp_parts;
+    uint16 armor_up;
+    uint16 warp_up;
+    uint16 boost_offset;
+    uint16 boost_offset_ns;
+    int32 witem_id;
+    int32 sitem_id;
+    int32 spitem_id;
+    uint16 wbu_power;
+    uint16 wbu_stability;
+    uint16 wbu_rapid;
+    uint16 wbu_shot_range;
+    uint16 wbu_shield_hp;
+    uint16 wbu_eff_time;
+    uint16 wbu_eff_range;
+    int32 eq_modules;
+    int32 eq_bonus_modules;
+    int32 exceed_eq_modules;
+    int32 adop_items_ms;
+    int32 adop_items_eq;
+    int32 is_exdeck;
+    int32 is_rokaku;
+    int32 rokakums_limit_use;
+    int32 advanced_custom_exceed_step;
+    uint16 respawn_wait_sec;
+    uint16 respawn_wait_max;
+    int32 is_reduce_respawn_wait;
+    int32 is_extrule_invalid;
+    int32 is_heroms;
+    string additional_info;
+    int32 level_gauge_now_level;
+  ]
+
+proto_battle_client::recv_msma_spawn_list_get_r_end (0xbabe) (0x7ff759fc2015)
+
+proto_battle_client::recv_msma_spawn_wait_update (0xbabe) (0x7ff759fc2408)
+  int32 deck_index;
+  uint16 respawn_wait_sec;
+  uint16 respawn_wait_max;
+
+proto_battle_client::recv_msma_spawn_select_r (0xbabe) (0x7ff759fc2bbd)
+  int32 result;
+  int32 ms_index;
+  int32 post_index;
+  int32 spt_spot_index;
+  uint16 respawn_ent_id;
+  string script_ini;
+
+proto_battle_client::recv_msma_spawn_info_prestart (0xbabe) (0x7ff759fc37a2)
+  int32 remain_sec;
+  int32 mstype;
+  uint16 post_index;
+  uint16 spt_spot_index;
+  uint16 stghold_entid;
+
+proto_battle_client::recv_msma_spawn_warp_start_r (0xbabe) (0x7ff759fc4174)
+  int32 result;
+  int32 is_cancel;
+  uint16 ent_id;
+  int32 countdown_msec;
+
+proto_battle_client::recv_msma_spawn_force_warp_start (0xbabe) (0x7ff759fc46eb)
+  uint16 ent_id;
+  int32 countdown_msec;
+
+proto_battle_client::recv_msma_spawn_warp_countdown_finish (0xbabe) (0x7ff759fc4ac6)
+  uint16 ent_id;
+
+proto_battle_client::recv_entity_msma_appear_self (0xbabe) (0x7ff759fc5522)
+  int32 team;
+  int32 troops;
+  struct ms -> [
+    unknown-string uniqid;
+    int32 msma_id;
+    int32 crew_msma_id;
+    int32 decal;
+    int32 color;
+    int32 deck_index;
+    int32 cost;
+    int32 is_costover;
+    int32 energy_now;
+    uint16 weight_balance;
+    uint16 shield_weight;
+    int32 sp_parts;
+    uint16 armor_up;
+    uint16 warp_up;
+    uint16 boost_offset;
+    uint16 boost_offset_ns;
+    int32 witem_id;
+    int32 sitem_id;
+    int32 spitem_id;
+    uint16 wbu_power;
+    uint16 wbu_stability;
+    uint16 wbu_rapid;
+    uint16 wbu_shot_range;
+    uint16 wbu_shield_hp;
+    uint16 wbu_eff_time;
+    uint16 wbu_eff_range;
+    int32 eq_modules;
+    int32 eq_bonus_modules;
+    int32 exceed_eq_modules;
+    int32 adop_items_ms;
+    int32 adop_items_eq;
+    int32 is_exdeck;
+    int32 is_rokaku;
+    int32 rokakums_limit_use;
+    int32 advanced_custom_exceed_step;
+    uint16 respawn_wait_sec;
+    uint16 respawn_wait_max;
+    int32 is_reduce_respawn_wait;
+    int32 is_extrule_invalid;
+    int32 is_heroms;
+    string additional_info;
+    int32 level_gauge_now_level;
+  ]
+  struct snapshot -> [
+    uint16 ent_id;
+    uint16 pos_x;
+    uint16 pos_y;
+    uint16 pos_z;
+    uint16 dir;
+    uint16 target_x;
+    uint16 target_y;
+    uint16 target_z;
+    uint16 score1;
+    uint16 score2;
+    uint16 score3;
+    int32 hp_percent;
+    int32 hp_percent_shield;
+    uint16 down_power;
+    int32 equip_index;
+    int32 water_index;
+    int32 layer_index;
+    uint16 rideon_ent_id;
+    uint16 lockon_ent_id;
+    uint32 special_bits;
+    enum16 special_bits2;
+  ]
+  struct funnelss -> [
+    uint16 ent_id;
+    int32 wslot_idx;
+    string move_info;
+  ]
+  int32 hp_now;
+  int32 hp_max;
+  int32 shield_hp_now;
+  int32 shield_hp_max;
+  uint16 weapon_state_bits;
+
+proto_battle_client::recv_entity_msma_appear (0xbabe) (0x7ff759fc686b)
+  int32 team;
+  int32 troops;
+  int32 world_id;
+  int32 pilot_id;
+  struct ms -> [
+    unknown-string uniqid;
+    int32 msma_id;
+    int32 crew_msma_id;
+    int32 decal;
+    int32 color;
+    int32 deck_index;
+    int32 cost;
+    int32 is_costover;
+    int32 energy_now;
+    uint16 weight_balance;
+    uint16 shield_weight;
+    int32 sp_parts;
+    uint16 armor_up;
+    uint16 warp_up;
+    uint16 boost_offset;
+    uint16 boost_offset_ns;
+    int32 witem_id;
+    int32 sitem_id;
+    int32 spitem_id;
+    uint16 wbu_power;
+    uint16 wbu_stability;
+    uint16 wbu_rapid;
+    uint16 wbu_shot_range;
+    uint16 wbu_shield_hp;
+    uint16 wbu_eff_time;
+    uint16 wbu_eff_range;
+    int32 eq_modules;
+    int32 eq_bonus_modules;
+    int32 exceed_eq_modules;
+    int32 adop_items_ms;
+    int32 adop_items_eq;
+    int32 is_exdeck;
+    int32 is_rokaku;
+    int32 rokakums_limit_use;
+    int32 advanced_custom_exceed_step;
+    uint16 respawn_wait_sec;
+    uint16 respawn_wait_max;
+    int32 is_reduce_respawn_wait;
+    int32 is_extrule_invalid;
+    int32 is_heroms;
+    string additional_info;
+    int32 level_gauge_now_level;
+  ]
+  struct snapshot -> [
+    uint16 ent_id;
+    uint16 pos_x;
+    uint16 pos_y;
+    uint16 pos_z;
+    uint16 dir;
+    uint16 target_x;
+    uint16 target_y;
+    uint16 target_z;
+    uint16 score1;
+    uint16 score2;
+    uint16 score3;
+    int32 hp_percent;
+    int32 hp_percent_shield;
+    uint16 down_power;
+    int32 equip_index;
+    int32 water_index;
+    int32 layer_index;
+    uint16 rideon_ent_id;
+    uint16 lockon_ent_id;
+    uint32 special_bits;
+    enum16 special_bits2;
+  ]
+  struct funnelss -> [
+    uint16 ent_id;
+    int32 wslot_idx;
+    string move_info;
+  ]
+  uint16 unattended_state_bit;
+  uint16 weapon_state_bits;
+  int32 target_icon;
+  int32 is_respawn;
+  int32 is_using_ss;
+  int32 stghold_number;
+  int32 xweapon_fired;
+
+proto_battle_client::recv_entity_deploy_arms_appear (0xbabe) (0x7ff759fc725f)
+  struct appear_info -> [
+    int32 team;
+    int32 troops;
+    int32 world_id;
+    int32 pilot_id;
+    int32 ent_id;
+    int32 index;
+    int32 msma_id;
+    int32 item_id;
+    int32 type;
+    int32 eff_range;
+    struct snapshot -> [
+      uint16 ent_id;
+      uint16 pos_x;
+      uint16 pos_y;
+      uint16 pos_z;
+      uint16 dir;
+      uint16 target_x;
+      uint16 target_y;
+      uint16 target_z;
+      uint16 score1;
+      uint16 score2;
+      uint16 score3;
+      int32 hp_percent;
+      int32 hp_percent_shield;
+      uint16 down_power;
+      int32 equip_index;
+      int32 water_index;
+      int32 layer_index;
+      uint16 rideon_ent_id;
+      uint16 lockon_ent_id;
+      uint32 special_bits;
+      enum16 special_bits2;
+    ]
+    int32 arms_id;
+    uint16 state_bit;
+    int32 is_gmk;
+    int32 is_using_ss;
+    int32 remain_msec;
+    int32 buildup_eff_range;
+  ]
+
+proto_battle_client::recv_entity_msma_disappear (0xbabe) (0x7ff759fc76cd)
+  uint16 ent_id;
+  int32 reason;
+  uint16 not_use;
+
+proto_battle_client::recv_entity_msma_dead (0xbabe) (0x7ff759fc8233)
+  uint16 ent_id_dead;
+  int32 world_id_kill;
+  int32 pilot_id_kill;
+  int32 decal_kill;
+  int32 weapon_itemid;
+  uint16 repair_wait_sec;
+  uint16 kill_streak_count;
+  int32 spbits;
+  int32 is_resurrect;
+  int32 is_extend_style_change_limit;
+
+proto_battle_client::recv_entity_msma_reborn (0xbabe) (0x7ff759fc8ade)
+  uint16 ent_id;
+  uint16 hp_percent;
+
+proto_battle_client::recv_entity_msma_attach (0xbabe) (0x7ff759fc921a)
+  uint16 ent_id;
+  uint16 attach_parent_ent_id;
+  uint32 attach_socket;
+  uint16 attach_pos_x;
+  uint16 attach_pos_y;
+  uint16 attach_pos_z;
+
+proto_battle_client::recv_entity_msma_detach (0xbabe) (0x7ff759fc981b)
+  uint16 ent_id;
+
+proto_battle_client::recv_entity_msma_hide (0xbabe) (0x7ff759fc9b72)
+  uint16 ent_id;
+
+proto_battle_client::recv_entity_msma_show (0xbabe) (0x7ff759fc9ec9)
+  uint16 ent_id;
+
+proto_battle_client::recv_entity_msma_show_hp (0xbabe) (0x7ff759fca4e6)
+  uint16 ent_id;
+  int32 hp_max;
+  int32 gauge_max;
+
+proto_battle_client::recv_entity_msma_unattended_state (0xbabe) (0x7ff759fcab1b)
+  uint16 ent_id;
+  uint16 state_bit;
+
+proto_battle_client::recv_entity_snapshot (0xbabe) (0x7ff759fcb109)
+  int32 frame_count;
+  int32 remain_msec;
+  struct snapshots -> [
+    uint16 ent_id;
+    uint16 pos_x;
+    uint16 pos_y;
+    uint16 pos_z;
+    uint16 dir;
+    uint16 target_x;
+    uint16 target_y;
+    uint16 target_z;
+    uint16 score1;
+    uint16 score2;
+    uint16 score3;
+    int32 hp_percent;
+    int32 hp_percent_shield;
+    uint16 down_power;
+    int32 equip_index;
+    int32 water_index;
+    int32 layer_index;
+    uint16 rideon_ent_id;
+    uint16 lockon_ent_id;
+    uint32 special_bits;
+    enum16 special_bits2;
+  ]
+
+proto_battle_client::recv_entity_snapshot_splitdelta (0xbabe) (0x7ff759fd1531)
+  int32 frame_count;
+  int32 remain_msec;
+  uint16 ent_id;
+  enum16 dirty_bits;
+  uint16 pos_real_x;
+  uint16 pos_real_y;
+  uint16 pos_real_z;
+  int32 pos_diff_x;
+  int32 pos_diff_y;
+  int32 pos_diff_z;
+  uint32 dir;
+  uint16 target_real_x;
+  uint16 target_real_y;
+  uint16 target_real_z;
+  uint16 target_diff_x;
+  uint16 target_diff_y;
+  uint16 target_diff_z;
+  uint32 spbit_ll;
+  uint32 spbit_l;
+  uint32 spbit_h;
+  uint32 spbit_hh;
+  enum16 spbit2;
+  int32 hp_percent;
+  int32 hp_percent_shield;
+  uint16 down_power;
+  int32 equip_index;
+  uint16 score1;
+  int32 water_index;
+  uint16 score2;
+  int32 layer_index;
+  uint16 score3;
+  uint16 rideon_ent_id;
+  uint16 lockon_ent_id;
+
+proto_battle_client::recv_entity_snapshot_splitdelta_compress (0xbabe) (0x7ff759fd3fc2)
+  int32 frame_count;
+  int32 remain_msec;
+  uint32 zbuff;
+
+proto_battle_client::recv_preset_voice_down (0xbabe) (0x7ff759fd48f5)
+  uint16 ent_id;
+  int32 voice_id;
+  int32 voice_volume;
+  int32 is_cutin;
+  int32 is_party;
+  int32 is_use_textmsg;
+  string textmsg;
+
+proto_battle_client::recv_cutin_down (0xbabe) (0x7ff759fd4fd1)
+  uint16 ent_id;
+  int32 cutin_category_id;
+
+proto_battle_client::recv_pos_warp_force (0xbabe) (0x7ff759fd570b)
+  uint16 ent_id;
+  uint16 pos_x;
+  uint16 pos_y;
+  uint16 pos_z;
+  uint16 dir;
+  uint16 reason;
+
+proto_battle_client::recv_tumble_ukemi_r (0xbabe) (0x7ff759fd5d9d)
+  uint16 ent_id;
+  int32 tmp;
+
+proto_battle_client::recv_active_weapon_change_r (0xbabe) (0x7ff759fd640a)
+  uint16 ent_id;
+  int32 result;
+  int32 equip_index;
+  int32 equip_itemid;
+  int32 is_force;
+
+proto_battle_client::recv_weapon_state_update (0xbabe) (0x7ff759fd6aaa)
+  uint16 ent_id;
+  uint16 weapon_state;
+  uint16 weapon_change_flag;
+
+proto_battle_client::recv_weapon_fire__shot_single_special_r (0xbabe) (0x7ff759fd6f9e)
+  uint16 ent_id;
+  int32 itemid;
+
+proto_battle_client::recv_weapon_fire__wrestle_r (0xbabe) (0x7ff759fd7a7e)
+  uint16 ent_id;
+  int32 itemid;
+  uint16 dir_h;
+  uint16 dir_v;
+  uint16 msec;
+  int32 wrestle_id;
+  int32 charge_lv;
+  int32 action;
+  uint16 chase_ent_id;
+  int32 is_dp_damage_cut;
+
+proto_battle_client::recv_weapon_fire__wrestle_counter_r (0xbabe) (0x7ff759fd83ce)
+  uint16 ent_id;
+  int32 itemid;
+  uint16 target_ent_id;
+
+proto_battle_client::recv_weapon_fire__grenade_r (0xbabe) (0x7ff759fd9be1)
+  uint16 ent_id;
+  int32 itemid;
+  int32 grenade_id;
+  int32 parent_id;
+  uint16 launch_x;
+  uint16 launch_y;
+  uint16 launch_z;
+  uint16 target1_x;
+  uint16 target1_y;
+  uint16 target1_z;
+  uint16 target2_x;
+  uint16 target2_y;
+  uint16 target2_z;
+  uint16 target_ent_id;
+  uint16 msec;
+  int32 shot0_impact1;
+  int32 fx_opt;
+  int32 charge_lv;
+  int32 impact_wall;
+  int32 action;
+
+proto_battle_client::recv_weapon_fire__hand_throw_r (0xbabe) (0x7ff759fdb4ec)
+  uint16 ent_id;
+  int32 itemid;
+  int32 grenade_id;
+  uint16 launch_x;
+  uint16 launch_y;
+  uint16 launch_z;
+  uint16 target_x;
+  uint16 target_y;
+  uint16 target_z;
+  uint16 target_ent_id;
+  uint16 msec;
+  int32 shot0_impact1;
+  int32 fx_opt;
+  int32 charge_lv;
+
+proto_battle_client::recv_weapon_fire__hand_throw_bound_r (0xbabe) (0x7ff759fdc44e)
+  int32 grenade_id;
+  uint16 hit_x;
+  uint16 hit_y;
+  uint16 hit_z;
+  uint16 vec_x;
+  uint16 vec_y;
+  uint16 vec_z;
+  uint16 vec_power;
+
+proto_battle_client::recv_weapon_fire__start_homing_r (0xbabe) (0x7ff759fdcdf3)
+  int32 grenade_id;
+  uint16 pos_x;
+  uint16 pos_y;
+  uint16 pos_z;
+  uint16 target_ent_id;
+
+proto_battle_client::recv_weapon_fire__deploy_arms_r (0xbabe) (0x7ff759fddb77)
+  uint16 ent_id;
+  int32 itemid;
+  int32 arms_id;
+  uint16 target_x;
+  uint16 target_y;
+  uint16 target_z;
+  uint16 target_ent_id;
+  int32 state;
+  int32 fx_opt;
+  int32 judge_worldid;
+  int32 judge_pilotid;
+
+proto_battle_client::recv_weapon_fire__air_bomb_r (0xbabe) (0x7ff759fde936)
+  uint16 ent_id;
+  int32 itemid;
+  int32 airbomb_id;
+  uint16 target_x;
+  uint16 target_y;
+  uint16 target_z;
+  int32 shot0_drop1_impact2;
+  int32 fx_opt;
+
+proto_battle_client::recv_weapon_fire__snipe_beam_r (0xbabe) (0x7ff759fdf2d7)
+  int32 ent_id;
+  uint16 target_x;
+  uint16 target_y;
+  uint16 target_z;
+  int32 begin1_end0;
+
+proto_battle_client::recv_weapon_fire__bit_r (0xbabe) (0x7ff759fe03c6)
+  uint16 ent_id;
+  int32 itemid;
+  int32 bit_id;
+  int32 shot_alive;
+  uint16 launch_x;
+  uint16 launch_y;
+  uint16 launch_z;
+  uint16 target_x;
+  uint16 target_y;
+  uint16 target_z;
+  uint16 target_ent_id;
+  uint16 msec;
+  int32 release0_shot1;
+  int32 fx_opt;
+
+proto_battle_client::recv_weapon_fire_prepare__destruct (0xbabe) (0x7ff759fe0f3f)
+  uint16 ent_id;
+  int32 weapon_itemid;
+  int32 fire_id;
+
+proto_battle_client::recv_weapon_fire__destruct (0xbabe) (0x7ff759fe142f)
+  uint16 ent_id;
+  int32 weapon_itemid;
+
+proto_battle_client::recv_weapon_fire__for_myself_r (0xbabe) (0x7ff759fe1a9c)
+  int32 ent_id;
+  uint16 target_x;
+  uint16 target_y;
+  uint16 target_z;
+  int32 begin1_end0;
+
+proto_battle_client::recv_weapon_fire__chain_mine (0xbabe) (0x7ff759fe21f0)
+  uint16 from_ent_id;
+  uint16 to_ent_id;
+  int32 weapon_itemid;
+  int32 fire_id;
+
+proto_battle_client::recv_weapon_fire__funnel_r (0xbabe) (0x7ff759fe28ec)
+  int32 from_ent_id;
+  int32 wslot_idx;
+  struct fire_points -> [
+    uint16 x;
+    uint16 y;
+    uint16 z;
+  ]
+
+proto_battle_client::recv_funnel_snapshot_all (0xbabe) (0x7ff759fe2eba)
+  struct snapshot_arr -> [
+    uint16 ent_id;
+    int32 wslot_idx;
+    string move_info;
+  ]
+
+proto_battle_client::recv_weapon_fire__damage_field_r (0xbabe) (0x7ff759fe4378)
+  uint16 ent_id;
+  int32 itemid;
+  int32 grenade_id;
+  int32 parent_id;
+  uint16 launch_x;
+  uint16 launch_y;
+  uint16 launch_z;
+  uint16 target1_x;
+  uint16 target1_y;
+  uint16 target1_z;
+  uint16 target2_x;
+  uint16 target2_y;
+  uint16 target2_z;
+  uint16 target_ent_id;
+  uint16 msec;
+  int32 shot0_impact1;
+  int32 fx_opt;
+  int32 charge_lv;
+
+proto_battle_client::recv_weapon_fire__bit_reflect_r (0xbabe) (0x7ff759fe56fb)
+  uint16 ent_id;
+  int32 itemid;
+  uint16 launch_x;
+  uint16 launch_y;
+  uint16 launch_z;
+  uint16 target_x;
+  uint16 target_y;
+  uint16 target_z;
+  int32 charge_lv;
+  uint16 reflect_ent_id;
+
+proto_battle_client::recv_weapon_hit_to_r (0xbabe) (0x7ff759fe6286)
+  int32 weapon_itemid;
+  uint16 ent_id;
+  int32 optbit;
+  uint16 hit_pos_x;
+  uint16 hit_pos_y;
+  uint16 hit_pos_z;
+
+proto_battle_client::recv_weapon_hit_chain_mine (0xbabe) (0x7ff759fe6be8)
+  int32 weapon_itemid;
+  uint16 to_ent_id;
+  uint16 from_ent_id;
+  uint16 hit_pos_x;
+  uint16 hit_pos_y;
+  uint16 hit_pos_z;
+
+proto_battle_client::recv_weapon_hit_from (0xbabe) (0x7ff759fe7ea6)
+  uint16 ent_id;
+  uint16 from_ent_id;
+  int32 weapon_itemid;
+  int32 charge_lv;
+  int32 hp_now;
+  int32 hp_max;
+  int32 damage;
+  int32 spbits;
+  uint16 hit_pos_x;
+  uint16 hit_pos_y;
+  uint16 hit_pos_z;
+  uint16 hit_dir;
+  uint16 body_region;
+  int32 optbits;
+  int32 shield_hp_now;
+
+proto_battle_client::recv_weapon_hit_from_with_tumble (0xbabe) (0x7ff759fe8cd1)
+  uint16 ent_id;
+  uint16 hit_dir;
+  int32 spbits;
+  int32 optbits;
+  uint16 down_power;
+  uint16 down_msec;
+
+proto_battle_client::recv_weapon_hit_from_with_stumble (0xbabe) (0x7ff759fe9632)
+  uint16 ent_id;
+  uint16 hit_dir;
+  int32 spbits;
+  int32 optbits;
+  uint16 stumble_power;
+  uint16 stumble_msec;
+
+proto_battle_client::recv_weapon_hit_from_with_staggery (0xbabe) (0x7ff759fe9f93)
+  uint16 ent_id;
+  uint16 hit_dir;
+  int32 spbits;
+  int32 optbits;
+  uint16 staggery_power;
+  uint16 staggery_msec;
+
+proto_battle_client::recv_weapon_hit_from_with_module (0xbabe) (0x7ff759fea6c4)
+  uint16 ent_id;
+  int32 module_hp;
+  int32 is_force;
+
+proto_battle_client::recv_eqparts_execute (0xbabe) (0x7ff759feac91)
+  uint16 ent_id;
+  struct parts_exec -> [
+    int32 item_id;
+    int32 effect_msec;
+    int32 effect_catego;
+    uint16 effect_param;
+    int32 effect_value;
+    uint16 effect_value2;
+  ]
+
+proto_battle_client::recv_eqparts_toggle (0xbabe) (0x7ff759feb2ed)
+  uint16 ent_id;
+  int32 group_id;
+  uint16 toggle;
+  uint32 reason;
+
+proto_battle_client::recv_eqparts_ready_start_r (0xbabe) (0x7ff759feba6f)
+  int32 result;
+  int32 frame_count;
+  uint16 AI_ent_id;
+  uint16 group_id;
+  uint32 reason;
+
+proto_battle_client::recv_eqparts_ready_cancel_r (0xbabe) (0x7ff759fec1c1)
+  int32 result;
+  int32 frame_count;
+  uint16 AI_ent_id;
+  uint16 group_id;
+
+proto_battle_client::recv_eqparts_ready_counter_notice (0xbabe) (0x7ff759fec88a)
+  int32 result;
+  uint16 ent_id;
+  int32 count;
+  int32 maxcount;
+
+proto_battle_client::recv_kill_count_update (0xbabe) (0x7ff759fed1ab)
+  int32 reason;
+  uint16 ent_id_dead;
+  int32 world_id_kill;
+  int32 pilot_id_kill;
+  int32 kill_streak;
+  int32 weapon_itemid;
+  int32 is_extend_style_change_limit;
+
+proto_battle_client::recv_score_update (0xbabe) (0x7ff759fedd46)
+  int32 reason;
+  uint16 point_gain;
+  int32 point_total;
+  uint16 is_taskforce_aux;
+  int32 point_atk;
+  int32 point_spt;
+  int32 point_con;
+  int32 kill_streak_chain_num;
+
+proto_battle_client::recv_score_update_coopwave (0xbabe) (0x7ff759fee886)
+  int32 reason;
+  int32 world_id;
+  int32 pilot_id;
+  uint16 point_gain;
+  int32 point_total;
+  uint16 n_cont_kill;
+  uint16 bonus_cont_kill;
+
+proto_battle_client::recv_badge_add (0xbabe) (0x7ff759feef9f)
+  int32 rank;
+  int32 badge_type;
+
+proto_battle_client::recv_battle_contribute_rank (0xbabe) (0x7ff759fef382)
+  int32 rank;
+
+proto_battle_client::recv_repair_gauge_update (0xbabe) (0x7ff759fef76e)
+  uint16 gauge_old;
+  uint16 gauge_now;
+
+proto_battle_client::recv_repair_waittime_update (0xbabe) (0x7ff759fefb51)
+  uint16 repair_wait_sec;
+
+proto_battle_client::recv_radar_captured_notice (0xbabe) (0x7ff759fefeae)
+  uint16 ent_id_radar;
+
+proto_battle_client::recv_msma_AI_install (0xbabe) (0x7ff759ff029c)
+  uint16 AI_ent_id;
+  struct AI -> [
+    int32 type;
+    string name;
+    uint32 param_id;
+    int32 action_type;
+    uint16 move_spd;
+    int32 stat;
+    uint16 hate_ent_id;
+    uint16 hate_val;
+    uint16 pop_init_x;
+    uint16 pop_init_y;
+    uint16 pop_init_z;
+    uint16 pop_init_dir;
+    uint16 fire_start_x;
+    uint16 fire_start_y;
+    uint16 fire_start_z;
+    uint16 fire_end_x;
+    uint16 fire_end_y;
+    uint16 fire_end_z;
+    uint16 move_end_x;
+    uint16 move_end_y;
+    uint16 move_end_z;
+    uint16 order_kind;
+    int32 order_param;
+    int32 group_id;
+    uint16 center_ms_entid;
+    uint16 route_number;
+    uint16 formation_id;
+    int32 formation_number;
+    int32 stuck_escape;
+  ]
+
+proto_battle_client::recv_msma_AI_uninstall (0xbabe) (0x7ff759ff0666)
+  uint16 AI_ent_id;
+
+proto_battle_client::recv_msma_AI_reboot (0xbabe) (0x7ff759ff09c3)
+  uint16 AI_ent_id;
+
+proto_battle_client::recv_msma_AI_suspend (0xbabe) (0x7ff759ff0d20)
+  uint16 AI_ent_id;
+
+proto_battle_client::recv_msma_AI_resume (0xbabe) (0x7ff759ff107d)
+  uint16 AI_ent_id;
+
+proto_battle_client::recv_msma_AI_update_hate (0xbabe) (0x7ff759ff16ba)
+  uint16 AI_ent_id;
+  uint16 ent_id;
+  uint16 val;
+
+proto_battle_client::recv_msma_AI_update_move_end (0xbabe) (0x7ff759ff1e40)
+  uint16 AI_ent_id;
+  uint16 end_x;
+  uint16 end_y;
+  uint16 end_z;
+
+proto_battle_client::recv_msma_AI_set_fire_point (0xbabe) (0x7ff759ff2768)
+  uint16 AI_ent_id;
+  uint16 fire_x;
+  uint16 fire_y;
+  uint16 fire_z;
+  uint16 end_x;
+  uint16 end_y;
+  uint16 end_z;
+
+proto_battle_client::recv_msma_AI_set_fire_area (0xbabe) (0x7ff759ff34fe)
+  uint16 AI_ent_id;
+  uint16 fire_sx;
+  uint16 fire_sy;
+  uint16 fire_sz;
+  uint16 fire_ex;
+  uint16 fire_ey;
+  uint16 fire_ez;
+  uint16 end_x;
+  uint16 end_y;
+  uint16 end_z;
+
+proto_battle_client::recv_msma_AI_update_order (0xbabe) (0x7ff759ff3e5c)
+  uint16 AI_ent_id;
+  int32 kind;
+  int32 param;
+
+proto_battle_client::recv_msma_AI_change_movetype (0xbabe) (0x7ff759ff43f2)
+  uint16 AI_ent_id;
+  int32 action_type;
+  uint16 route_number;
+
+proto_battle_client::recv_msma_AI_move_stuckescape_r (0xbabe) (0x7ff759ff4aed)
+  uint16 AI_ent_id;
+  uint16 to_x;
+  uint16 to_y;
+  uint16 to_z;
+  uint16 msec;
+
+proto_battle_client::recv_msma_AI_move_stuckescape_end (0xbabe) (0x7ff759ff506a)
+  uint16 AI_ent_id;
+
+proto_battle_client::recv_msma_change_team (0xbabe) (0x7ff759ff54f6)
+  int32 team;
+  int32 troops;
+  uint16 ent_id;
+
+proto_battle_client::recv_bullet_supply (0xbabe) (0x7ff759ff59f0)
+  uint16 percent_val;
+  uint16 equip_idx;
+
+proto_battle_client::recv_bullet_supply_per_weapon_slot (0xbabe) (0x7ff759ff5f36)
+  uint16 supplyer_end_id;
+  uint16 supply_amount_per_weapon_slot;
+
+proto_battle_client::recv_repair_pack_supply (0xbabe) (0x7ff759ff6449)
+  int32 val;
+  uint16 equip_idx;
+
+proto_battle_client::recv_access_state (0xbabe) (0x7ff759ff6959)
+  uint16 to_ent_id;
+  uint16 from_ent_id;
+  int32 remain_msec;
+
+proto_battle_client::recv_itembox_open (0xbabe) (0x7ff759ff6eef)
+  uint16 itembox_ent_id;
+  int32 itemid;
+  int32 trap_weaponid;
+
+proto_battle_client::recv_itembox_alarm (0xbabe) (0x7ff759ff7354)
+  uint16 ent_id;
+
+proto_battle_client::recv_commander_list_get_r (0xbabe) (0x7ff759ff7814)
+  int32 result;
+  int32 commander_id;
+
+proto_battle_client::recv_commander_select_r (0xbabe) (0x7ff759ff7c92)
+  int32 result;
+
+proto_battle_client::recv_commander_select_tell (0xbabe) (0x7ff759ff811c)
+  int32 team;
+  int32 troops;
+  int32 commander_id;
+
+proto_battle_client::recv_commander_candidacy_start (0xbabe) (0x7ff759ff8583)
+  uint16 remain_sec;
+
+proto_battle_client::recv_commander_candidacy_end (0xbabe) (0x7ff759ff8a0f)
+  int32 result;
+  int32 cmdr_world_id;
+  int32 cmdr_pilot_id;
+
+proto_battle_client::recv_commander_get_pilotinfo_r (0xbabe) (0x7ff759ff904c)
+  int32 target_member;
+  uint16 target_ace;
+  uint16 kill_cnt;
+  uint16 death_cnt;
+
+proto_battle_client::recv_commander_order_assist_r (0xbabe) (0x7ff759ff953f)
+  int32 type;
+
+proto_battle_client::recv_commander_support_spot_notice (0xbabe) (0x7ff759ff9961)
+  struct support_spots -> [
+    uint16 team;
+    uint16 troops;
+    int32 type;
+    int32 stat;
+    int32 is_lock;
+    int32 pos_x;
+    int32 pos_y;
+    int32 pos_z;
+    int32 dir;
+    int32 route_no;
+    int32 ai_priority;
+  ]
+
+proto_battle_client::recv_commander_support_spot_lock (0xbabe) (0x7ff759ff9def)
+  int32 index;
+  int32 is_lock;
+
+proto_battle_client::recv_commander_support_gauge_update (0xbabe) (0x7ff759ffa263)
+  int32 gauge_val;
+  int32 no_complement;
+
+proto_battle_client::recv_commander_support_execute_r (0xbabe) (0x7ff759ffa644)
+  int32 result;
+
+proto_battle_client::recv_commander_support_tell (0xbabe) (0x7ff759ffb7a3)
+  int32 team;
+  int32 troops;
+  int32 support_type;
+  uint16 ent_id;
+  uint16 target_x;
+  uint16 target_y;
+  uint16 target_z;
+  uint16 spt_ms_index;
+  int32 spt_spot_index;
+  uint16 spt_spot_dir;
+  uint16 remain_cnt;
+  int32 remain_msec;
+  int32 use_worldid;
+  int32 use_pilotid;
+  uint16 setter_ms;
+  int32 val;
+
+proto_battle_client::recv_commander_support_end (0xbabe) (0x7ff759ffc661)
+  int32 team;
+  int32 troops;
+  int32 support_type;
+  uint16 ent_id;
+  uint16 spt_ms_index;
+  int32 spt_spot_index;
+
+proto_battle_client::recv_commander_support_debug_end (0xbabe) (0x7ff759ffcfc4)
+  int32 team;
+  int32 troops;
+  int32 support_type;
+  uint16 ent_id;
+  uint16 spt_ms_index;
+  int32 spt_spot_index;
+
+proto_battle_client::recv_commander_support_rendition_end (0xbabe) (0x7ff759ffd7a2)
+  int32 team;
+  int32 troops;
+  int32 support_type;
+  int32 spt_spot_index;
+
+proto_battle_client::recv_commander_support_countdown (0xbabe) (0x7ff759ffe29a)
+  uint16 ent_id;
+  int32 support_type;
+  int32 team;
+  int32 troops;
+  uint16 target_x;
+  uint16 target_y;
+  uint16 target_z;
+  uint16 count;
+  int32 is_hit_send;
+
+proto_battle_client::recv_commander_support_hit_from (0xbabe) (0x7ff759ffed9a)
+  int32 support_type;
+  uint16 ent_id;
+  int32 hp_now;
+  int32 hp_max;
+  int32 spbits;
+  uint16 hit_dir;
+
+proto_battle_client::recv_commander_support_cooltime_notice (0xbabe) (0x7ff759fff4c6)
+  int32 support_type;
+  int32 remain_msec;
+  int32 target_change_msec;
+
+proto_battle_client::recv_commander_support_debug_cooltime_end (0xbabe) (0x7ff759fff844)
+
+proto_battle_client::recv_xwar_commander_subcmdr_lot_r (0xbabe) (0x7ff759fffb0e)
+  int32 is_lot;
+
+proto_battle_client::recv_commander_subcmdr_candidacy_start (0xbabe) (0x7ff759fffe6b)
+  uint16 remain_sec;
+
+proto_battle_client::recv_commander_subcmdr_candidacy_end (0xbabe) (0x7ff75a0000e3)
+
+proto_battle_client::recv_commander_subcmdr_notice (0xbabe) (0x7ff75a000752)
+  int32 worldids;
+  int32 pilotids;
+  int32 subcmdr_lvpt;
+
+proto_battle_client::recv_combat_operation_start (0xbabe) (0x7ff75a0013a3)
+  int32 team;
+  int32 troops;
+  int32 support_type;
+  int32 remain_msec;
+  uint16 target_x;
+  uint16 target_y;
+  uint16 target_z;
+  int32 use_worldid;
+  int32 use_pilotid;
+
+proto_battle_client::recv_combat_operation_end (0xbabe) (0x7ff75a001c6c)
+  int32 support_type;
+  int32 is_completed;
+  int32 stg_arms_initiation_ms;
+
+proto_battle_client::recv_combat_operation_container_collect_r (0xbabe) (0x7ff75a002162)
+  uint16 ent_id;
+  int32 result;
+
+proto_battle_client::recv_combat_operation_target_change_r (0xbabe) (0x7ff75a0028a2)
+  int32 result;
+  uint16 target_x;
+  uint16 target_y;
+  uint16 target_z;
+  int32 use_worldid;
+  int32 use_pilotid;
+
+proto_battle_client::recv_dynamic_taskforce_info_update (0xbabe) (0x7ff75a0035e2)
+  int32 order_all_number;
+  int32 order_all_kind;
+  int32 order_all_param;
+  int32 members_order_idx;
+  uint16 npc_entid;
+  int32 npc_order_index;
+  int32 party_worldid;
+  int32 party_pilotid;
+
+proto_battle_client::recv_dynamic_taskforce_order_result (0xbabe) (0x7ff75a0042fe)
+  int32 result;
+  int32 order_index;
+  int32 order_number;
+  int32 order_kind;
+  int32 order_param;
+
+proto_battle_client::recv_battleship_ride_r (0xbabe) (0x7ff75a004e7d)
+  int32 result;
+  int32 from_world_id;
+  int32 from_pilot_id;
+  uint16 from_ent_id;
+  uint16 to_ent_id;
+  int32 hp_now;
+  int32 hp_max;
+  int32 shield_hp_now;
+  int32 shield_hp_max;
+
+proto_battle_client::recv_battleship_get_down_r (0xbabe) (0x7ff75a0056a1)
+  int32 result;
+  uint16 to_ent_id;
+
+proto_battle_client::recv_battleship_limittime_notice (0xbabe) (0x7ff75a005b13)
+  uint16 to_ent_id;
+  int32 limit_msec;
+
+proto_battle_client::recv_battleship_cooltime_notice (0xbabe) (0x7ff75a005f85)
+  uint16 to_ent_id;
+  int32 remain_msec;
+
+proto_battle_client::recv_rideable_msma_ride (0xbabe) (0x7ff75a00687e)
+  int32 result;
+  uint16 access_type;
+  int32 from_world_id;
+  int32 from_pilot_id;
+  uint16 from_ent_id;
+  uint16 to_ent_id;
+  int32 hp_now;
+  int32 hp_max;
+
+proto_battle_client::recv_rideable_msma_get_down_r (0xbabe) (0x7ff75a0074a4)
+  int32 result;
+  uint16 access_type;
+  uint16 from_ent_id;
+  int32 to_world_id;
+  int32 to_pilot_id;
+  uint16 to_ent_id;
+  int32 hp_now;
+  int32 hp_max;
+
+proto_battle_client::recv_bgm_change (0xbabe) (0x7ff75a007ce0)
+  struct bgm_desc -> [
+    int32 is_final_phase;
+    int32 field_bgm_id;
+    int32 ace_bgm_id;
+    int32 force_bgm_id;
+    int32 is_one_shot;
+  ]
+  int32 fade_msec;
+  uint32 reset;
+
+proto_battle_client::recv_deliver_oration (0xbabe) (0x7ff75a0081ca)
+  int32 voice_id;
+  int32 elap_msec;
+
+proto_battle_client::recv_deliver_assault_stghold_ace_status (0xbabe) (0x7ff75a008bb1)
+  int32 team;
+  int32 troops;
+  uint16 ent_id;
+  uint16 target_x;
+  uint16 target_y;
+  uint16 target_z;
+  int32 spt_spot_index;
+  uint16 spt_spot_dir;
+  int32 remain_msec;
+
+proto_battle_client::recv_conquer_spoint_change (0xbabe) (0x7ff75a009352)
+  int32 conquer;
+
+proto_battle_client::recv_mission_clear_countdown_start (0xbabe) (0x7ff75a00973e)
+  int32 remain_msec;
+  int32 clear_remain_msec;
+
+proto_battle_client::recv_mission_clear_countdown_cancel (0xbabe) (0x7ff75a009b1d)
+  int32 remain_msec;
+
+proto_battle_client::recv_mission_goal_text (0xbabe) (0x7ff75a009e73)
+  string text;
+
+proto_battle_client::recv_battle_buffitem_list (0xbabe) (0x7ff75a00a255)
+  struct buffitem -> [
+    int32 itemid;
+    int32 is_used;
+    int32 is_usable;
+  ]
+  struct buffitem_ex -> [
+    int32 itemid;
+    int32 is_used;
+    int32 is_usable;
+  ]
+
+proto_battle_client::recv_examination_progress_r (0xbabe) (0x7ff75a00a8a3)
+  struct examination_info -> [
+    int32 id;
+    int32 gain_val;
+    int32 type;
+    int32 badge_rank;
+  ]
+  int32 examination_playscore;
+  int32 examination_playsec_remain_msec;
+
+proto_battle_client::recv_daily_record_progress_r (0xbabe) (0x7ff75a00adb6)
+  struct daily_record_info -> [
+    int32 id;
+    int32 val;
+    int32 sub_val;
+    int32 is_clear;
+  ]
+
+proto_battle_client::recv_netcafe_challenge_progress_r (0xbabe) (0x7ff75a00b1c1)
+  struct netcafe_challenge_info -> [
+    int32 id;
+    int32 val;
+    int32 sub_val;
+    int32 is_clear;
+  ]
+
+proto_battle_client::recv_check_progress_quest_r (0xbabe) (0x7ff75a00b5ad)
+  struct check_quest -> [
+    int32 quest_id;
+    string title;
+    int32 achv_trig;
+    int32 achv_trigbit;
+    int32 achv_valA;
+    int32 achv_valB;
+    int32 achv_valC;
+    int32 denom_val;
+    int32 num_val;
+    int32 common_value;
+  ]
+
+proto_battle_client::recv_demolition_breakthrough_result (0xbabe) (0x7ff75a00b983)
+  int32 group_id;
+  uint32 is_succcess;
+
+proto_battle_client::recv_map_event_fog_change (0xbabe) (0x7ff75a00c199)
+  int32 nearz;
+  int32 farz;
+  uint32 color_r;
+  uint32 color_g;
+  uint32 color_b;
+  int32 time;
+  int32 elapsed_time;
+
+proto_battle_client::recv_map_event_linkfx_change (0xbabe) (0x7ff75a00c819)
+  string path;
+
+proto_battle_client::recv_gm_camera_change_r (0xbabe) (0x7ff75a00cbca)
+  int32 type;
+  uint16 args;
+
+proto_battle_client::recv_cpf_authenticate (0xbabe) (0x7ff75a00d075)
+  uint32 data;
+
+proto_battle_client::recv_cpf_authenticate_error (0xbabe) (0x7ff75a00d472)
+  int32 result;
+
+proto_battle_client::recv_system_message (0xbabe) (0x7ff75a00d84e)
+  string msg;
+  uint32 color;
+
+proto_battle_client::recv_debug_message (0xbabe) (0x7ff75a00dc75)
+  string msg;
+  uint32 color;
+
+proto_battle_client::recv_setmsparam (0xbabe) (0x7ff75a00e14a)
+  int32 ent_id;
+  int32 val;
+  int32 type;
+
+proto_battle_client::recv_setwpnparam (0xbabe) (0x7ff75a00e6dc)
+  int32 ent_id;
+  float32 val;
+  int32 type;
+
+proto_battle_client::recv_module_val_update (0xbabe) (0x7ff75a00ec71)
+  uint16 ent_id;
+  uint16 val;
+  uint16 val2;
+
+proto_battle_client::recv_module_toggle_point (0xbabe) (0x7ff75a00f209)
+  uint16 ent_id;
+  uint16 point;
+  uint16 point_max;
+
+proto_battle_client::recv_module_toggle_time (0xbabe) (0x7ff75a00f7a1)
+  uint16 ent_id;
+  int32 msec;
+  uint16 rate;
+
+proto_battle_client::recv_module_toggle_level (0xbabe) (0x7ff75a00fd37)
+  uint16 ent_id;
+  int32 level_up_flag;
+  int32 next_level_max;
+
+proto_battle_client::recv_shield_any_damage (0xbabe) (0x7ff75a01022d)
+  uint16 ent_id;
+  int32 damage;
+
+proto_battle_client::recv_chara_effect (0xbabe) (0x7ff75a01073d)
+  uint16 ent_id;
+  uint16 effect_id;
+  int32 is_start;
+
+proto_battle_client::recv_wrestle_chase_move_start_r (0xbabe) (0x7ff75a0110be)
+  uint16 ent_id;
+  int32 itemid;
+  uint16 dir_h;
+  int32 wrestle_id;
+  uint16 target_ent_id;
+  uint16 target_pos_x;
+  uint16 target_pos_y;
+  uint16 target_pos_z;
+
+proto_battle_client::recv_wrestle_chase_move_end_r (0xbabe) (0x7ff75a0117d4)
+  uint16 ent_id;
+
+proto_battle_client::recv_area_over_penalty_countdown (0xbabe) (0x7ff75a011c60)
+  uint16 ent_id;
+  int32 limit_msec;
+  int32 elapsed_msec;
+
+proto_battle_client::recv_mission_safety_area_return_to_area (0xbabe) (0x7ff75a0120c5)
+  uint16 ent_id;
+
+proto_battle_client::recv_mission_safety_area_over_penalty (0xbabe) (0x7ff75a012422)
+  uint16 ent_id;
+
+proto_battle_client::recv_custommatch_room_begin_r (0xbabe) (0x7ff75a01277f)
+  int32 result;
+
+proto_battle_client::recv_custommatch_room_breakup_r (0xbabe) (0x7ff75a012c09)
+  int32 result;
+  int32 is_room_owner;
+  int32 reason;
+
+proto_lounge_client::recv_proto_version_check_r (0xbabe) (0x7ff75a035006)
+  int32 version;
+  uint32 crc;
+  uint32 gentime;
+
+proto_lounge_client::recv_authenticate_r (0xbabe) (0x7ff75a0354f4)
+  int32 result;
+  int32 admin_lv;
+
+proto_lounge_client::recv_channel_list_get_r (0xbabe) (0x7ff75a035992)
+  struct list_chnl -> [
+    int32 channelid;
+    string name;
+    int32 type;
+    int32 pilotlv_min;
+    int32 pilotlv_max;
+    uint16 user_num_eff;
+    uint16 user_num_zeon;
+    uint16 user_max;
+    uint16 user_conn;
+    uint16 user_comeback;
+  ]
+
+proto_lounge_client::recv_channel_list_select_r (0xbabe) (0x7ff75a036176)
+  int32 result;
+  int32 channel_id;
+  string loungesv_host;
+  int32 loungesv_port;
+  int32 userid;
+  int32 pilot_id;
+  string otp;
+
+proto_lounge_client::recv_datafile_download_r (0xbabe) (0x7ff75a036b99)
+  int32 result;
+  string filepath;
+  int32 hashval;
+  uint32 src_bytes;
+  uint16 compress;
+  uint32 bin;
+
+proto_lounge_client::recv_datafile_reload (0xbabe) (0x7ff75a037613)
+  int32 result;
+  string filepath;
+  int32 hashval;
+  uint32 src_bytes;
+  uint16 compress;
+  uint32 bin;
+
+proto_lounge_client::recv_adop_ignore_list_get_r (0xbabe) (0x7ff75a037d39)
+  int32 ignore_list;
+
+proto_lounge_client::recv_pilot_list_get_r (0xbabe) (0x7ff75a038ebf)
+  int32 result;
+  struct pilots_eff -> [
+    int32 pilot_id;
+    string name;
+    int32 last_in;
+    int32 troops;
+    int32 level;
+    int32 mil_class;
+    uint16 byword;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+    int32 cmdr_fame;
+    uint16 rate_vslocal;
+    uint16 rate_vslocal_4ev;
+    uint16 rate_vslocal_clan;
+    int32 rec_vs;
+    int32 rec_vs_win;
+    int32 rec_vs_lose;
+    int32 rec_vsl_td;
+    int32 rec_vsl_td_win;
+    int32 rec_vsl_td_lose;
+    int32 rec_xwar;
+    int32 rec_xwar_win;
+    int32 rec_xwar_lose;
+    int32 rec_xwar_last1;
+    int32 rec_xwar_win_last1;
+    int32 rec_xwar_lose_last1;
+    int32 rec_xwar_win_term;
+    int32 rec_xwar_win_term_last1;
+    int32 rec_cmd;
+    int32 rec_cmd_win;
+    int32 rec_cmd_lose;
+    int32 rec_cmd_last1;
+    int32 rec_cmd_win_last1;
+    int32 rec_cmd_lose_last1;
+    int32 rec_dc;
+    int32 rec_dc_win;
+    int32 rec_dc_lose;
+    int32 score_assault_a;
+    int32 score_assault_b;
+    int32 score_snipe;
+    int32 score_cannon;
+    int32 score_support;
+    string comment;
+    int32 clan_id;
+    string clan_name;
+    int32 clan_emb_base;
+    int32 clan_emb_parts1;
+    int32 clan_emb_parts2;
+    int32 clan_lv;
+    int32 clan_memb_exp;
+    int32 cupteam_id;
+    string cupteam_name;
+    int32 channel_id;
+    int32 state_bits;
+    int32 accum_point;
+    int32 rank;
+    int32 base_accump;
+    int32 req_accump;
+    int32 level_point;
+    int32 capture_bonus_state;
+    int32 capture_bonus_limit;
+  ]
+  struct pilots_zeon -> [
+    int32 pilot_id;
+    string name;
+    int32 last_in;
+    int32 troops;
+    int32 level;
+    int32 mil_class;
+    uint16 byword;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+    int32 cmdr_fame;
+    uint16 rate_vslocal;
+    uint16 rate_vslocal_4ev;
+    uint16 rate_vslocal_clan;
+    int32 rec_vs;
+    int32 rec_vs_win;
+    int32 rec_vs_lose;
+    int32 rec_vsl_td;
+    int32 rec_vsl_td_win;
+    int32 rec_vsl_td_lose;
+    int32 rec_xwar;
+    int32 rec_xwar_win;
+    int32 rec_xwar_lose;
+    int32 rec_xwar_last1;
+    int32 rec_xwar_win_last1;
+    int32 rec_xwar_lose_last1;
+    int32 rec_xwar_win_term;
+    int32 rec_xwar_win_term_last1;
+    int32 rec_cmd;
+    int32 rec_cmd_win;
+    int32 rec_cmd_lose;
+    int32 rec_cmd_last1;
+    int32 rec_cmd_win_last1;
+    int32 rec_cmd_lose_last1;
+    int32 rec_dc;
+    int32 rec_dc_win;
+    int32 rec_dc_lose;
+    int32 score_assault_a;
+    int32 score_assault_b;
+    int32 score_snipe;
+    int32 score_cannon;
+    int32 score_support;
+    string comment;
+    int32 clan_id;
+    string clan_name;
+    int32 clan_emb_base;
+    int32 clan_emb_parts1;
+    int32 clan_emb_parts2;
+    int32 clan_lv;
+    int32 clan_memb_exp;
+    int32 cupteam_id;
+    string cupteam_name;
+    int32 channel_id;
+    int32 state_bits;
+    int32 accum_point;
+    int32 rank;
+    int32 base_accump;
+    int32 req_accump;
+    int32 level_point;
+    int32 capture_bonus_state;
+    int32 capture_bonus_limit;
+  ]
+  int32 del_remain_sec_eff;
+  int32 del_remain_sec_zeon;
+  int32 pilot_rename_remaintime_eff;
+  int32 pilot_rename_remaintime_zeon;
+  int32 charge_point;
+  struct bmgpack_list -> [
+    int32 shopitem_id;
+    int32 gp_x01;
+    int32 gp_x10;
+    int32 cp_x01;
+    int32 cp_x10;
+    int32 item_id;
+    int32 item_x01;
+    int32 bit_eff;
+    uint16 stock;
+    int32 restrictbuy;
+  ]
+  int32 is_tutorial_end;
+  int32 pilot_rename_price;
+  int32 pilot_rename_time_efsf;
+  int32 pilot_rename_forbidtime_efsf;
+  int32 pilot_rename_time_zeon;
+  int32 pilot_rename_forbidtime_zeon;
+
+proto_lounge_client::recv_pilot_create_r (0xbabe) (0x7ff75a039e03)
+  int32 result;
+  struct pilot -> [
+    int32 pilot_id;
+    string name;
+    int32 troops;
+    int32 level;
+    int32 mil_class;
+    uint16 byword;
+    int32 cmdr_fame;
+    uint16 rate_vslocal;
+    uint16 rate_vslocal_4ev;
+    uint16 rate_vslocal_clan;
+    int32 level_point;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+    int32 clan_id;
+    string clan_name;
+    int32 clan_emb_base;
+    int32 clan_emb_parts1;
+    int32 clan_emb_parts2;
+    int32 cupteam_id;
+    string cupteam_name;
+    int32 accum_point;
+    int32 rank;
+    int32 base_accump;
+    int32 req_accump;
+    int32 penalty;
+  ]
+
+proto_lounge_client::recv_pilot_rename_r (0xbabe) (0x7ff75a03a5d7)
+  int32 result;
+  int32 troops;
+  int32 slot;
+  int32 pilot_id;
+  string pilot_name;
+  int32 request_status;
+  int32 pilot_rename_remaintime;
+
+proto_lounge_client::recv_pilot_delete_r (0xbabe) (0x7ff75a03adf4)
+  int32 result;
+  int32 pilot_id;
+  int32 del_kind;
+  int32 del_remain_sec;
+
+proto_lounge_client::recv_pilot_select_r (0xbabe) (0x7ff75a03c951)
+  int32 result;
+  int32 restore_channel;
+  int32 charge_point;
+  int32 tuto_step;
+  int64 tuto_flags;
+  int32 tuto_missionid;
+  struct pilot_detail -> [
+    int32 exp;
+    int32 money;
+    int32 clan_id;
+    int32 clan_memb_exp;
+    int32 clan_forbidden;
+    int32 cupteam_id;
+    uint16 deckcost;
+    int32 last_battle;
+    int32 cw_chscore;
+    int32 score_special_a;
+    int32 last_play_bonus;
+    int32 last_dormant_ret_cc;
+    int32 capture_bonus_state;
+    int32 capture_bonus_limit;
+    int32 clan_rokaku_btime_limit;
+    string comment;
+    unknown-string hav_medal;
+    unknown-string hav_emblem;
+    unknown-string hav_avatar;
+    unknown-string hav_voice;
+    int32 hav_modules;
+    struct examination_state -> [
+      int32 state;
+      int32 chances_used;
+      int32 chances_total;
+      int32 playsec_total;
+      int32 playsec_elapsed;
+      int32 playscore_sum;
+      struct examination_list -> [
+        int32 id;
+        int32 gain_val;
+      ]
+      int32 id;
+      int32 gain_val;
+      int32 interval_cnt;
+    ]
+    struct consecutive_lose -> [
+      int32 cnt;
+      uint16 accum_pt;
+      uint16 accum_pt_diff;
+      int32 is_dirty;
+    ]
+    unknown-string rokaku_uniq_msid;
+    unknown-string rokaku_space_uniq_msid;
+    int32 rokaku_pt;
+    int32 rokaku_pt_use;
+    struct cshist -> [
+      struct items -> [
+        int32 item_id;
+        uint16 num;
+      ]
+      int32 item_id;
+      uint16 num;
+    ]
+    int32 second_chance_free;
+    int32 second_chance_free_upd;
+    string restrictbuy_multiple;
+    int32 item_id;
+    int32 bought_cnt;
+    int32 item_id;
+    int32 bought_cnt;
+    struct plan_pack_shop -> [
+      int32 pack_selected_time;
+      int32 pack_id;
+      int32 ticket_purchased_cnt;
+    ]
+    int32 dc_point;
+    int32 cb_point;
+    int32 cb_point_total;
+    struct favms_arr -> [
+      int32 pilot_id;
+      int32 favorite_ms_id;
+      int32 battle_rule;
+      int32 favorite_exp_sum;
+      int32 kill_cnt;
+      int32 kill_assist_cnt;
+      int32 resurrect_cnt;
+      int32 stghold_damage;
+      int32 battle_cnt;
+      int32 score_max_atk;
+      int32 score_max_spt;
+      int32 score_max_con;
+      int32 score_sum_atk;
+      int32 score_sum_spt;
+      int32 score_sum_con;
+      int32 score_sum_sum;
+      int32 last_update;
+      int32 dirty_flag;
+    ]
+    int32 heroms_grants;
+    unknown-string heroms_uniqid;
+    int32 last_period_bonus;
+    uint32 daily_battle_bonus_flg;
+    uint32 last_daily_battle_bonus;
+    int32 check_progress_quest_id;
+    uint16 lvjudge_hist;
+    int32 pilot_made_timestamp;
+    int32 tech_research_point;
+    int32 tech_research_panel_unlock;
+    uint16 sc_lv_up_reward_get;
+    uint16 sc_lv_max_pre;
+    uint16 sc_lv_max;
+    int32 sc_battle_num;
+    int32 sc_cb_entry_num;
+    int32 last_pilot_channel_in;
+    int32 expire_onlineevent;
+    int32 authority_onlineevent;
+    struct dailycup_result -> [
+      int32 attend_group;
+      int32 result;
+    ]
+    struct commonbattle_result -> [
+      int32 attend_group;
+      int32 result;
+    ]
+    uint16 rookie_cheer_campaign_status;
+    uint16 monthly_bonus_holding_id;
+    uint16 monthly_bonus_logincnt;
+    int32 custom_match_point;
+  ]
+  int32 is_netcafe;
+  int32 is_processing_comeback;
+  int32 vip_lv;
+  int32 overplay_type;
+  int32 accum_playtime;
+  int32 daily_compcnt;
+  int32 ncafe_compcnt;
+  string heroms_term;
+  int32 flag_wideuse;
+  int32 level_point;
+  uint16 dc_bracket_idx;
+  uint16 dc_team_id;
+  uint16 cb_bracket_idx;
+  uint16 cb_team_id;
+  int32 monthlybonus_category;
+
+proto_lounge_client::recv_pilot_comeback_process_stat (0xbabe) (0x7ff75a03d791)
+  int32 comeback_stat;
+
+proto_lounge_client::recv_pilot_exit_r (0xbabe) (0x7ff75a03dae6)
+  int32 result;
+
+proto_lounge_client::recv_pilot_tutorial_step_get_r (0xbabe) (0x7ff75a03df6a)
+  int32 tuto_step;
+  int64 tuto_flags;
+  int32 tuto_missionid;
+
+proto_lounge_client::recv_pilot_evflag_3_get_r (0xbabe) (0x7ff75a03e3c8)
+  int64 evflag3;
+
+proto_lounge_client::recv_pilot_overplay_update (0xbabe) (0x7ff75a03e7b0)
+  int32 type;
+  int32 accum_playtime;
+
+proto_lounge_client::recv_pilot_money_update (0xbabe) (0x7ff75a03eb8b)
+  int32 money;
+
+proto_lounge_client::recv_pilot_lvpt_update (0xbabe) (0x7ff75a03eee0)
+  int32 lvpt_now;
+
+proto_lounge_client::recv_pilot_level_update (0xbabe) (0x7ff75a03f66a)
+  int32 pilot_id;
+  uint16 lv_new;
+  uint16 lv_old;
+  int32 lv_point;
+  uint16 deckcost;
+  int32 reason;
+  int32 is_penalty;
+
+proto_lounge_client::recv_pilot_cmdr_fame_update (0xbabe) (0x7ff75a03fcee)
+  int32 fame_now;
+
+proto_lounge_client::recv_pilot_rating_update (0xbabe) (0x7ff75a0400d4)
+  uint16 rate_vslocal;
+  uint16 rate_vslocal_4ev;
+
+proto_lounge_client::recv_deckcost_update_by_accum_point (0xbabe) (0x7ff75a0408e6)
+  int32 userid;
+  int32 pilot_id;
+  int32 accum_point;
+  int32 rank;
+  int32 base_accump;
+  int32 req_accump;
+  int32 deckcost;
+
+proto_lounge_client::recv_pilot_comment_edit_r (0xbabe) (0x7ff75a040f5f)
+  int32 result;
+
+proto_lounge_client::recv_pilot_medal_update (0xbabe) (0x7ff75a0412d3)
+  int64 hav_medal;
+
+proto_lounge_client::recv_pilot_avatar_edit_r (0xbabe) (0x7ff75a0417f0)
+  int32 result;
+  struct avatar -> [
+    int32 avatar_id;
+    int32 gender;
+    int32 face;
+    int32 skincolor;
+    enum16 clothes;
+    uint32 hair;
+    int32 accessory;
+    int32 frame;
+    int32 voice;
+    enum16 byword;
+  ]
+  int64 hav_avatar;
+
+proto_lounge_client::recv_pilot_avatar_parts_unlock_r (0xbabe) (0x7ff75a041e00)
+  int32 result;
+  int32 custom_id;
+  int64 hav_avatar;
+
+proto_lounge_client::recv_pilot_avatar_voice_unlock_r (0xbabe) (0x7ff75a042424)
+  int32 result;
+  int32 custom_id;
+  int64 hav_voice;
+
+proto_lounge_client::recv_pilot_earlyexit_penalty (0xbabe) (0x7ff75a042911)
+  int32 penalty_sec;
+
+proto_lounge_client::recv_pilot_personal_emblem_unlock_r (0xbabe) (0x7ff75a042e38)
+  int32 result;
+  int32 emblem_id;
+  int32 use_gp;
+  int64 hav_emblem;
+
+proto_lounge_client::recv_pilot_module_unlock_r (0xbabe) (0x7ff75a04343c)
+  int32 result;
+  int32 module_id;
+
+proto_lounge_client::recv_pilot_bot_checkcode_request (0xbabe) (0x7ff75a043810)
+  string code;
+
+proto_lounge_client::recv_pilot_bot_checkcode_result (0xbabe) (0x7ff75a043b2a)
+  int32 remain;
+
+proto_lounge_client::recv_chargepoint_update (0xbabe) (0x7ff75a043e7f)
+  int32 chargepoint;
+
+proto_lounge_client::recv_chargepoint_price_list_get_r (0xbabe) (0x7ff75a0448d9)
+  int32 strg_msma;
+  int32 strg_item;
+  int32 clan_emblem;
+  int32 clan_npc;
+  int32 msma_energy;
+  int32 deckcost;
+  int32 avatar_reset;
+  int32 pilotpass_plus;
+  int32 reserve3;
+  int32 reserve4;
+
+proto_lounge_client::recv_chargepoint_charge_url_get_r (0xbabe) (0x7ff75a045175)
+  int32 result;
+  string url;
+
+proto_lounge_client::recv_bnid_mkhash_get_r (0xbabe) (0x7ff75a0455a2)
+  int32 result;
+  string mkhash;
+
+proto_lounge_client::recv_bnid_mkhash_get_for_tournament_r (0xbabe) (0x7ff75a0459cf)
+  int32 result;
+  string mkhash;
+
+proto_lounge_client::recv_chat_all_down (0xbabe) (0x7ff75a045f33)
+  int32 pilot_id;
+  int32 troops;
+  string pilot_name;
+  string msg;
+
+proto_lounge_client::recv_chat_world_down (0xbabe) (0x7ff75a0464bf)
+  int32 pilot_id;
+  string pilot_name;
+  string msg;
+
+proto_lounge_client::recv_chat_troops_down (0xbabe) (0x7ff75a0469c2)
+  int32 pilot_id;
+  string pilot_name;
+  string msg;
+
+proto_lounge_client::recv_chat_clan_down (0xbabe) (0x7ff75a046ec5)
+  int32 pilot_id;
+  string pilot_name;
+  string msg;
+
+proto_lounge_client::recv_chat_whisper_up_r (0xbabe) (0x7ff75a047473)
+  int32 result;
+  int32 to_pilot_id;
+  string to_pilot_name;
+  string msg;
+
+proto_lounge_client::recv_chat_whisper_down (0xbabe) (0x7ff75a0479ff)
+  int32 from_pilot_id;
+  string from_pilot_name;
+  string msg;
+
+proto_lounge_client::recv_chat_party_down (0xbabe) (0x7ff75a047f02)
+  int32 pilot_id;
+  string pilot_name;
+  string msg;
+
+proto_lounge_client::recv_chat_dcteam_down (0xbabe) (0x7ff75a048405)
+  int32 pilot_id;
+  string pilot_name;
+  string msg;
+
+proto_lounge_client::recv_announce (0xbabe) (0x7ff75a04886f)
+  string msg;
+  uint16 priority;
+
+proto_lounge_client::recv_cmdline_exec_r (0xbabe) (0x7ff75a048c9f)
+  int32 result;
+  string res;
+
+proto_lounge_client::recv_bonus_event_now_update (0xbabe) (0x7ff75a04905d)
+  struct events -> [
+    int32 main_rate;
+    int32 main_priority;
+    int32 gp_rate;
+    int32 reward_rate;
+    int32 raredrop_rate;
+    int32 accump_rate;
+    int32 gp_offset;
+    int32 reward_num;
+    int32 accump_offset;
+    int32 buildup_odds_offset;
+    int32 bonus_target;
+    int32 game_type;
+    int32 begin_time;
+    int32 end_time;
+  ]
+
+proto_lounge_client::recv_mission_info_update_vs (0xbabe) (0x7ff75a049872)
+  int32 mission_ids_exvs;
+  int32 mission_ids_vslocal;
+  int32 is_mission_vs_force_entry;
+  int32 xwar_entry_is_freeze;
+  int32 vswar_entry_is_freeze;
+
+proto_lounge_client::recv_mission_info_update_coop (0xbabe) (0x7ff75a04a138)
+  int64 is_unlock;
+  int64 is_known;
+  int64 is_clear;
+  int32 coop_entry_is_freeze;
+
+proto_lounge_client::recv_mission_info_unlock_coop (0xbabe) (0x7ff75a04a7cf)
+  int32 mission_id;
+
+proto_lounge_client::recv_channellobby_members_get_r (0xbabe) (0x7ff75a04ad38)
+  int32 is_simple;
+  int32 world_client_num;
+  struct pilots -> [
+    int32 pilot_id;
+    string name;
+    int32 troops;
+    int32 level;
+    int32 mil_class;
+    uint16 byword;
+    int32 cmdr_fame;
+    uint16 rate_vslocal;
+    uint16 rate_vslocal_4ev;
+    uint16 rate_vslocal_clan;
+    int32 level_point;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+    int32 clan_id;
+    string clan_name;
+    int32 clan_emb_base;
+    int32 clan_emb_parts1;
+    int32 clan_emb_parts2;
+    int32 cupteam_id;
+    string cupteam_name;
+    int32 accum_point;
+    int32 rank;
+    int32 base_accump;
+    int32 req_accump;
+    int32 penalty;
+  ]
+
+proto_lounge_client::recv_channellobby_script_play (0xbabe) (0x7ff75a04b34c)
+  string src;
+  int32 val1;
+  int32 val2;
+
+proto_lounge_client::recv_pilotcard_get_r (0xbabe) (0x7ff75a04b89f)
+  int32 result;
+  int32 world_id;
+  struct pcard -> [
+    int32 pilot_id;
+    string name;
+    int32 last_in;
+    int32 troops;
+    int32 level;
+    int32 mil_class;
+    uint16 byword;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+    int32 cmdr_fame;
+    uint16 rate_vslocal;
+    uint16 rate_vslocal_4ev;
+    uint16 rate_vslocal_clan;
+    int32 rec_vs;
+    int32 rec_vs_win;
+    int32 rec_vs_lose;
+    int32 rec_vsl_td;
+    int32 rec_vsl_td_win;
+    int32 rec_vsl_td_lose;
+    int32 rec_xwar;
+    int32 rec_xwar_win;
+    int32 rec_xwar_lose;
+    int32 rec_xwar_last1;
+    int32 rec_xwar_win_last1;
+    int32 rec_xwar_lose_last1;
+    int32 rec_xwar_win_term;
+    int32 rec_xwar_win_term_last1;
+    int32 rec_cmd;
+    int32 rec_cmd_win;
+    int32 rec_cmd_lose;
+    int32 rec_cmd_last1;
+    int32 rec_cmd_win_last1;
+    int32 rec_cmd_lose_last1;
+    int32 rec_dc;
+    int32 rec_dc_win;
+    int32 rec_dc_lose;
+    int32 score_assault_a;
+    int32 score_assault_b;
+    int32 score_snipe;
+    int32 score_cannon;
+    int32 score_support;
+    string comment;
+    int32 clan_id;
+    string clan_name;
+    int32 clan_emb_base;
+    int32 clan_emb_parts1;
+    int32 clan_emb_parts2;
+    int32 clan_lv;
+    int32 clan_memb_exp;
+    int32 cupteam_id;
+    string cupteam_name;
+    int32 channel_id;
+    int32 state_bits;
+    int32 accum_point;
+    int32 rank;
+    int32 base_accump;
+    int32 req_accump;
+    int32 level_point;
+    int32 capture_bonus_state;
+    int32 capture_bonus_limit;
+  ]
+
+proto_lounge_client::recv_pilot_rookie_get_r (0xbabe) (0x7ff75a04bebf)
+  int32 result;
+  int32 pilot_id;
+  int32 world_id;
+  uint16 rookie_cheer_campaign_status;
+
+proto_lounge_client::recv_pilot_record_get_r (0xbabe) (0x7ff75a04c8f9)
+  int32 result;
+  int32 pilot_id;
+  int32 world_id;
+  struct precord -> [
+    int32 rec_point;
+    int32 kill_cnt;
+    int32 kill_wrestle_cnt;
+    int32 kill_shot_cnt;
+    int32 kill_cannon_cnt;
+    int32 kill_throw_cnt;
+    int32 kill_deparms_cnt;
+    int32 kill_assist_cnt;
+    int32 mapobj_killcnt;
+    int32 battery_killcnt;
+    int32 stronghold_killcnt;
+    int32 death_cnt;
+    int32 search_cnt;
+    int32 resurrect_cnt;
+    int32 respawn_defeat_cnt;
+    int32 respawn_conquer_cnt;
+    int32 container_cnt;
+    int32 protect_cnt;
+    int32 stgarms_set_cnt;
+    int32 odrcomp_pl_cnt;
+    int32 move_length;
+    int32 stgarms_move_length;
+    int32 repair_armor;
+    int32 stghold_damage;
+    int32 btlship_damage;
+    int32 tender_damage;
+    int32 ace_damage;
+    int32 result_gold;
+    int32 result_gold_score;
+    int32 result_gold_rank;
+    int32 result_gold_dss;
+    int32 result_gold_conquer;
+    int32 score_atk;
+    int32 score_spt;
+    int32 score_con;
+    int32 score_total;
+    int32 score_atk_max;
+    int32 score_spt_max;
+    int32 score_con_max;
+    int32 vsl_kill_cnt;
+    int32 vsl_kill_wrestle_cnt;
+    int32 vsl_kill_shot_cnt;
+    int32 vsl_kill_cannon_cnt;
+    int32 vsl_kill_throw_cnt;
+    int32 vsl_kill_deparms_cnt;
+    int32 vsl_kill_assist_cnt;
+    int32 vsl_death_cnt;
+    int32 vsl_search_cnt;
+    int32 vsl_repair_armor;
+    int32 vsl_resurrect_cnt;
+    int32 vsl_td_kill_cnt;
+    int32 vsl_td_death_cnt;
+    uint16 vsl_td_score_best;
+    int32 vsl_td_score_total;
+    int32 dc_victory;
+    int32 dc_kill_cnt;
+    int32 dc_death_cnt;
+    int32 ms_develop_cnt;
+    int32 ms_buildup_cnt;
+    int32 weapon_unlock_cnt;
+    int32 weapon_buildup_cnt;
+  ]
+  struct pbadge -> [
+    int32 hav_count;
+  ]
+  int64 hav_medal;
+  struct msdeck -> [
+    int32 msma_id;
+    int32 weapon_main;
+    int32 weapon_sub;
+    int32 weapon_ex;
+    int32 shield;
+    int32 special;
+    int32 sp_parts;
+    int32 color;
+    int32 eq_modules;
+    int32 exceed_eq_modules;
+    int32 eq_bonus_modules;
+    string is_heroms;
+  ]
+  struct plvhist -> [
+    int32 pilot_id;
+    int32 lv_history;
+    int32 lv_history_num;
+    int32 lv_history_max;
+    uint16 xwarwin_history;
+    uint16 xwarlose_history;
+    string termstr_now;
+    int32 term_old;
+  ]
+  uint16 lvjudge_hist;
+
+proto_lounge_client::recv_pilot_favms_get_r (0xbabe) (0x7ff75a04d55b)
+  int32 result;
+  int32 pilot_id;
+  int32 world_id;
+  struct favms_arr -> [
+    int32 pilot_id;
+    int32 favorite_ms_id;
+    int32 battle_rule;
+    int32 favorite_exp_sum;
+    int32 kill_cnt;
+    int32 kill_assist_cnt;
+    int32 resurrect_cnt;
+    int32 stghold_damage;
+    int32 battle_cnt;
+    int32 score_max_atk;
+    int32 score_max_spt;
+    int32 score_max_con;
+    int32 score_sum_atk;
+    int32 score_sum_spt;
+    int32 score_sum_con;
+    int32 score_sum_sum;
+    int32 last_update;
+    int32 dirty_flag;
+  ]
+
+proto_lounge_client::recv_pilot_dailyrecord_get_r (0xbabe) (0x7ff75a04de60)
+  struct pdaily -> [
+    int32 id;
+    int32 val;
+    int32 sub_val;
+    int32 is_clear;
+  ]
+  int32 is_all_clear;
+  int32 cnt_completed;
+  uint16 year;
+  int32 month;
+  int32 day;
+
+proto_lounge_client::recv_pilot_dailyrecord_notice (0xbabe) (0x7ff75a04e4ec)
+  int32 is_open_info;
+
+proto_lounge_client::recv_pilot_dailyrecord_collect_complete_r (0xbabe) (0x7ff75a04ead5)
+  int32 result;
+  int32 cnt_completed;
+  int32 item_id;
+  uint16 item_cnt;
+  int32 money_gp;
+
+proto_lounge_client::recv_pilot_netcafechallenge_get_r (0xbabe) (0x7ff75a04f3c1)
+  struct pdaily -> [
+    int32 id;
+    int32 val;
+    int32 sub_val;
+    int32 is_clear;
+  ]
+  int32 is_all_clear;
+  int32 cnt_completed;
+  uint16 year;
+  int32 month;
+  int32 day;
+
+proto_lounge_client::recv_pilot_netcafechallenge_notice (0xbabe) (0x7ff75a04fa4d)
+  int32 is_open_info;
+
+proto_lounge_client::recv_pilot_netcafechallenge_collect_complete_r (0xbabe) (0x7ff75a050036)
+  int32 result;
+  int32 cnt_completed;
+  int32 item_id;
+  uint16 item_cnt;
+  int32 money_gp;
+
+proto_lounge_client::recv_pilot_clanchallenge_get_r (0xbabe) (0x7ff75a050922)
+  struct pclanchlg -> [
+    int32 id;
+    int32 val;
+    int32 is_clear;
+  ]
+  int32 is_perfect;
+  uint16 year;
+  int32 month;
+  int32 day;
+  int32 clan_forbidden;
+
+proto_lounge_client::recv_pilot_troopchallenge_get_r (0xbabe) (0x7ff75a0510f5)
+  int32 result;
+  struct trchallenge_info -> [
+    int32 id;
+    int32 val;
+    int32 sub_val;
+    int32 is_clear;
+  ]
+  int32 allclear_num;
+
+proto_lounge_client::recv_pilot_troopchallenge_clear_notify (0xbabe) (0x7ff75a051670)
+  struct challenge_info -> [
+    int32 id;
+    int32 val;
+    int32 sub_val;
+    int32 is_clear;
+  ]
+
+proto_lounge_client::recv_pilot_dailybattlebonus_get_r (0xbabe) (0x7ff75a051ae3)
+  int32 result;
+  int32 on_event;
+  struct bonus_info -> [
+    int32 id;
+    int32 battle_num;
+    uint32 begin_time;
+    uint32 end_time;
+    int32 rwd_item_id;
+    int32 rwd_item_num;
+    int32 rwd_gp_amount;
+    int32 is_completed;
+  ]
+
+proto_lounge_client::recv_pilot_monthlybonus_get_r (0xbabe) (0x7ff75a052135)
+  int32 result;
+  struct info -> [
+    int32 archive;
+    int32 holding_id;
+    string holding_term;
+    int32 category;
+    int32 logincnt;
+  ]
+
+proto_lounge_client::recv_buff_effect_add (0xbabe) (0x7ff75a0526de)
+  int32 buff_id;
+  int32 remain_sec;
+  int32 remain_max;
+
+proto_lounge_client::recv_buff_effect_del (0xbabe) (0x7ff75a052b3b)
+  int32 buff_id;
+
+proto_lounge_client::recv_btlroom_info_one (0xbabe) (0x7ff75a05306a)
+  int32 is_new;
+  struct roominfo -> [
+    int32 room_id;
+    string room_name;
+    int32 room_type;
+    int32 room_stat;
+    int32 play_elapsed;
+    int32 mission_id;
+    int32 extrule_id;
+    int32 is_lock;
+    int32 is_vsclan;
+    uint16 count_eff;
+    uint16 count_zeon;
+    uint16 count_max;
+    int32 master_pilotid;
+    int32 master_worldid;
+    string master_name;
+    struct custommatch_property -> [
+      int32 is_custommatch;
+      int32 owner_world_id;
+      int32 owner_pilot_id;
+      int32 flag_levellimit;
+    ]
+  ]
+  struct clan_eff -> [
+    int32 clan_id;
+    int32 world_id;
+    int32 emb_base;
+    int32 emb_parts1;
+    int32 emb_parts2;
+  ]
+  struct clan_zeon -> [
+    int32 clan_id;
+    int32 world_id;
+    int32 emb_base;
+    int32 emb_parts1;
+    int32 emb_parts2;
+  ]
+
+proto_lounge_client::recv_btlroom_deleted (0xbabe) (0x7ff75a053510)
+  int32 room_id;
+
+proto_lounge_client::recv_btlroom_update_count (0xbabe) (0x7ff75a053c19)
+  int32 room_ids;
+  uint16 count_effs;
+  uint16 count_zeons;
+
+proto_lounge_client::recv_btlroom_quick_start_r (0xbabe) (0x7ff75a054266)
+  int32 result;
+
+proto_lounge_client::recv_btlroom_create_r (0xbabe) (0x7ff75a05479b)
+  int32 result;
+  int32 matching_type;
+  int32 mission_id;
+  int32 room_id;
+
+proto_lounge_client::recv_btlroom_enter_r (0xbabe) (0x7ff75a054fad)
+  int32 result;
+  int32 matching_type;
+  string battlesv_host;
+  int32 battlesv_port;
+  int32 room_id;
+  string otp_battle;
+
+proto_lounge_client::recv_btlroom_invite_r (0xbabe) (0x7ff75a055662)
+  int32 result;
+  int32 refuse_pilot_id;
+  int32 reason;
+
+proto_lounge_client::recv_btlroom_invite_to (0xbabe) (0x7ff75a055d19)
+  int32 room_id;
+  string room_pw;
+  int32 pilot_id;
+  string pilot_name;
+  int32 is_gm_camera;
+
+proto_lounge_client::recv_btlroom_change_mission_r (0xbabe) (0x7ff75a0563d5)
+  int32 result;
+  string room_name;
+  int32 mission_id;
+  int32 is_lock;
+
+proto_lounge_client::recv_btlroom_commander_cheer_r (0xbabe) (0x7ff75a056882)
+  string cmdr_name;
+
+proto_lounge_client::recv_btlroom_commander_cheer_message (0xbabe) (0x7ff75a056b9d)
+  string pilot_name;
+
+proto_lounge_client::recv_btlroom_coop_roomlist_get_r (0xbabe) (0x7ff75a056f88)
+  struct roomlist -> [
+    int32 room_id;
+    string room_name;
+    int32 room_type;
+    int32 room_stat;
+    int32 play_elapsed;
+    int32 mission_id;
+    int32 extrule_id;
+    int32 is_lock;
+    int32 is_vsclan;
+    uint16 count_eff;
+    uint16 count_zeon;
+    uint16 count_max;
+    int32 master_pilotid;
+    int32 master_worldid;
+    string master_name;
+    struct custommatch_property -> [
+      int32 is_custommatch;
+      int32 owner_world_id;
+      int32 owner_pilot_id;
+      int32 flag_levellimit;
+    ]
+  ]
+
+proto_lounge_client::recv_btlroom_member_detail_get_r (0xbabe) (0x7ff75a057596)
+  int32 result;
+  struct roominfo -> [
+    int32 room_id;
+    string room_name;
+    int32 room_type;
+    int32 room_stat;
+    int32 play_elapsed;
+    int32 mission_id;
+    int32 extrule_id;
+    int32 is_lock;
+    int32 is_vsclan;
+    uint16 count_eff;
+    uint16 count_zeon;
+    uint16 count_max;
+    int32 master_pilotid;
+    int32 master_worldid;
+    string master_name;
+    struct custommatch_property -> [
+      int32 is_custommatch;
+      int32 owner_world_id;
+      int32 owner_pilot_id;
+      int32 flag_levellimit;
+    ]
+  ]
+  struct members -> [
+    int32 pilot_id;
+    string name;
+    int32 level;
+    uint16 rate_vslocal;
+    int32 is_leader;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+    int32 pstat;
+  ]
+
+proto_lounge_client::recv_xwar_entry_regist_r (0xbabe) (0x7ff75a057a86)
+  int32 result;
+
+proto_lounge_client::recv_xwar_forcegauge_get_r (0xbabe) (0x7ff75a0580ed)
+  int32 e_fgauge;
+  int32 z_fgauge;
+  string ranking_term_now;
+  string ranking_term_last;
+  int32 lose_troops;
+  uint16 expup_fgauge;
+
+proto_lounge_client::recv_xwar_reward_accept_notice (0xbabe) (0x7ff75a0587a5)
+  int32 item_id;
+  int32 amount;
+  int32 bTwice;
+
+proto_lounge_client::recv_xwar_booking_option_get_r (0xbabe) (0x7ff75a058f69)
+  int32 result;
+  int32 matching_type;
+  int32 matching_request_flag;
+  int32 matching_battlerule_flag;
+  int32 matching_extrule_flag;
+  struct ext_subrule -> [
+    enum16 subrule_type;
+    uint16 param;
+    int32 mslimit_usable_msid;
+  ]
+
+proto_lounge_client::recv_xwar_booking_info_get_r (0xbabe) (0x7ff75a05997e)
+  int32 matching_type;
+  int32 is_active;
+  int32 room_cnt;
+  int32 book_cntE;
+  int32 book_cntZ;
+  int32 remain_count;
+  int32 remain_seconds;
+
+proto_lounge_client::recv_xwar_booking_regist_r (0xbabe) (0x7ff75a05a605)
+  int32 result;
+  int32 matching_type;
+  int32 is_newbie;
+  int32 matching_request_flag;
+  int32 matching_battlerule_flag;
+  int32 matching_extrule_flag;
+  int32 is_party_wait;
+  uint16 party_wait_sec;
+  int32 is_party_readyNG;
+
+proto_lounge_client::recv_xwar_booking_cancel_r (0xbabe) (0x7ff75a05ae2c)
+  int32 result;
+  int32 matching_type;
+
+proto_lounge_client::recv_xwar_booking_room_created (0xbabe) (0x7ff75a05b3e5)
+  int32 matching_type;
+  int32 room_id;
+  int32 wait_sec;
+  int32 mission_id;
+
+proto_lounge_client::recv_xwar_booking_waitbonus_notice (0xbabe) (0x7ff75a05b8cf)
+  struct wbonus -> [
+    int32 lv;
+    int32 openbox;
+    uint16 gp_rate;
+    uint16 event_bonus;
+  ]
+
+proto_lounge_client::recv_xwar_booking_forced_enter_notify (0xbabe) (0x7ff75a05bb2f)
+
+proto_lounge_client::recv_party_create_r (0xbabe) (0x7ff75a05bfc1)
+  int32 result;
+  int32 is_recruiting;
+  string comment;
+  int32 party_type;
+
+proto_lounge_client::recv_party_invite_r (0xbabe) (0x7ff75a05c5a2)
+  int32 result;
+  int32 pilot_id;
+  int32 reason;
+
+proto_lounge_client::recv_party_invite_to (0xbabe) (0x7ff75a05cbda)
+  int32 party_id;
+  int32 channel_id;
+  int32 pilot_id;
+  string pilot_name;
+
+proto_lounge_client::recv_party_enter_r (0xbabe) (0x7ff75a05d2ff)
+  int32 result;
+  int32 is_recruiting;
+  string comment;
+  uint16 remain_minutes;
+  int32 party_type;
+
+proto_lounge_client::recv_party_leader_delegate_r (0xbabe) (0x7ff75a05d8cc)
+  int32 pilot_id_old_leader;
+  int32 pilot_id_new_leader;
+
+proto_lounge_client::recv_party_member_add (0xbabe) (0x7ff75a05e00a)
+  struct pilot -> [
+    int32 pilot_id;
+    string name;
+    int32 troops;
+    int32 level;
+    int32 mil_class;
+    uint16 byword;
+    int32 cmdr_fame;
+    uint16 rate_vslocal;
+    uint16 rate_vslocal_4ev;
+    uint16 rate_vslocal_clan;
+    int32 level_point;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+    int32 clan_id;
+    string clan_name;
+    int32 clan_emb_base;
+    int32 clan_emb_parts1;
+    int32 clan_emb_parts2;
+    int32 cupteam_id;
+    string cupteam_name;
+    int32 accum_point;
+    int32 rank;
+    int32 base_accump;
+    int32 req_accump;
+    int32 penalty;
+  ]
+  int32 stat;
+  int32 mission_id;
+  int32 is_party_leader;
+  int32 comeback_limittime;
+  int32 is_booking;
+
+proto_lounge_client::recv_party_member_del (0xbabe) (0x7ff75a05e683)
+  int32 pilot_id;
+  int32 is_kick;
+
+proto_lounge_client::recv_party_member_kick_r (0xbabe) (0x7ff75a05eaf5)
+  int32 result;
+  int32 pilot_id;
+
+proto_lounge_client::recv_party_info_edit_notice (0xbabe) (0x7ff75a05eff1)
+  int32 is_recruiting;
+  string comment;
+  int32 party_type;
+
+proto_lounge_client::recv_party_member_stat_update (0xbabe) (0x7ff75a05f4e1)
+  struct party_member_stats -> [
+    int32 pilot_id;
+    int32 lv;
+    uint16 rate_vslocal;
+    int32 stat;
+    int32 is_booking;
+    int32 mission_id;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+  ]
+
+proto_lounge_client::recv_party_recruit_list_get_r (0xbabe) (0x7ff75a05fb0c)
+  struct recruits -> [
+    int32 channel_id;
+    int32 party_id;
+    int32 troops;
+    uint16 member_count;
+    string comment;
+    int32 pstat;
+    int32 is_lock;
+    uint16 remain_minutes;
+    int32 party_type;
+  ]
+  struct leaders -> [
+    int32 pilot_id;
+    string name;
+    int32 level;
+    uint16 rate_vslocal;
+    int32 is_leader;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+    int32 pstat;
+  ]
+
+proto_lounge_client::recv_party_recruit_detail_get_r (0xbabe) (0x7ff75a06023f)
+  int32 result;
+  struct recruit -> [
+    int32 channel_id;
+    int32 party_id;
+    int32 troops;
+    uint16 member_count;
+    string comment;
+    int32 pstat;
+    int32 is_lock;
+    uint16 remain_minutes;
+    int32 party_type;
+  ]
+  struct members -> [
+    int32 pilot_id;
+    string name;
+    int32 level;
+    uint16 rate_vslocal;
+    int32 is_leader;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+    int32 pstat;
+  ]
+
+proto_lounge_client::recv_party_booking_ready_r (0xbabe) (0x7ff75a0607c0)
+  int32 result;
+  int32 ready_ok;
+
+proto_lounge_client::recv_party_clan_rate_get_notice (0xbabe) (0x7ff75a060ba1)
+  int32 is_enable;
+
+proto_lounge_client::recv_msma_init_get_r_begin (0xbabe) (0x7ff75a061506)
+  int32 sv_time;
+  uint16 slot_num;
+  int32 sort_tm_sec;
+  int32 sort_tm_usec;
+  uint16 conf_payload_boost_penalty;
+  uint16 conf_payload_boost_bonus;
+  uint16 conf_payload_body_balance_max;
+  int32 msma_sort_type;
+  int32 msma_sort_order;
+
+proto_lounge_client::recv_msma_init_get_r_end (0xbabe) (0x7ff75a061bb9)
+
+proto_lounge_client::recv_msma_add (0xbabe) (0x7ff75a0622fd)
+  struct ms -> [
+    unknown-string uniqid;
+    int32 msma_id;
+    uint32 tm_sec;
+    uint32 tm_usec;
+    string nickname;
+    int32 energy_now;
+    int32 decal;
+    int32 color;
+    string deckslot;
+    string is_costover;
+    int32 cost;
+    int32 mission_cost;
+    int32 eqweapon_itemid;
+    int32 eqshield_itemid;
+    int32 eqspecial_itemid;
+    int32 eq_modules;
+    int32 eq_bonus_modules;
+    int32 sp_parts;
+    int32 sp_parts_exp;
+    uint16 buildup_cnt;
+    uint16 up_param;
+    uint16 up_param_develop;
+    uint16 weapon_buildup_extra_cnt;
+    enum16 msbits;
+    uint32 unlocked_colors;
+    int32 spticket_success_ms;
+    int32 spticket_greatest_ms;
+    int32 is_favorite;
+    struct advanced_custom_data -> [
+      uint16 exceed_steps;
+      uint16 exceed_buildup_cnt;
+      int32 exceed_eq_modules;
+      int32 use_exceed_module_slot_num;
+      int32 exceed_sp_parts;
+      int32 exceed_sp_parts_exp;
+    ]
+  ]
+  struct unlockw -> [
+    int32 item_id;
+    uint16 db_index;
+    uint16 buildup_cnt;
+    uint16 buildup_val;
+    int32 spticket_success_wp;
+    int32 spticket_greatest_wp;
+  ]
+  struct equip_set -> [
+    unknown-string uniq_id;
+    uint16 slot;
+    int32 eq_weapon;
+    int32 eq_shield;
+    int32 eq_special;
+    int32 eq_modules;
+    int32 eq_bonus_modules;
+    string setname;
+    int32 sp_parts;
+    int32 exceed_eq_modules;
+  ]
+  struct adop_list -> [
+    int32 db_index;
+    int32 equip_wid;
+    uint16 adop_set;
+  ]
+
+proto_lounge_client::recv_msma_add_dialog_show (0xbabe) (0x7ff75a062a4f)
+  int32 msma_id;
+  uint16 stack;
+
+proto_lounge_client::recv_msma_del (0xbabe) (0x7ff75a062e30)
+  int64 uniqid;
+
+proto_lounge_client::recv_msma_update (0xbabe) (0x7ff75a06321e)
+  int64 uniqid;
+  int32 msma_id;
+
+proto_lounge_client::recv_msma_get_buyback_list_r (0xbabe) (0x7ff75a0636c7)
+  struct ms_list -> [
+    unknown-string uniqid;
+    int32 msma_id;
+    uint32 tm_sec;
+    uint32 tm_usec;
+    string nickname;
+    int32 energy_now;
+    int32 decal;
+    int32 color;
+    string deckslot;
+    string is_costover;
+    int32 cost;
+    int32 mission_cost;
+    int32 eqweapon_itemid;
+    int32 eqshield_itemid;
+    int32 eqspecial_itemid;
+    int32 eq_modules;
+    int32 eq_bonus_modules;
+    int32 sp_parts;
+    int32 sp_parts_exp;
+    uint16 buildup_cnt;
+    uint16 up_param;
+    uint16 up_param_develop;
+    uint16 weapon_buildup_extra_cnt;
+    enum16 msbits;
+    uint32 unlocked_colors;
+    int32 spticket_success_ms;
+    int32 spticket_greatest_ms;
+    int32 is_favorite;
+    struct advanced_custom_data -> [
+      uint16 exceed_steps;
+      uint16 exceed_buildup_cnt;
+      int32 exceed_eq_modules;
+      int32 use_exceed_module_slot_num;
+      int32 exceed_sp_parts;
+      int32 exceed_sp_parts_exp;
+    ]
+  ]
+
+proto_lounge_client::recv_msma_deckslot_change_r (0xbabe) (0x7ff75a063d59)
+  int32 result;
+  int64 uniqid;
+  uint16 decktype;
+  uint16 deckslot;
+  int32 is_costover;
+
+proto_lounge_client::recv_msma_deckslot_change_terminal (0xbabe) (0x7ff75a0641ed)
+
+proto_lounge_client::recv_msma_equip_weapon_change_r (0xbabe) (0x7ff75a064691)
+  int32 result;
+  int64 uniqid_ms;
+  uint16 eq_slot;
+  int32 item_id;
+
+proto_lounge_client::recv_msma_equip_weapon_exchange_r (0xbabe) (0x7ff75a064d58)
+  int32 result;
+  int64 uniqid_ms;
+  uint16 eq_slot1;
+  uint16 eq_slot2;
+
+proto_lounge_client::recv_msma_equip_shield_change_r (0xbabe) (0x7ff75a065377)
+  int32 result;
+  int64 uniqid_ms;
+  int32 item_id;
+
+proto_lounge_client::recv_msma_equip_special_change_r (0xbabe) (0x7ff75a06590a)
+  int32 result;
+  int64 uniqid_ms;
+  int32 item_id;
+
+proto_lounge_client::recv_msma_equip_modules_update_r (0xbabe) (0x7ff75a065ffd)
+  int32 result;
+  int64 uniqid_ms;
+  int32 eq_modules;
+  int32 eq_advanced_custom_modules;
+  int32 cost;
+
+proto_lounge_client::recv_msma_equip_advanced_custom_modules_update_r (0xbabe) (0x7ff75a066869)
+  int32 result;
+  int64 uniqid_ms;
+  int32 eq_advanced_custom_modules;
+  int32 use_exceed_module_slot_num;
+
+proto_lounge_client::recv_msma_equip_bonus_modules_update_r (0xbabe) (0x7ff75a066f16)
+  int32 result;
+  int64 uniqid_ms;
+  int32 eq_bonus_modules;
+
+proto_lounge_client::recv_msma_nickname_change_r (0xbabe) (0x7ff75a067532)
+  int32 result;
+  int64 uniqid;
+  string nickname;
+
+proto_lounge_client::recv_msma_decal_change_r (0xbabe) (0x7ff75a067b36)
+  int32 result;
+  int64 uniqid_ms;
+  int32 decal;
+  int64 uniqid_decal;
+
+proto_lounge_client::recv_msma_color_change_r (0xbabe) (0x7ff75a068153)
+  int32 result;
+  int64 uniqid_ms;
+  int32 color;
+
+proto_lounge_client::recv_msma_energy_update (0xbabe) (0x7ff75a068648)
+  int64 uniqid;
+  int32 energy_now;
+
+proto_lounge_client::recv_msma_energy_charge_r (0xbabe) (0x7ff75a068a29)
+  int32 result;
+
+proto_lounge_client::recv_msma_energy_charge_deck_r (0xbabe) (0x7ff75a068d84)
+  int32 result;
+
+proto_lounge_client::recv_msma_sort_list_r (0xbabe) (0x7ff75a0692b9)
+  int32 sort_tm_sec;
+  int32 sort_tm_usec;
+  int32 msma_sort_type;
+  int32 msma_sort_order;
+
+proto_lounge_client::recv_msma_plan_sort_list_r (0xbabe) (0x7ff75a06997d)
+  int32 sort_tm_sec;
+  int32 sort_tm_usec;
+  int32 msma_sort_type;
+  int32 msma_sort_order;
+
+proto_lounge_client::recv_msma_mschoice_notice (0xbabe) (0x7ff75a06a0f6)
+  int32 result;
+  struct mschoice -> [
+    struct choice_ms -> [
+      int32 msma_id;
+      int32 sp_parts_id;
+      int32 weapon_id;
+    ]
+  ]
+  uint16 under_cost;
+  uint16 upper_cost;
+  int32 btltype;
+
+proto_lounge_client::recv_msma_mschoice_decision_r (0xbabe) (0x7ff75a06a9ec)
+  int32 result;
+  int32 set_index;
+  int32 choice_index;
+
+proto_lounge_client::recv_mschoice_ms_battletype_num_notice (0xbabe) (0x7ff75a06b00e)
+  int32 result;
+  uint16 battletype_num;
+
+proto_lounge_client::recv_mschoice_comeback_notice (0xbabe) (0x7ff75a06b520)
+  int32 result;
+  struct ms_info -> [
+    int32 msma_id;
+    int32 sp_parts_id;
+    int32 weapon_id;
+  ]
+
+proto_lounge_client::recv_msma_mschoice_weapon_change_r (0xbabe) (0x7ff75a06bac3)
+  int32 result;
+  int32 msma_id;
+  int32 weapon_id;
+
+proto_lounge_client::recv_msma_create_r (0xbabe) (0x7ff75a06c18e)
+  int32 result;
+  int64 uniqid_ms;
+  int32 workres;
+  int32 mech_npcpict;
+
+proto_lounge_client::recv_msma_create_estimate_r (0xbabe) (0x7ff75a06c70a)
+  int32 result;
+  int32 price;
+
+proto_lounge_client::recv_msma_create_complete_r (0xbabe) (0x7ff75a06ccc3)
+  int32 result;
+  int64 uniqid_ms;
+  int32 workres;
+  int32 mech_npcpict;
+
+proto_lounge_client::recv_msma_breakup_r (0xbabe) (0x7ff75a06d1ae)
+  int32 result;
+
+proto_lounge_client::recv_msma_buildup_r (0xbabe) (0x7ff75a06dc0e)
+  int32 result;
+  int64 uniqid_ms;
+  int32 ticket_id;
+  uint16 usenum;
+  int32 workres;
+  uint16 buildup_cnt;
+  uint16 param_idx;
+  uint16 up_param;
+  int32 mech_npcpict;
+  uint16 exceed_buildup_cnt;
+
+proto_lounge_client::recv_msma_buildup_estimate_r (0xbabe) (0x7ff75a06e4c3)
+  int32 result;
+  int32 price;
+
+proto_lounge_client::recv_msma_buildup_complete_r (0xbabe) (0x7ff75a06efa7)
+  int32 result;
+  int64 uniqid_ms;
+  int32 ticket_id;
+  uint16 usenum;
+  int32 workres;
+  uint16 buildup_cnt;
+  uint16 param_idx;
+  uint16 up_param;
+  int32 mech_npcpict;
+  uint16 exceed_buildup_cnt;
+
+proto_lounge_client::recv_msma_buildup_reset_r (0xbabe) (0x7ff75a06f8ff)
+  int32 result;
+  int64 uniqid_ms;
+  uint16 up_param;
+
+proto_lounge_client::recv_msma_weapon_buildup_extra_cnt_update_r (0xbabe) (0x7ff75a06ff22)
+  int32 result;
+  int64 uniqid_ms;
+  uint16 weapon_buildup_extra_cnt;
+
+proto_lounge_client::recv_msma_weapon_buildup_r (0xbabe) (0x7ff75a070a8d)
+  int32 result;
+  int64 uniqid_ms;
+  int32 item_id;
+  int32 ticket_id;
+  uint16 usenum;
+  uint16 param_target;
+  int32 workres;
+  uint16 buildup_cnt;
+  uint16 up_param;
+  int32 mech_npcpict;
+
+proto_lounge_client::recv_msma_weapon_buildup_estimate_r (0xbabe) (0x7ff75a07133f)
+  int32 result;
+  int32 price;
+
+proto_lounge_client::recv_msma_weapon_buildup_complete_r (0xbabe) (0x7ff75a071e23)
+  int32 result;
+  int64 uniqid_ms;
+  int32 item_id;
+  int32 ticket_id;
+  uint16 usenum;
+  uint16 param_target;
+  int32 workres;
+  uint16 buildup_cnt;
+  uint16 up_param;
+  int32 mech_npcpict;
+
+proto_lounge_client::recv_msma_weapon_buildup_reset_r (0xbabe) (0x7ff75a072773)
+  int32 result;
+  int64 uniqid_ms;
+  int32 item_id;
+
+proto_lounge_client::recv_msma_weapon_unlock_r (0xbabe) (0x7ff75a072db1)
+  int32 result;
+  int64 uniqid_ms;
+  int32 item_id;
+  int32 db_index;
+
+proto_lounge_client::recv_msma_weapon_unlock_estimate_r (0xbabe) (0x7ff75a07332f)
+  int32 result;
+  int32 price;
+
+proto_lounge_client::recv_msma_weapon_unlock_complete_r (0xbabe) (0x7ff75a0738e8)
+  int32 result;
+  int64 uniqid_ms;
+  int32 item_id;
+  int32 db_index;
+
+proto_lounge_client::recv_msma_color_unlock_r (0xbabe) (0x7ff75a073faf)
+  int32 result;
+  int64 uniqid_ms;
+  int32 color_id;
+  int32 unlocked_colors;
+
+proto_lounge_client::recv_msma_overhaul_r (0xbabe) (0x7ff75a07449a)
+  int32 result;
+
+proto_lounge_client::recv_msma_overhaul_change_r (0xbabe) (0x7ff75a074924)
+  int32 result;
+  int64 uniqid_ms;
+  int32 sp_parts;
+
+proto_lounge_client::recv_msma_sp_parts_exp_update (0xbabe) (0x7ff75a074eb7)
+  int64 uniqid_ms;
+  int32 sp_parts;
+  int32 exp;
+
+proto_lounge_client::recv_msma_sp_parts_level_update (0xbabe) (0x7ff75a0754f6)
+  int64 uniqid_ms;
+  int32 sp_parts;
+  int32 isWearing;
+  uint16 advanced_custom_idx;
+
+proto_lounge_client::recv_msma_msset_get_r (0xbabe) (0x7ff75a075aac)
+  struct ms_set -> [
+    unknown-string uniq_id;
+    uint16 deck_type;
+    uint16 deck_slot;
+    string setname;
+    unknown-string msma_uniq_ids;
+    uint16 equip_set_slots;
+  ]
+
+proto_lounge_client::recv_msma_msset_store_r (0xbabe) (0x7ff75a075f3a)
+  int32 result;
+  struct ms_set -> [
+    unknown-string uniq_id;
+    uint16 deck_type;
+    uint16 deck_slot;
+    string setname;
+    unknown-string msma_uniq_ids;
+    uint16 equip_set_slots;
+  ]
+
+proto_lounge_client::recv_msma_msset_del_r (0xbabe) (0x7ff75a076431)
+  int32 result;
+  uint16 deck_type;
+  uint16 slot;
+
+proto_lounge_client::recv_msma_msset_apply_r (0xbabe) (0x7ff75a0769c7)
+  int32 result;
+  uint16 deck_type;
+  uint16 slot;
+
+proto_lounge_client::recv_msma_equipset_store_r (0xbabe) (0x7ff75a076f5d)
+  int32 result;
+  int64 uniqid_ms;
+  struct equip_set -> [
+    unknown-string uniq_id;
+    uint16 slot;
+    int32 eq_weapon;
+    int32 eq_shield;
+    int32 eq_special;
+    int32 eq_modules;
+    int32 eq_bonus_modules;
+    string setname;
+    int32 sp_parts;
+    int32 exceed_eq_modules;
+  ]
+
+proto_lounge_client::recv_msma_equipset_switch_r (0xbabe) (0x7ff75a077584)
+  int32 result;
+  int64 uniqid_ms;
+  uint16 slot;
+  int32 cost;
+
+proto_lounge_client::recv_msma_equip_all_change_r (0xbabe) (0x7ff75a077c4b)
+  int32 result;
+  int64 uniqid_ms;
+  struct equip_set -> [
+    unknown-string uniq_id;
+    uint16 slot;
+    int32 eq_weapon;
+    int32 eq_shield;
+    int32 eq_special;
+    int32 eq_modules;
+    int32 eq_bonus_modules;
+    string setname;
+    int32 sp_parts;
+    int32 exceed_eq_modules;
+  ]
+  int32 cost;
+
+proto_lounge_client::recv_msma_equipset_del_r (0xbabe) (0x7ff75a07824e)
+  int32 result;
+  int64 uniqid_ms;
+  uint16 slot;
+
+proto_lounge_client::recv_msma_missionunit_get_list_r (0xbabe) (0x7ff75a078779)
+  struct missionunit_set -> [
+    uint16 deck_type;
+    uint16 deck_set;
+    int32 missionunit_id;
+  ]
+
+proto_lounge_client::recv_msma_missionunit_store_r (0xbabe) (0x7ff75a078c07)
+  int32 result;
+  struct missionunit_set -> [
+    uint16 deck_type;
+    uint16 deck_set;
+    int32 missionunit_id;
+  ]
+
+proto_lounge_client::recv_msma_buyback_r (0xbabe) (0x7ff75a079060)
+  int32 result;
+  int64 uniqid_ms;
+
+proto_lounge_client::recv_msma_advanced_custom_steps_update_r (0xbabe) (0x7ff75a07956f)
+  int32 result;
+  int64 uniqid_ms;
+  struct advanced_custom_data -> [
+    uint16 exceed_steps;
+    uint16 exceed_buildup_cnt;
+    int32 exceed_eq_modules;
+    int32 use_exceed_module_slot_num;
+    int32 exceed_sp_parts;
+    int32 exceed_sp_parts_exp;
+  ]
+
+proto_lounge_client::recv_item_init_get_r (0xbabe) (0x7ff75a07b000)
+  uint16 slot_num_main;
+  uint16 slot_num_consume;
+  uint16 slot_num_trash;
+  uint16 slot_num_plan;
+  int32 sort_tm_sec_main;
+  int32 sort_tm_usec_main;
+  int32 sort_tm_sec_consume;
+  int32 sort_tm_usec_consume;
+  int32 sort_tm_sec_plan;
+  int32 sort_tm_usec_plan;
+  struct itmlist_main -> [
+    unknown-string uniqid;
+    int32 item_id;
+    uint32 tm_sec;
+    uint32 tm_usec;
+    uint16 stack;
+  ]
+  struct itmlist_consume -> [
+    unknown-string uniqid;
+    int32 item_id;
+    uint32 tm_sec;
+    uint32 tm_usec;
+    uint16 stack;
+  ]
+  struct itmlist_trash -> [
+    unknown-string uniqid;
+    int32 item_id;
+    uint32 tm_sec;
+    uint32 tm_usec;
+    uint16 stack;
+  ]
+  struct itmlist_plan -> [
+    unknown-string uniqid;
+    int32 item_id;
+    uint32 tm_sec;
+    uint32 tm_usec;
+    uint16 stack;
+  ]
+  int32 msma_plan_sort_type;
+  int32 msma_plan_sort_order;
+  int32 sort_plan_sec;
+  int32 sort_plan_usec;
+
+proto_lounge_client::recv_item_add (0xbabe) (0x7ff75a07bf87)
+  uint16 inv_place;
+  struct item -> [
+    unknown-string uniqid;
+    int32 item_id;
+    uint32 tm_sec;
+    uint32 tm_usec;
+    uint16 stack;
+  ]
+
+proto_lounge_client::recv_item_add_dialog_show (0xbabe) (0x7ff75a07c3ec)
+  int32 item_id;
+  uint16 stack;
+
+proto_lounge_client::recv_item_del (0xbabe) (0x7ff75a07c7cd)
+  int64 uniqid;
+
+proto_lounge_client::recv_item_stack_update (0xbabe) (0x7ff75a07cbbb)
+  int64 uniqid;
+  uint16 stack;
+
+proto_lounge_client::recv_item_sort_list_r (0xbabe) (0x7ff75a07d0cd)
+  uint16 inv_place;
+  int32 sort_tm_sec;
+  int32 sort_tm_usec;
+
+proto_lounge_client::recv_item_use_uniqid_in_lobby_r (0xbabe) (0x7ff75a07d532)
+  int32 result;
+
+proto_lounge_client::recv_item_use_uniqid_in_battle_r (0xbabe) (0x7ff75a07d91e)
+  int32 result;
+  int32 item_id;
+
+proto_lounge_client::recv_item_redemption_r (0xbabe) (0x7ff75a07dcfd)
+  int32 result;
+
+proto_lounge_client::recv_item_buyback_delete_term_get_r (0xbabe) (0x7ff75a07e053)
+  string delete_term;
+
+proto_lounge_client::recv_friend_list_get_idlist_r (0xbabe) (0x7ff75a07e4d6)
+  int32 result;
+  int32 friend_idlist;
+
+proto_lounge_client::recv_friend_list_get_detail_r (0xbabe) (0x7ff75a07eaba)
+  int32 result;
+  struct friend_details -> [
+    int32 pilot_id;
+    string name;
+    int32 last_in;
+    int32 troops;
+    int32 level;
+    int32 mil_class;
+    uint16 byword;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+    int32 clan_id;
+    string clan_name;
+    int32 clan_emb_base;
+    int32 clan_emb_parts1;
+    int32 clan_emb_parts2;
+    int32 clan_memb_exp;
+    int32 clan_memb_exp_use;
+    int32 channel_id;
+    int32 capture_bonus_state;
+    int32 capture_bonus_limit;
+    int32 rokaku_pt_use;
+    int32 state_bits;
+  ]
+
+proto_lounge_client::recv_friend_list_mail_accept_r (0xbabe) (0x7ff75a07efce)
+  int32 result;
+  int32 to_pilotid;
+
+proto_lounge_client::recv_friend_list_remove_r (0xbabe) (0x7ff75a07f3ad)
+  int32 result;
+
+proto_lounge_client::recv_online_notice (0xbabe) (0x7ff75a07f8c3)
+  int32 pilot_id;
+  string pilot_name;
+  int32 count;
+  int32 type;
+
+proto_lounge_client::recv_friend_history_get_r (0xbabe) (0x7ff75a07fed9)
+  int32 result;
+  struct friend_histories -> [
+    int32 pilot_id;
+    string name;
+    int32 last_in;
+    int32 troops;
+    int32 level;
+    int32 mil_class;
+    uint16 byword;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+    int32 clan_id;
+    string clan_name;
+    int32 clan_emb_base;
+    int32 clan_emb_parts1;
+    int32 clan_emb_parts2;
+    int32 clan_memb_exp;
+    int32 clan_memb_exp_use;
+    int32 channel_id;
+    int32 capture_bonus_state;
+    int32 capture_bonus_limit;
+    int32 rokaku_pt_use;
+    int32 state_bits;
+  ]
+
+proto_lounge_client::recv_friend_history_get_xworld_r (0xbabe) (0x7ff75a08063f)
+  int32 result;
+  struct friend_histories -> [
+    int32 pilot_id;
+    string name;
+    int32 last_in;
+    int32 troops;
+    int32 level;
+    int32 mil_class;
+    uint16 byword;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+    int32 clan_id;
+    string clan_name;
+    int32 clan_emb_base;
+    int32 clan_emb_parts1;
+    int32 clan_emb_parts2;
+    int32 clan_memb_exp;
+    int32 clan_memb_exp_use;
+    int32 channel_id;
+    int32 capture_bonus_state;
+    int32 capture_bonus_limit;
+    int32 rokaku_pt_use;
+    int32 state_bits;
+  ]
+  int32 block_widlist;
+
+proto_lounge_client::recv_friend_search_r (0xbabe) (0x7ff75a080d50)
+  int32 result;
+  struct friend_details -> [
+    int32 pilot_id;
+    string name;
+    int32 last_in;
+    int32 troops;
+    int32 level;
+    int32 mil_class;
+    uint16 byword;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+    int32 clan_id;
+    string clan_name;
+    int32 clan_emb_base;
+    int32 clan_emb_parts1;
+    int32 clan_emb_parts2;
+    int32 clan_memb_exp;
+    int32 clan_memb_exp_use;
+    int32 channel_id;
+    int32 capture_bonus_state;
+    int32 capture_bonus_limit;
+    int32 rokaku_pt_use;
+    int32 state_bits;
+  ]
+
+proto_lounge_client::recv_friend_xworld_search_r (0xbabe) (0x7ff75a081561)
+  int32 result;
+  int32 pilot_id;
+  int32 connet_world_num;
+  int32 connet_world_id;
+  struct friend_details -> [
+    int32 pilot_id;
+    string name;
+    int32 last_in;
+    int32 troops;
+    int32 level;
+    int32 mil_class;
+    uint16 byword;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+    int32 clan_id;
+    string clan_name;
+    int32 clan_emb_base;
+    int32 clan_emb_parts1;
+    int32 clan_emb_parts2;
+    int32 clan_memb_exp;
+    int32 clan_memb_exp_use;
+    int32 channel_id;
+    int32 capture_bonus_state;
+    int32 capture_bonus_limit;
+    int32 rokaku_pt_use;
+    int32 state_bits;
+  ]
+
+proto_lounge_client::recv_block_list_get_idlist_r (0xbabe) (0x7ff75a081cdb)
+  int32 result;
+  int32 block_idlist;
+
+proto_lounge_client::recv_block_list_get_idwlist_r (0xbabe) (0x7ff75a082439)
+  int32 result;
+  int32 block_idlist;
+  int32 block_widlist;
+
+proto_lounge_client::recv_block_list_get_detail_r (0xbabe) (0x7ff75a082b45)
+  int32 result;
+  struct block_details -> [
+    int32 pilot_id;
+    string name;
+    int32 last_in;
+    int32 troops;
+    int32 level;
+    int32 mil_class;
+    uint16 byword;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+    int32 clan_id;
+    string clan_name;
+    int32 clan_emb_base;
+    int32 clan_emb_parts1;
+    int32 clan_emb_parts2;
+    int32 clan_memb_exp;
+    int32 clan_memb_exp_use;
+    int32 channel_id;
+    int32 capture_bonus_state;
+    int32 capture_bonus_limit;
+    int32 rokaku_pt_use;
+    int32 state_bits;
+  ]
+
+proto_lounge_client::recv_block_list_get_detail_xworld_r (0xbabe) (0x7ff75a0832ab)
+  int32 result;
+  struct block_details -> [
+    int32 pilot_id;
+    string name;
+    int32 last_in;
+    int32 troops;
+    int32 level;
+    int32 mil_class;
+    uint16 byword;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+    int32 clan_id;
+    string clan_name;
+    int32 clan_emb_base;
+    int32 clan_emb_parts1;
+    int32 clan_emb_parts2;
+    int32 clan_memb_exp;
+    int32 clan_memb_exp_use;
+    int32 channel_id;
+    int32 capture_bonus_state;
+    int32 capture_bonus_limit;
+    int32 rokaku_pt_use;
+    int32 state_bits;
+  ]
+  int32 block_widlist;
+
+proto_lounge_client::recv_block_list_add_r (0xbabe) (0x7ff75a0838e7)
+  int32 result;
+  int32 send_sysmes;
+
+proto_lounge_client::recv_block_list_remove_r (0xbabe) (0x7ff75a083d57)
+  int32 result;
+  int32 send_sysmes;
+
+proto_lounge_client::recv_mail_post_r (0xbabe) (0x7ff75a084136)
+  int32 result;
+
+proto_lounge_client::recv_mail_delete_r (0xbabe) (0x7ff75a084491)
+  int32 result;
+
+proto_lounge_client::recv_mail_get_box_r (0xbabe) (0x7ff75a0849fd)
+  int32 result;
+  int32 box_type;
+  struct mails -> [
+    unknown-string mailid;
+    int32 kind;
+    int32 state;
+    string pilot_name;
+    string subject;
+    int32 date;
+    int32 accept_term;
+    int32 attach_type;
+    int32 attach_id;
+  ]
+
+proto_lounge_client::recv_mail_get_body_r (0xbabe) (0x7ff75a085196)
+  int32 result;
+  int32 from_pilotid;
+  int32 from_clan_id;
+  int64 mailid;
+  string body;
+
+proto_lounge_client::recv_mail_get_present_body_r (0xbabe) (0x7ff75a085a26)
+  int32 result;
+  int64 mailid;
+  int32 attach_type;
+  int32 attach_id;
+  int32 amount;
+  string body;
+
+proto_lounge_client::recv_mail_get_present_r (0xbabe) (0x7ff75a086078)
+  int32 result;
+  int64 mailid;
+
+proto_lounge_client::recv_mail_sell_present_r (0xbabe) (0x7ff75a0864e9)
+  int32 result;
+  int64 mailid;
+
+proto_lounge_client::recv_mail_notify_new_arriving (0xbabe) (0x7ff75a0868c9)
+  int32 box_type;
+
+proto_lounge_client::recv_present_add_dialog_show (0xbabe) (0x7ff75a086dfb)
+  int32 attach_type;
+  int32 attach_id;
+  int32 amount;
+  string message;
+
+proto_lounge_client::recv_shop_lineup_r (0xbabe) (0x7ff75a0874be)
+  int32 result;
+  int32 id_type;
+  struct item_list -> [
+    int32 shopitem_id;
+    int32 gp_x01;
+    int32 gp_x10;
+    int32 cp_x01;
+    int32 cp_x10;
+    int32 item_id;
+    int32 item_x01;
+    int32 bit_eff;
+    uint16 stock;
+    int32 restrictbuy;
+  ]
+
+proto_lounge_client::recv_shop_lineup_one_r (0xbabe) (0x7ff75a087af6)
+  int32 result;
+  int32 id_type;
+  struct item -> [
+    int32 shopitem_id;
+    int32 gp_x01;
+    int32 gp_x10;
+    int32 cp_x01;
+    int32 cp_x10;
+    int32 item_id;
+    int32 item_x01;
+    int32 bit_eff;
+    uint16 stock;
+    int32 restrictbuy;
+  ]
+
+proto_lounge_client::recv_shop_lineup_notify (0xbabe) (0x7ff75a08817c)
+  int32 id_type;
+  struct item_list -> [
+    int32 shopitem_id;
+    int32 gp_x01;
+    int32 gp_x10;
+    int32 cp_x01;
+    int32 cp_x10;
+    int32 item_id;
+    int32 item_x01;
+    int32 bit_eff;
+    uint16 stock;
+    int32 restrictbuy;
+  ]
+
+proto_lounge_client::recv_shop_buy_r (0xbabe) (0x7ff75a0886a1)
+  int32 result;
+
+proto_lounge_client::recv_shop_sell_r (0xbabe) (0x7ff75a0889fc)
+  int32 result;
+
+proto_lounge_client::recv_exchange_play_bonus_r (0xbabe) (0x7ff75a088e86)
+  int32 result;
+  int32 reward_id;
+  int32 is_complete;
+
+proto_lounge_client::recv_quest_list_init (0xbabe) (0x7ff75a089442)
+  struct list_all -> [
+    int32 quest_id;
+    string title;
+    int32 is_event;
+    int32 is_known;
+    uint16 achieve_trigger;
+    int32 achieve_denom;
+    int32 achieve_num;
+    int32 pay_gp;
+    int32 pay_exp;
+    int32 pay_item_id;
+    int32 pay_item_num;
+    int32 pay_msma_id;
+    int32 pay_byword_id;
+    int32 category;
+  ]
+  int32 progress_id;
+
+proto_lounge_client::recv_quest_list_update (0xbabe) (0x7ff75a0899f5)
+  int32 quest_id;
+  int32 achieve_denom;
+  int32 achieve_num;
+
+proto_lounge_client::recv_quest_detail_get_r (0xbabe) (0x7ff75a089f84)
+  int32 result;
+  int32 quest_id;
+  string desc;
+
+proto_lounge_client::recv_quest_clear_r (0xbabe) (0x7ff75a08a4d9)
+  int32 result;
+  int32 quest_id;
+  string pay_comment;
+
+proto_lounge_client::recv_gacha_enter_r (0xbabe) (0x7ff75a08a902)
+  int32 result;
+
+proto_lounge_client::recv_gacha_leave_r (0xbabe) (0x7ff75a08ac5d)
+  int32 result;
+
+proto_lounge_client::recv_gacha_lineup_r (0xbabe) (0x7ff75a08b11e)
+  int32 result;
+  struct quantity -> [
+    int32 gacha_id;
+    uint16 stock;
+  ]
+
+proto_lounge_client::recv_gacha_prize_lineup_r (0xbabe) (0x7ff75a08bb98)
+  int32 result;
+  int32 gacha_id;
+  struct prize -> [
+    int32 prize_id;
+    int32 id_type;
+    uint16 stack;
+    int32 rare_type;
+    int32 odds;
+    int32 odds_max;
+    int32 b_pickup_target;
+    string prob_categoryname;
+    uint16 csv_index;
+  ]
+  uint32 bEnableDiscount;
+  int32 servicePoint;
+  int32 last1_num;
+  struct omake -> [
+    int32 id;
+    int32 step_count;
+    int32 is_loop;
+    struct prize_info -> [
+      int32 type;
+      int32 item_id;
+      int32 amount;
+    ]
+    int32 prize_count;
+  ]
+  int32 payout_num;
+
+proto_lounge_client::recv_gacha_exec_r (0xbabe) (0x7ff75a08c796)
+  int32 result;
+  int32 gacha_id;
+  struct prize -> [
+    int32 prize_id;
+    int32 id_type;
+    uint16 stack;
+    int32 rare_type;
+    int32 odds;
+    int32 odds_max;
+    int32 b_pickup_target;
+    string prob_categoryname;
+    uint16 csv_index;
+  ]
+  int32 n_last1B;
+  struct omake_prize -> [
+    int32 prize_id;
+    int32 id_type;
+    uint16 stack;
+    int32 rare_type;
+    int32 odds;
+    int32 odds_max;
+    int32 b_pickup_target;
+    string prob_categoryname;
+    uint16 csv_index;
+  ]
+
+proto_lounge_client::recv_gacha_exec_w_buy_ticket_r (0xbabe) (0x7ff75a08d2ba)
+  int32 result;
+  int32 gacha_id;
+  struct prize -> [
+    int32 prize_id;
+    int32 id_type;
+    uint16 stack;
+    int32 rare_type;
+    int32 odds;
+    int32 odds_max;
+    int32 b_pickup_target;
+    string prob_categoryname;
+    uint16 csv_index;
+  ]
+  int32 n_last1B;
+  struct omake_prize -> [
+    int32 prize_id;
+    int32 id_type;
+    uint16 stack;
+    int32 rare_type;
+    int32 odds;
+    int32 odds_max;
+    int32 b_pickup_target;
+    string prob_categoryname;
+    uint16 csv_index;
+  ]
+
+proto_lounge_client::recv_gacha_effect_stop_r (0xbabe) (0x7ff75a08d974)
+  int32 result;
+
+proto_lounge_client::recv_gacha_reset_r (0xbabe) (0x7ff75a08dd60)
+  int32 result;
+  int32 gacha_id;
+
+proto_lounge_client::recv_itemcode_input_r (0xbabe) (0x7ff75a08e71e)
+  int32 result;
+  int32 id_type;
+  int32 itemid;
+  int32 amount;
+  string title;
+  string message;
+
+proto_lounge_client::recv_result_info (0xbabe) (0x7ff75a090ae1)
+  int32 win_team;
+  int32 res_coop;
+  struct progress -> [
+    int32 remain_msec;
+    int32 coop_step;
+    int32 A_point_now;
+    int32 B_point_now;
+    uint16 A_gauge_dmg_scale;
+    uint16 B_gauge_dmg_scale;
+    int32 coop_dead_remain;
+    int32 is_prestart;
+    int32 rule_status;
+    int32 rule_timer_msec;
+    int32 rule_param1;
+    int32 rule_param2;
+    int32 A_dot_dmg;
+    int32 B_dot_dmg;
+  ]
+  struct result -> [
+    int32 teamside;
+    int32 exp;
+    int32 money;
+    int32 tp;
+    int32 cmdr_fame;
+    int32 victory_fame;
+    int32 victory_score;
+    int32 alloy_chip;
+    uint16 rate_vslocal;
+    uint16 rate_vslocal_4ev;
+    uint16 lv_point_self;
+    uint16 lv_point_team;
+    uint16 lv_point_subcmdr;
+    uint16 rate_vslocal_clan;
+    uint16 rate_vslocal_clan_total;
+    int32 is_lv_point_subcmdr;
+    int32 cnt_kill;
+    int32 cnt_death;
+    int32 cnt_assist;
+    int32 cnt_resurrect;
+    enum16 cnt_search;
+    uint32 cnt_repair;
+    int32 openable_num_win_bonus;
+    int32 openable_num_member_bonus;
+    int32 openable_num_bc_bonus;
+    int32 openable_num_event_bonus;
+    uint16 expup_campaign;
+    uint16 expup_bc;
+    uint16 expup_fgauge;
+    uint16 moneyup_campaign;
+    uint16 moneyup_bc;
+    uint16 moneyup_event;
+    uint16 moneyup_win;
+    uint16 accumpup_event;
+    int32 buffnum;
+    uint16 clan_gp_bonus_rate;
+    uint16 clan_rokaku_bonus_rate;
+    int32 result_spbits;
+    int32 enemy_avg_lv;
+    uint16 enemy_avg_rate;
+    int32 avg_lv_diff;
+    int32 overplay_rate;
+    int32 itm_id;
+    int32 itm_num;
+    int32 use_buffitem_id;
+    int32 use_buffitem_num;
+    unknown-string fight_ms_uniqid;
+    int32 fight_ms_score;
+    int32 fight_ms_score_atk;
+    int32 fight_ms_score_spt;
+    int32 fight_ms_score_con;
+    int32 fight_ms_kill_cnt;
+    int32 fight_ms_assist_cnt;
+    int32 fight_ms_resurrect_cnt;
+    int32 fight_ms_stghold_damage;
+    int32 fight_ms_num;
+    unknown-string no_fight_ms_uniqid;
+    int32 no_fight_ms_num;
+    unknown-string badge_bits;
+    int32 badge_score;
+    int32 badge_result;
+    int32 badge_rankmember;
+    int32 badge_rankmember_adjusted_subcmdr;
+    int32 badge_deadcnt;
+    int32 badge_cleartime;
+    int32 badge_cmdr;
+    int32 badge_cmdr2;
+    int32 team_pilot_rate_adjusted_level;
+    int32 contribute_rank;
+    int32 dtf_score_rate;
+    int32 conquer_rate;
+    int32 elapsed_sec;
+    int32 accump_inc;
+    int32 spc_bonus_item_ids;
+    int32 spc_bonus_item_nums;
+    uint16 bef_cupteam_rate;
+    uint16 cupteam_rate_delta;
+    uint16 enemy_cupteam_rate;
+    int32 rokaku_pt;
+    int32 rokaku_pt_reason;
+    int32 examination_playsec_elapsed;
+    int32 examination_playscore;
+    int32 special_contributed_point;
+    struct consecutive_lose -> [
+      int32 cnt;
+      uint16 accum_pt;
+      uint16 accum_pt_diff;
+      int32 is_dirty;
+    ]
+  ]
+  struct result_wbonus -> [
+    int32 lv;
+    int32 openbox;
+    uint16 gp_rate;
+    uint16 event_bonus;
+  ]
+  struct score_ranking_A -> [
+    int32 pilot_id;
+    int32 world_id;
+    int32 troops;
+    int32 is_cmdr;
+    int32 is_xbnpc;
+    uint16 rank;
+    int32 totalpoint;
+    int32 stghold_dmg;
+    uint16 kill_cnt;
+    int32 atk_point;
+    int32 spt_point;
+    int32 con_point;
+    int32 victory_score;
+    int32 ranking_point;
+    int32 last_msma;
+    int32 last_weapon;
+    int32 last_shield;
+    int32 last_decal;
+    int32 last_mscolor;
+    uint16 add_rate_vslocal;
+  ]
+  struct score_ranking_B -> [
+    int32 pilot_id;
+    int32 world_id;
+    int32 troops;
+    int32 is_cmdr;
+    int32 is_xbnpc;
+    uint16 rank;
+    int32 totalpoint;
+    int32 stghold_dmg;
+    uint16 kill_cnt;
+    int32 atk_point;
+    int32 spt_point;
+    int32 con_point;
+    int32 victory_score;
+    int32 ranking_point;
+    int32 last_msma;
+    int32 last_weapon;
+    int32 last_shield;
+    int32 last_decal;
+    int32 last_mscolor;
+    uint16 add_rate_vslocal;
+  ]
+  struct result_wave -> [
+    int32 wave_rank;
+    int32 cleartime_sec;
+    int32 cleartime_rank;
+    uint16 container_num;
+    uint16 container_max;
+    int32 container_rank;
+    uint16 enemybase_num;
+    uint16 enemybase_max;
+    int32 enemybase_rank;
+    int32 total_score;
+  ]
+  struct totalresult_wave -> [
+    int32 end_wave;
+    int32 result_coop;
+    int32 rank;
+    int32 rank_score;
+    int32 container_comp;
+    int32 enemyobj_comp;
+    int32 total_score;
+  ]
+  uint16 ranking_highscore;
+  uint32 debrief_info;
+  struct examination_list -> [
+    int32 id;
+    int32 gain_val;
+  ]
+  struct favms_add -> [
+    int32 pilot_id;
+    int32 favorite_ms_id;
+    int32 battle_rule;
+    int32 favorite_exp_sum;
+    int32 kill_cnt;
+    int32 kill_assist_cnt;
+    int32 resurrect_cnt;
+    int32 stghold_damage;
+    int32 battle_cnt;
+    int32 score_max_atk;
+    int32 score_max_spt;
+    int32 score_max_con;
+    int32 score_sum_atk;
+    int32 score_sum_spt;
+    int32 score_sum_con;
+    int32 score_sum_sum;
+    int32 last_update;
+    int32 dirty_flag;
+  ]
+  struct dcpoint -> [
+    int32 is_dc;
+    int32 is_reward_all;
+    int32 bef_dcpoint;
+    int32 aft_dcpoint;
+    struct bef_next -> [
+      int32 point;
+      int32 item_id;
+      int32 item_num;
+      int32 spc_bonus_exceeded_interval;
+    ]
+    struct aft_next -> [
+      int32 point;
+      int32 item_id;
+      int32 item_num;
+      int32 spc_bonus_exceeded_interval;
+    ]
+    int32 reward_item_ids;
+    int32 reward_item_nums;
+  ]
+  struct cbpoint -> [
+    int32 is_cb;
+    int32 is_reward_all;
+    int32 bef_cbpoint;
+    int32 aft_cbpoint;
+    struct bef_next -> [
+      int32 point;
+      int32 item_id;
+      int32 item_num;
+      int32 spc_bonus_exceeded_interval;
+    ]
+    struct aft_next -> [
+      int32 point;
+      int32 item_id;
+      int32 item_num;
+      int32 spc_bonus_exceeded_interval;
+    ]
+    int32 reward_item_ids;
+    int32 reward_item_nums;
+  ]
+  uint32 dbbonus_get;
+  struct pointdmg -> [
+    int32 gaugedmg;
+  ]
+  struct tech_research_reward -> [
+    int32 win_lose_point;
+    int32 rank_point;
+    int32 special_point;
+    int32 gain_point;
+    int32 result_wait_bonus_type;
+  ]
+  uint16 adop_result;
+  int64 adop_uniq_msid;
+  struct adop_get -> [
+    int32 db_index;
+    int32 equip_wid;
+    uint16 adop_set;
+  ]
+  int32 season_class_up_promotion_point;
+
+proto_lounge_client::recv_result_open_item_r (0xbabe) (0x7ff75a091d8c)
+  int32 result;
+  int32 id_type;
+  int32 itemid;
+
+proto_lounge_client::recv_result_item_fullopen_r (0xbabe) (0x7ff75a092210)
+  struct ritem -> [
+    int32 id_type;
+    int32 itemid;
+    int32 is_itmbox;
+    uint16 amount;
+  ]
+
+proto_lounge_client::recv_result_itemlist_get_r (0xbabe) (0x7ff75a0926c1)
+  struct ritem -> [
+    int32 id_type;
+    int32 itemid;
+    int32 is_itmbox;
+    uint16 amount;
+  ]
+
+proto_lounge_client::recv_result_sell_item_r (0xbabe) (0x7ff75a092abe)
+  int32 result;
+
+proto_lounge_client::recv_result_add_inventory_r (0xbabe) (0x7ff75a092eaa)
+  int32 result;
+  int32 remain_count;
+
+proto_lounge_client::recv_result_reward_accept_notice (0xbabe) (0x7ff75a09331a)
+  int32 item_id;
+  int32 amount;
+
+proto_lounge_client::recv_clan_info_get_self_r (0xbabe) (0x7ff75a093dbf)
+  int32 result;
+  int32 reason;
+  struct cinfo -> [
+    int32 clan_id;
+    int32 troops;
+    int32 npc_id;
+    int32 npc_id2;
+    string clan_name;
+    int32 level;
+    int32 exp;
+    int32 emb_base;
+    int32 emb_parts1;
+    int32 emb_parts2;
+    uint16 member_num;
+    uint16 member_max;
+    int32 leader_id;
+    int32 vs_win;
+    int32 vs_lose;
+    int32 rank;
+    int32 rank_score;
+    int32 rank_rate_vsl;
+    int32 rate_vsl_score;
+    int32 offer_is_active;
+    string notice_body;
+    int32 active_time_bits;
+    int32 play_style;
+    int32 capture_unlock_num;
+    string feature_word;
+  ]
+  string offer_body;
+  struct leader -> [
+    int32 pilot_id;
+    string name;
+    int32 last_in;
+    int32 troops;
+    int32 level;
+    int32 mil_class;
+    uint16 byword;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+    int32 clan_id;
+    string clan_name;
+    int32 clan_emb_base;
+    int32 clan_emb_parts1;
+    int32 clan_emb_parts2;
+    int32 clan_memb_exp;
+    int32 clan_memb_exp_use;
+    int32 channel_id;
+    int32 capture_bonus_state;
+    int32 capture_bonus_limit;
+    int32 rokaku_pt_use;
+    int32 state_bits;
+  ]
+  struct subleader -> [
+    int32 pilot_id;
+    string name;
+    int32 last_in;
+    int32 troops;
+    int32 level;
+    int32 mil_class;
+    uint16 byword;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+    int32 clan_id;
+    string clan_name;
+    int32 clan_emb_base;
+    int32 clan_emb_parts1;
+    int32 clan_emb_parts2;
+    int32 clan_memb_exp;
+    int32 clan_memb_exp_use;
+    int32 channel_id;
+    int32 capture_bonus_state;
+    int32 capture_bonus_limit;
+    int32 rokaku_pt_use;
+    int32 state_bits;
+  ]
+  int32 clan_kind;
+  int32 clan_forbidden;
+
+proto_lounge_client::recv_clan_info_get_other_r (0xbabe) (0x7ff75a094a2b)
+  int32 result;
+  struct cinfo -> [
+    int32 clan_id;
+    int32 troops;
+    int32 npc_id;
+    int32 npc_id2;
+    string clan_name;
+    int32 level;
+    int32 exp;
+    int32 emb_base;
+    int32 emb_parts1;
+    int32 emb_parts2;
+    uint16 member_num;
+    uint16 member_max;
+    int32 leader_id;
+    int32 vs_win;
+    int32 vs_lose;
+    int32 rank;
+    int32 rank_score;
+    int32 rank_rate_vsl;
+    int32 rate_vsl_score;
+    int32 offer_is_active;
+    string notice_body;
+    int32 active_time_bits;
+    int32 play_style;
+    int32 capture_unlock_num;
+    string feature_word;
+  ]
+  struct leader -> [
+    int32 pilot_id;
+    string name;
+    int32 last_in;
+    int32 troops;
+    int32 level;
+    int32 mil_class;
+    uint16 byword;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+    int32 clan_id;
+    string clan_name;
+    int32 clan_emb_base;
+    int32 clan_emb_parts1;
+    int32 clan_emb_parts2;
+    int32 clan_memb_exp;
+    int32 clan_memb_exp_use;
+    int32 channel_id;
+    int32 capture_bonus_state;
+    int32 capture_bonus_limit;
+    int32 rokaku_pt_use;
+    int32 state_bits;
+  ]
+  struct subleader -> [
+    int32 pilot_id;
+    string name;
+    int32 last_in;
+    int32 troops;
+    int32 level;
+    int32 mil_class;
+    uint16 byword;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+    int32 clan_id;
+    string clan_name;
+    int32 clan_emb_base;
+    int32 clan_emb_parts1;
+    int32 clan_emb_parts2;
+    int32 clan_memb_exp;
+    int32 clan_memb_exp_use;
+    int32 channel_id;
+    int32 capture_bonus_state;
+    int32 capture_bonus_limit;
+    int32 rokaku_pt_use;
+    int32 state_bits;
+  ]
+  int32 clan_kind;
+
+proto_lounge_client::recv_clan_memberlist_get_r (0xbabe) (0x7ff75a0952d8)
+  int32 result;
+  struct lpcard -> [
+    int32 pilot_id;
+    string name;
+    int32 last_in;
+    int32 troops;
+    int32 level;
+    int32 mil_class;
+    uint16 byword;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+    int32 clan_id;
+    string clan_name;
+    int32 clan_emb_base;
+    int32 clan_emb_parts1;
+    int32 clan_emb_parts2;
+    int32 clan_memb_exp;
+    int32 clan_memb_exp_use;
+    int32 channel_id;
+    int32 capture_bonus_state;
+    int32 capture_bonus_limit;
+    int32 rokaku_pt_use;
+    int32 state_bits;
+  ]
+  int32 clan_kind;
+
+proto_lounge_client::recv_clan_npclist_get_r (0xbabe) (0x7ff75a095b89)
+  int32 npclist_id;
+  int32 npclist_is_ex;
+  int32 npclist_unlock_lv;
+
+proto_lounge_client::recv_clan_create_r (0xbabe) (0x7ff75a096267)
+  int32 result;
+  int32 clan_kind;
+
+proto_lounge_client::recv_clan_leave_r (0xbabe) (0x7ff75a096822)
+  int32 result;
+  int32 clan_id;
+  int32 clan_kind;
+  int32 deckcost;
+
+proto_lounge_client::recv_clan_rookie_enter_r (0xbabe) (0x7ff75a096d0e)
+  int32 result;
+
+proto_lounge_client::recv_clan_mshipbid_request_r (0xbabe) (0x7ff75a097231)
+  int32 result;
+  int32 mclan_id;
+  string mclan_name;
+  int32 clan_kind;
+
+proto_lounge_client::recv_clan_mshipbid_request_cancel_r (0xbabe) (0x7ff75a097774)
+  int32 result;
+  int32 clan_kind;
+
+proto_lounge_client::recv_clan_mshipbid_get_list_r (0xbabe) (0x7ff75a097d59)
+  int32 result;
+  struct lpcard -> [
+    int32 pilot_id;
+    string name;
+    int32 last_in;
+    int32 troops;
+    int32 level;
+    int32 mil_class;
+    uint16 byword;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+    int32 clan_id;
+    string clan_name;
+    int32 clan_emb_base;
+    int32 clan_emb_parts1;
+    int32 clan_emb_parts2;
+    int32 clan_memb_exp;
+    int32 clan_memb_exp_use;
+    int32 channel_id;
+    int32 capture_bonus_state;
+    int32 capture_bonus_limit;
+    int32 rokaku_pt_use;
+    int32 state_bits;
+  ]
+  int32 clan_kind;
+
+proto_lounge_client::recv_clan_mshipbid_response_r (0xbabe) (0x7ff75a0982f6)
+  int32 result;
+  int32 clan_kind;
+
+proto_lounge_client::recv_clan_subleader_set_r (0xbabe) (0x7ff75a0988b1)
+  int32 result;
+  int32 pilot_id_sub;
+  int32 is_set;
+  int32 clan_kind;
+
+proto_lounge_client::recv_clan_emblem_update_r (0xbabe) (0x7ff75a098f77)
+  int32 result;
+  int32 emb_base;
+  int32 emb_parts1;
+  int32 emb_parts2;
+
+proto_lounge_client::recv_clan_npc_update_r (0xbabe) (0x7ff75a0994f8)
+  int32 result;
+  int32 npc_id;
+
+proto_lounge_client::recv_clan_leader_change_r (0xbabe) (0x7ff75a099a06)
+  int32 result;
+  int32 pilot_id_new;
+  int32 clan_kind;
+
+proto_lounge_client::recv_clan_text_notice_set_r (0xbabe) (0x7ff75a099f8a)
+  int32 result;
+  string body;
+  int32 clan_kind;
+
+proto_lounge_client::recv_clan_text_offer_set_r (0xbabe) (0x7ff75a09a616)
+  int32 result;
+  int32 is_active;
+  string subj;
+  string body;
+  int32 clan_kind;
+
+proto_lounge_client::recv_clan_introduction_set_r (0xbabe) (0x7ff75a09ac46)
+  int32 result;
+  struct intro_info -> [
+    int32 active_time_bits;
+    int32 play_style;
+    string feature_word;
+    string notice_body;
+  ]
+  int32 clan_kind;
+
+proto_lounge_client::recv_clan_kick_member_r (0xbabe) (0x7ff75a09b1c3)
+  int32 result;
+  int32 pilot_id_kick;
+  int32 clan_kind;
+
+proto_lounge_client::recv_clan_level_update (0xbabe) (0x7ff75a09b6b9)
+  int32 lv;
+  int32 deckcost;
+
+proto_lounge_client::recv_clan_search_r (0xbabe) (0x7ff75a09bc9b)
+  int32 result;
+  struct search_res -> [
+    int32 clan_id;
+    int32 emb_base;
+    int32 emb_parts1;
+    int32 emb_parts2;
+    string clan_name;
+    int32 level;
+    string offer_body;
+    string leader_name;
+    int32 member_num;
+    int32 member_max;
+    int32 offer_is_active;
+    int32 clan_kind;
+    int32 active_time_bits;
+    int32 play_style;
+    int32 capture_unlock_num;
+  ]
+  int32 clan_kind;
+
+proto_lounge_client::recv_clan_search_random_r (0xbabe) (0x7ff75a09c2fa)
+  struct search_res -> [
+    int32 clan_id;
+    int32 emb_base;
+    int32 emb_parts1;
+    int32 emb_parts2;
+    string clan_name;
+    int32 level;
+    string offer_body;
+    string leader_name;
+    int32 member_num;
+    int32 member_max;
+    int32 offer_is_active;
+    int32 clan_kind;
+    int32 active_time_bits;
+    int32 play_style;
+    int32 capture_unlock_num;
+  ]
+  int32 clan_kind;
+
+proto_lounge_client::recv_clan_search_sortfilter_get_r (0xbabe) (0x7ff75a09ca43)
+  int32 result;
+  int32 clan_kind;
+  struct sort_info -> [
+    enum16 filter_type;
+    int32 lv_under;
+    int32 lv_upper;
+    int32 member_under;
+    int32 member_upper;
+    int32 rokaku_under;
+    int32 rokaku_upper;
+    enum16 ranking_under;
+    enum16 ranking_upper;
+    int32 recruit_value;
+    int32 time_value;
+    int32 style_value;
+  ]
+  struct search_res -> [
+    int32 clan_id;
+    int32 emb_base;
+    int32 emb_parts1;
+    int32 emb_parts2;
+    string clan_name;
+    int32 level;
+    string offer_body;
+    string leader_name;
+    int32 member_num;
+    int32 member_max;
+    int32 offer_is_active;
+    int32 clan_kind;
+    int32 active_time_bits;
+    int32 play_style;
+    int32 capture_unlock_num;
+  ]
+
+proto_lounge_client::recv_clan_msgboard_news_get_r (0xbabe) (0x7ff75a09d1bf)
+  int32 result;
+  struct news -> [
+    unknown-string msg_id;
+    int32 date;
+    uint16 kind;
+    uint16 nice_count;
+    uint16 child_count;
+    string body;
+    int32 pilot_id;
+    int32 npc_id;
+    string name;
+  ]
+  int32 clan_kind;
+
+proto_lounge_client::recv_clan_msgboard_msglist_get_r (0xbabe) (0x7ff75a09ded2)
+  int32 result;
+  int32 sv_time;
+  struct comment_social -> [
+    unknown-string msg_id;
+    unknown-string parent_msgid;
+    int32 date;
+    uint16 nice_count;
+    int32 is_niced;
+    string body;
+    int32 pilot_id;
+    int32 npc_id;
+    string name;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+  ]
+  struct comment_event -> [
+    unknown-string msg_id;
+    unknown-string parent_msgid;
+    int32 date;
+    uint16 nice_count;
+    int32 is_niced;
+    string body;
+    int32 pilot_id;
+    int32 npc_id;
+    string name;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+  ]
+  struct comment_question -> [
+    unknown-string msg_id;
+    unknown-string parent_msgid;
+    int32 date;
+    uint16 nice_count;
+    int32 is_niced;
+    string body;
+    int32 pilot_id;
+    int32 npc_id;
+    string name;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+  ]
+  struct comment_system -> [
+    unknown-string msg_id;
+    unknown-string parent_msgid;
+    int32 date;
+    uint16 nice_count;
+    int32 is_niced;
+    string body;
+    int32 pilot_id;
+    int32 npc_id;
+    string name;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+  ]
+  int32 clan_kind;
+
+proto_lounge_client::recv_clan_msgboard_msg_insert_r (0xbabe) (0x7ff75a09e87d)
+  int32 result;
+  int32 clan_kind;
+
+proto_lounge_client::recv_clan_msgboard_msg_delete_r (0xbabe) (0x7ff75a09ecef)
+  int32 result;
+  int32 clan_kind;
+
+proto_lounge_client::recv_clan_msgboard_nicecount_add_r (0xbabe) (0x7ff75a09f161)
+  int32 result;
+  int32 clan_kind;
+
+proto_lounge_client::recv_clan_invite_pilotlist_get_r (0xbabe) (0x7ff75a09f8a6)
+  int32 result;
+  struct invite_list -> [
+    int32 pilot_id;
+    string name;
+    int32 mil_class;
+    int32 rank;
+    int32 xwar_cnt;
+    int32 vslocal_cnt;
+    int32 last_login;
+    int32 last_logout;
+    int32 continued_login_days;
+    int32 is_bonus;
+  ]
+  int32 page_now;
+  int32 page_max;
+  struct sort_info -> [
+    int32 sort_type;
+    int32 is_class_filter;
+    int32 class_filter_begin;
+    int32 class_filter_end;
+    int32 is_time_filter;
+    int32 time_filter_begin;
+    int32 time_filter_end;
+    int32 is_bonus_filter;
+    int32 bonus_filter;
+  ]
+
+proto_lounge_client::recv_clan_rokaku_tree_get_r (0xbabe) (0x7ff75a0a02e6)
+  int32 clan_id;
+  struct page -> [
+    int32 open_cnt;
+  ]
+  struct node -> [
+    int32 tree_id;
+    int32 node_no;
+    int32 idx_no;
+    int32 unlock;
+    int32 pool_pt;
+    int32 need_pt_open;
+    int32 need_pt_rental;
+    int32 lv_min;
+    int32 lv_max;
+    int32 msma_id;
+    unknown-string uniq_msid;
+    int32 limit_use;
+    int32 limit_coolup;
+    int32 deck_mask;
+  ]
+  int32 point_use;
+  int32 point_pool;
+
+proto_lounge_client::recv_clan_rokaku_add_ms (0xbabe) (0x7ff75a0a0afa)
+  struct ms -> [
+    struct body -> [
+      unknown-string uniqid;
+      int32 msma_id;
+      uint32 tm_sec;
+      uint32 tm_usec;
+      string nickname;
+      int32 energy_now;
+      int32 decal;
+      int32 color;
+      string deckslot;
+      string is_costover;
+      int32 cost;
+      int32 mission_cost;
+      int32 eqweapon_itemid;
+      int32 eqshield_itemid;
+      int32 eqspecial_itemid;
+      int32 eq_modules;
+      int32 eq_bonus_modules;
+      int32 sp_parts;
+      int32 sp_parts_exp;
+      uint16 buildup_cnt;
+      uint16 up_param;
+      uint16 up_param_develop;
+      uint16 weapon_buildup_extra_cnt;
+      enum16 msbits;
+      uint32 unlocked_colors;
+      int32 spticket_success_ms;
+      int32 spticket_greatest_ms;
+      int32 is_favorite;
+      struct advanced_custom_data -> [
+        uint16 exceed_steps;
+        uint16 exceed_buildup_cnt;
+        int32 exceed_eq_modules;
+        int32 use_exceed_module_slot_num;
+        int32 exceed_sp_parts;
+        int32 exceed_sp_parts_exp;
+      ]
+    ]
+    struct weapons -> [
+      int32 item_id;
+      uint16 db_index;
+      uint16 buildup_cnt;
+      uint16 buildup_val;
+      int32 spticket_success_wp;
+      int32 spticket_greatest_wp;
+    ]
+    int32 limit_use;
+    int32 limit_coolup;
+  ]
+  int32 is_firstonetime;
+
+proto_lounge_client::recv_clan_rokaku_del_ms (0xbabe) (0x7ff75a0a0f7e)
+  int32 uniq_msid;
+
+proto_lounge_client::recv_clan_rokaku_use_point_r (0xbabe) (0x7ff75a0a1638)
+  int32 result;
+  int32 tree_id;
+  int32 node_no;
+  int32 idx_no;
+  int32 point_use;
+  int32 is_supply;
+
+proto_lounge_client::recv_clan_rokaku_ms_deck_set_r (0xbabe) (0x7ff75a0a1d61)
+  int32 result;
+  unknown-string uniq_msid;
+  int32 decktype;
+
+proto_lounge_client::recv_clan_rokaku_ms_deck_check_r (0xbabe) (0x7ff75a0a2313)
+  int32 rokaku_pt;
+  unknown-string deck_msid;
+
+proto_lounge_client::recv_clan_memb_exp_use_r (0xbabe) (0x7ff75a0a2824)
+  int32 result;
+  int32 exp;
+
+proto_lounge_client::recv_clan_shop_buy_r (0xbabe) (0x7ff75a0a2c03)
+  int32 result;
+
+proto_lounge_client::recv_clan_shop_buying_history_update (0xbabe) (0x7ff75a0a2f5e)
+  struct cshist_item -> [
+    int32 item_id;
+    uint16 num;
+  ]
+
+proto_lounge_client::recv_ranking_init_get_r (0xbabe) (0x7ff75a0a3583)
+  int32 is_revoked;
+  uint16 high_scores;
+  uint16 event_scores;
+
+proto_lounge_client::recv_ranking_pilot_get_r (0xbabe) (0x7ff75a0a436b)
+  int32 result;
+  int32 is_revoke;
+  struct order -> [
+    uint16 kind;
+    uint16 term;
+    uint16 filter;
+    uint16 reason;
+    uint16 troops;
+  ]
+  struct rankself -> [
+    int32 rank;
+    int32 score_now;
+    uint16 entry_until;
+    uint16 highscores;
+    uint16 entry_until_es;
+    uint16 eventscores;
+  ]
+  int32 page_now;
+  int32 page_max;
+  struct ranking -> [
+    int32 rank;
+    int32 pilot_id;
+    string name;
+    int32 troops;
+    int32 level;
+    int32 clan_id;
+    string clan_name;
+    int32 emb_base;
+    int32 emb_parts1;
+    int32 emb_parts2;
+    int32 score;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+  ]
+  struct toppilots -> [
+    int32 rank;
+    int32 pilot_id;
+    string name;
+    int32 troops;
+    int32 level;
+    int32 clan_id;
+    string clan_name;
+    int32 emb_base;
+    int32 emb_parts1;
+    int32 emb_parts2;
+    int32 score;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+  ]
+  string term_str;
+
+proto_lounge_client::recv_ranking_clan_get_r (0xbabe) (0x7ff75a0a53e6)
+  int32 result;
+  struct order -> [
+    uint16 kind;
+    uint16 term;
+    uint16 filter;
+    uint16 reason;
+    uint16 troops;
+  ]
+  struct rankself -> [
+    int32 rank;
+    int32 score_now;
+  ]
+  int32 page_now;
+  int32 page_max;
+  struct ranking -> [
+    int32 rank;
+    int32 clan_id;
+    string clan_name;
+    int32 troops;
+    int32 clan_lv;
+    int32 leader_pilot_id;
+    string leader_pilot_name;
+    int32 leader_level;
+    int32 emb_base;
+    int32 emb_parts1;
+    int32 emb_parts2;
+    int32 score;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+  ]
+  struct topclans -> [
+    int32 rank;
+    int32 clan_id;
+    string clan_name;
+    int32 troops;
+    int32 clan_lv;
+    int32 leader_pilot_id;
+    string leader_pilot_name;
+    int32 leader_level;
+    int32 emb_base;
+    int32 emb_parts1;
+    int32 emb_parts2;
+    int32 score;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+  ]
+  string term_str;
+  int32 clan_kind;
+
+proto_lounge_client::recv_storage_msma_extend_r (0xbabe) (0x7ff75a0a5ce6)
+  int32 result;
+  int32 slot_num;
+
+proto_lounge_client::recv_storage_msma_extend_buy_ticket_r (0xbabe) (0x7ff75a0a6156)
+  int32 result;
+  int32 slot_num;
+
+proto_lounge_client::recv_storage_item_extend_r (0xbabe) (0x7ff75a0a65c6)
+  int32 result;
+  int32 slot_num;
+
+proto_lounge_client::recv_deckcost_extend_r (0xbabe) (0x7ff75a0a6ad4)
+  int32 result;
+  uint16 deckcost;
+  uint16 remain;
+
+proto_lounge_client::recv_deckcost_extend_info_notice (0xbabe) (0x7ff75a0a706a)
+  uint16 deckcost;
+  uint16 remain;
+  uint16 is_notice;
+
+proto_lounge_client::recv_second_chance_free_play_update (0xbabe) (0x7ff75a0a74d3)
+  int32 remain;
+
+proto_lounge_client::recv_second_chance_free_play_r (0xbabe) (0x7ff75a0a78c1)
+  int32 result;
+  int32 remain;
+
+proto_lounge_client::recv_bgm_pack_info_notice (0xbabe) (0x7ff75a0a7df8)
+  int32 bgm_pack;
+  int32 tmp;
+
+proto_lounge_client::recv_restrictitem_buy_info_notice (0xbabe) (0x7ff75a0a833c)
+  int32 restrictitem_buy;
+
+proto_lounge_client::recv_restrictbuy_multiple_info_notice (0xbabe) (0x7ff75a0a87fc)
+  struct restrictbuy_multiple -> [
+    int32 item_id;
+    int32 bought_cnt;
+  ]
+
+proto_lounge_client::recv_restrict_exchange_notice (0xbabe) (0x7ff75a0a8fee)
+  uint16 exchanges_1;
+  uint16 exchanges_2;
+  uint16 exchanges_3;
+  uint16 exchanges_item;
+  uint16 exchanges_plan;
+  uint16 exchanges_tournament;
+  uint16 exchanges_tournament_complete;
+
+proto_lounge_client::recv_plan_pack_ticket_purchased_notice (0xbabe) (0x7ff75a0a9a5a)
+  int32 purchased_cnt;
+
+proto_lounge_client::recv_event_notice_add_dialog_show (0xbabe) (0x7ff75a0a9f72)
+  int32 notice_id;
+  string url;
+  int32 width;
+  int32 height;
+
+proto_lounge_client::recv_activity_notice (0xbabe) (0x7ff75a0aa4ea)
+  struct activity -> [
+    int32 pilot_id;
+    string pilot_name;
+    int32 level;
+    int32 is_admin;
+    int32 send_range;
+    string timestamp;
+    string msg;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+    int32 clan_id;
+    string clan_name;
+    int32 clan_emb_base;
+    int32 clan_emb_parts1;
+    int32 clan_emb_parts2;
+  ]
+
+proto_lounge_client::recv_replay_get_access_url (0xbabe) (0x7ff75a0aa8e7)
+  string url;
+
+proto_lounge_client::recv_replay_auth_get_downloadkey_r (0xbabe) (0x7ff75a0aad1f)
+  int32 result;
+  string download_key;
+  string secret_key;
+
+proto_lounge_client::recv_bbs_get_access_url (0xbabe) (0x7ff75a0ab10b)
+  string url;
+
+proto_lounge_client::recv_pilot_cwchscore_reward_notice (0xbabe) (0x7ff75a0ab600)
+  int32 get_reward;
+  int32 num_reward;
+  int32 highscore;
+  string coopwave_score_term;
+
+proto_lounge_client::recv_cupteam_party_get_r (0xbabe) (0x7ff75a0abbe5)
+  int32 result;
+  int32 channel_id;
+  int32 party_id;
+
+proto_lounge_client::recv_cupteam_party_status_update (0xbabe) (0x7ff75a0ac222)
+  int32 cupteam_rate;
+  int32 last_bracket_id;
+  struct phase -> [
+    int32 phase;
+    int32 round;
+    int32 open_time;
+    int32 close_time;
+  ]
+  struct bracket -> [
+    int32 phase;
+    int32 round;
+    int32 mission_id;
+    int32 bracket_id;
+    string bracket_name;
+    int32 winners_bracket_id;
+    int32 losers_bracket_id;
+    int32 open_time;
+    int32 close_time;
+    int32 cupteam_id_a;
+    int32 cupteam_id_b;
+  ]
+
+proto_lounge_client::recv_notify_cupteam_party_rate_update (0xbabe) (0x7ff75a0ac76e)
+  int32 cupteam_rate;
+  int32 last_bracket_id;
+
+proto_lounge_client::recv_cpf_authenticate (0xbabe) (0x7ff75a0acc15)
+  uint32 data;
+
+proto_lounge_client::recv_cpf_authenticate_error (0xbabe) (0x7ff75a0ad012)
+  int32 result;
+
+proto_lounge_client::recv_speedhack_check_request (0xbabe) (0x7ff75a0ad36d)
+  int32 sec;
+
+proto_lounge_client::recv_you9_cps_ICV_request (0xbabe) (0x7ff75a0ad6c8)
+  int32 factor;
+
+proto_lounge_client::recv_you9_cps_HDB_request (0xbabe) (0x7ff75a0adaeb)
+  uint32 hdbdat;
+
+proto_lounge_client::recv_you9_cps_RAC_request (0xbabe) (0x7ff75a0ae017)
+  int32 factor;
+  int32 sign_addr;
+  int32 sign_codelen;
+
+proto_lounge_client::recv_you9_cps_SCAN_request (0xbabe) (0x7ff75a0ae395)
+
+proto_lounge_client::recv_system_message (0xbabe) (0x7ff75a0ae6e0)
+  string msg;
+  uint32 color;
+
+proto_lounge_client::recv_debug_message (0xbabe) (0x7ff75a0aeb07)
+  string msg;
+  uint32 color;
+
+proto_lounge_client::recv_get_special_a_info_r (0xbabe) (0x7ff75a0af087)
+  int32 result;
+  struct info -> [
+    int32 rank;
+    int32 score_now;
+    uint16 entry_until;
+    uint16 highscores;
+    uint16 entry_until_es;
+    uint16 eventscores;
+  ]
+  struct next -> [
+    int32 point;
+    int32 item_id;
+    int32 item_num;
+    int32 spc_bonus_exceeded_interval;
+  ]
+  int32 type;
+
+proto_lounge_client::recv_pilot_earlyexit_rkgrevoke (0xbabe) (0x7ff75a0af543)
+  int32 remain_cnt;
+
+proto_lounge_client::recv_pilot_unreached_notify (0xbabe) (0x7ff75a0afa78)
+  int32 notify_type;
+  int32 data1;
+  int32 data2;
+  int32 data3;
+
+proto_lounge_client::recv_penalty_exp_and_money (0xbabe) (0x7ff75a0afff3)
+  int32 penalty_exp;
+  int32 penalty_money;
+
+proto_lounge_client::recv_pilot_examination_state (0xbabe) (0x7ff75a0b0501)
+  int32 pilot_id;
+  struct exam_state -> [
+    int32 state;
+    int32 chances_used;
+    int32 chances_total;
+    int32 playsec_total;
+    int32 playsec_elapsed;
+    int32 playscore_sum;
+    struct examination_list -> [
+      int32 id;
+      int32 gain_val;
+    ]
+    int32 id;
+    int32 gain_val;
+    int32 interval_cnt;
+  ]
+  uint16 evaluation_result;
+
+proto_lounge_client::recv_pilot_examination_interval_skip_r (0xbabe) (0x7ff75a0b094f)
+  int32 result;
+
+proto_lounge_client::recv_pilot_consecutive_lose_accum_pt_update (0xbabe) (0x7ff75a0b0caa)
+  int32 accum_pt;
+
+proto_lounge_client::recv_update_check_progress_quest_id_r (0xbabe) (0x7ff75a0b1096)
+  int32 result;
+  int32 quest_id;
+
+proto_lounge_client::recv_dailycup_config_update (0xbabe) (0x7ff75a0b1506)
+  struct dailycup_conf -> [
+    int32 state;
+    int32 tournament_id;
+    int32 mode;
+    int32 open_date;
+    int32 team_num;
+    uint16 bracket_num;
+    uint16 bracket_max;
+    int32 booking_start;
+    int32 booking_end;
+    int32 mission_id_st;
+    int32 mission_id_dt;
+    int32 matching_extrule;
+    int32 extrule_id;
+    int32 extrule_id_sp;
+    int32 group_id;
+    int32 isTDM;
+    int32 isMSChoice;
+  ]
+  struct dailycup_conf_next -> [
+    int32 state;
+    int32 tournament_id;
+    int32 mode;
+    int32 open_date;
+    int32 team_num;
+    uint16 bracket_num;
+    uint16 bracket_max;
+    int32 booking_start;
+    int32 booking_end;
+    int32 mission_id_st;
+    int32 mission_id_dt;
+    int32 matching_extrule;
+    int32 extrule_id;
+    int32 extrule_id_sp;
+    int32 group_id;
+    int32 isTDM;
+    int32 isMSChoice;
+  ]
+
+proto_lounge_client::recv_dailycup_state_update (0xbabe) (0x7ff75a0b18b8)
+  int32 state;
+
+proto_lounge_client::recv_dailycup_bracket_update (0xbabe) (0x7ff75a0b1c13)
+  int32 index;
+
+proto_lounge_client::recv_dailycup_entry_term (0xbabe) (0x7ff75a0b1f6e)
+  int32 term_sec;
+
+proto_lounge_client::recv_dailycup_booking_accept (0xbabe) (0x7ff75a0b22c9)
+  int32 is_accept;
+
+proto_lounge_client::recv_dailycup_booking_update (0xbabe) (0x7ff75a0b2626)
+  int32 fixed_team_num;
+
+proto_lounge_client::recv_dailycup_round_start_interval (0xbabe) (0x7ff75a0b2a12)
+  uint16 node_id;
+  int32 wait_sec;
+
+proto_lounge_client::recv_dailycup_get_bracket_r (0xbabe) (0x7ff75a0b2f22)
+  int32 result;
+  int32 index;
+  struct bracket -> [
+    int32 is_abort;
+    struct node -> [
+      uint16 node_id;
+      int32 isValid;
+      uint16 win_team_id;
+      int32 team_trA;
+      uint16 team_idA;
+      int32 team_trB;
+      uint16 team_idB;
+    ]
+  ]
+
+proto_lounge_client::recv_dailycup_entry_info (0xbabe) (0x7ff75a0b349d)
+  int32 rescode;
+  int32 bracket_idx;
+  int32 team_id;
+
+proto_lounge_client::recv_dailycup_team_info_get_r (0xbabe) (0x7ff75a0b3bc6)
+  int32 result;
+  int32 team_id;
+  int32 troops;
+  struct pilots -> [
+    int32 pilot_id;
+    string name;
+    int32 level;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+  ]
+
+proto_lounge_client::recv_dailycup_exit_r (0xbabe) (0x7ff75a0b4153)
+  int32 result;
+
+proto_lounge_client::recv_dailycup_get_point_r (0xbabe) (0x7ff75a0b453f)
+  int32 result;
+  struct dc_point -> [
+    int32 is_dc;
+    int32 is_reward_all;
+    int32 bef_dcpoint;
+    int32 aft_dcpoint;
+    struct bef_next -> [
+      int32 point;
+      int32 item_id;
+      int32 item_num;
+      int32 spc_bonus_exceeded_interval;
+    ]
+    struct aft_next -> [
+      int32 point;
+      int32 item_id;
+      int32 item_num;
+      int32 spc_bonus_exceeded_interval;
+    ]
+    int32 reward_item_ids;
+    int32 reward_item_nums;
+  ]
+
+proto_lounge_client::recv_dailycup_get_troop_pilot_result_r (0xbabe) (0x7ff75a0b4b15)
+  int32 result;
+  struct pilot_result -> [
+    int32 attend_group;
+    int32 result;
+  ]
+  struct troop_result -> [
+    int32 tournament_id;
+    int32 group_id;
+    int32 booking_start;
+    int32 extrule_id;
+    int32 extrule_id_sp;
+    uint16 e_wincnt;
+    uint16 z_wincnt;
+  ]
+
+proto_lounge_client::recv_heroms_set_r (0xbabe) (0x7ff75a0b50a8)
+  unknown-string heroms_uniqid;
+  int32 grants;
+
+proto_lounge_client::recv_heroms_exp_get_r (0xbabe) (0x7ff75a0b5794)
+  int32 pilot_id;
+  int32 favms_id;
+  int32 exp_mine;
+  int32 exp_top;
+  int32 my_rank;
+
+proto_lounge_client::recv_msma_adop_update (0xbabe) (0x7ff75a0b5e34)
+  uint16 adop_result;
+  int64 adop_uniq_msid;
+  struct adop_get -> [
+    int32 db_index;
+    int32 equip_wid;
+    uint16 adop_set;
+  ]
+
+proto_lounge_client::recv_byword_rate_get (0xbabe) (0x7ff75a0b6329)
+  int32 world_id;
+  float32 rate_ary;
+
+proto_lounge_client::recv_tech_research_point_update (0xbabe) (0x7ff75a0b679d)
+  int32 point;
+
+proto_lounge_client::recv_tech_research_panel_unlock_request_r (0xbabe) (0x7ff75a0b6b9e)
+  int32 result;
+  int32 panel;
+
+proto_lounge_client::recv_goldharo_get_detail_list_r (0xbabe) (0x7ff75a0b70d3)
+  struct goldharo_list -> [
+    int32 entry;
+    int32 validity;
+    uint16 status;
+  ]
+
+proto_lounge_client::recv_player_navi_get_list_r (0xbabe) (0x7ff75a0b7595)
+  struct player_navi_list -> [
+    int32 navi_id;
+    int32 status;
+  ]
+
+proto_lounge_client::recv_player_navi_unlock_r (0xbabe) (0x7ff75a0b7a23)
+  int32 result;
+  struct unlocked_navi -> [
+    int32 navi_id;
+    int32 status;
+  ]
+
+proto_lounge_client::recv_player_navi_exchange_r (0xbabe) (0x7ff75a0b7f1a)
+  int32 result;
+  struct old_navi -> [
+    int32 navi_id;
+    int32 status;
+  ]
+  struct new_navi -> [
+    int32 navi_id;
+    int32 status;
+  ]
+
+proto_lounge_client::recv_ranking_elite_pilot_get_page_r (0xbabe) (0x7ff75a0b8a5f)
+  int32 result;
+  int32 is_revoke;
+  struct order -> [
+    uint16 kind;
+    uint16 term;
+    uint16 filter;
+    uint16 reason;
+    uint16 troops;
+  ]
+  struct rankself -> [
+    int32 rank;
+    int32 season_class_lv;
+  ]
+  int32 page_now;
+  int32 page_max;
+  struct ranking -> [
+    int32 rank;
+    int32 score;
+    int32 pilot_id;
+    string name;
+    int32 troops;
+    int32 world_id;
+    int32 season_class_lv;
+    unknown-string2 tm_upd;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+    struct msdeck -> [
+      int32 msma_id;
+      int32 color;
+      string is_heroms;
+    ]
+    int32 last_score;
+    int32 last_rank;
+    string clan_name;
+    int32 emb_base;
+    int32 emb_parts1;
+    int32 emb_parts2;
+    int32 is_regular;
+    int32 is_reserve;
+  ]
+  string term_str;
+  int32 term_rankerbattle;
+
+proto_lounge_client::recv_season_class_up_reward_get_r (0xbabe) (0x7ff75a0b922b)
+  int32 result;
+
+proto_lounge_client::recv_season_class_up_reward_get_update (0xbabe) (0x7ff75a0b96e9)
+  int32 pilot_id;
+  uint16 sc_lv_up_reward_get;
+
+proto_lounge_client::recv_season_class_level_max_update (0xbabe) (0x7ff75a0b9b69)
+  int32 sc_lv_max;
+
+proto_lounge_client::recv_ranking_elite_pilot_get_page_light_r (0xbabe) (0x7ff75a0ba0d5)
+  int32 result;
+  struct order -> [
+    uint16 kind;
+    uint16 term;
+    uint16 filter;
+    uint16 reason;
+    uint16 troops;
+  ]
+  struct ranking -> [
+    int32 score;
+    int32 pilot_id;
+    string name;
+    int32 troops;
+    int32 world_id;
+    int32 season_class_lv;
+    string clan_name;
+  ]
+
+proto_lounge_client::recv_season_rankerbattle_config_update (0xbabe) (0x7ff75a0ba656)
+  struct season_rb_conf -> [
+    int32 state;
+    int32 tournament_id;
+    int32 mode;
+    int32 open_date;
+    int32 booking_start;
+    int32 booking_end;
+    int32 mission_id;
+    int32 mission_id_dm;
+    int32 is_end;
+    int32 is_debug;
+  ]
+  struct season_rb_conf_next -> [
+    int32 state;
+    int32 tournament_id;
+    int32 mode;
+    int32 open_date;
+    int32 booking_start;
+    int32 booking_end;
+    int32 mission_id;
+    int32 mission_id_dm;
+    int32 is_end;
+    int32 is_debug;
+  ]
+
+proto_lounge_client::recv_season_rankerbattle_state_update (0xbabe) (0x7ff75a0baa99)
+  int32 state;
+  int32 rb_rank;
+
+proto_lounge_client::recv_season_rankerbattle_entry_term (0xbabe) (0x7ff75a0bae78)
+  int32 term_sec;
+
+proto_lounge_client::recv_season_rankerbattle_entry_info (0xbabe) (0x7ff75a0bb264)
+  int32 reccode;
+  int32 is_set;
+
+proto_lounge_client::recv_season_rankerbattle_get_entitled_pilot_list_r (0xbabe) (0x7ff75a0bb854)
+  int32 result;
+  struct order -> [
+    uint16 kind;
+    uint16 term;
+    uint16 filter;
+    uint16 reason;
+    uint16 troops;
+  ]
+  struct ranking -> [
+    int32 score;
+    int32 pilot_id;
+    string name;
+    int32 troops;
+    int32 world_id;
+    int32 season_class_lv;
+    string clan_name;
+  ]
+
+proto_lounge_client::recv_season_rankerbattle_set_event_flag (0xbabe) (0x7ff75a0bbdd5)
+  int32 event_flag;
+  int32 is_set;
+
+proto_lounge_client::recv_season_rankerbattle_replay_info (0xbabe) (0x7ff75a0bc245)
+  struct replay_info -> [
+    unknown-string id;
+    int32 missionId;
+    int32 time;
+    int32 troopsA;
+    int32 troopsB;
+    int32 endDate;
+    int32 top_pilot_id_troopsA;
+    int32 top_world_id_troopsA;
+    int32 top_pilot_id_troopsB;
+    int32 top_world_id_troopsB;
+  ]
+  int32 win_troops;
+
+proto_lounge_client::recv_season_rankerbattle_team_info_get_r (0xbabe) (0x7ff75a0bc81f)
+  int32 result;
+  int32 troops;
+  struct pilots -> [
+    int32 pilot_id;
+    string name;
+    int32 level;
+    int32 world_id;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+  ]
+
+proto_lounge_client::recv_commonbattle_config_update (0xbabe) (0x7ff75a0bcdb7)
+  struct commonbattle_conf -> [
+    int32 state;
+    int32 tournament_id;
+    int32 mode;
+    int32 open_date;
+    int32 team_num;
+    uint16 bracket_num;
+    uint16 bracket_max;
+    int32 booking_start;
+    int32 booking_end;
+    int32 mission_id_st;
+    int32 mission_id_dt;
+    int32 matching_extrule;
+    int32 extrule_id;
+    int32 extrule_id_sp;
+    int32 group_id;
+    int32 isTDM;
+    int32 isMSChoice;
+  ]
+  struct commonbattle_conf_next -> [
+    int32 state;
+    int32 tournament_id;
+    int32 mode;
+    int32 open_date;
+    int32 team_num;
+    uint16 bracket_num;
+    uint16 bracket_max;
+    int32 booking_start;
+    int32 booking_end;
+    int32 mission_id_st;
+    int32 mission_id_dt;
+    int32 matching_extrule;
+    int32 extrule_id;
+    int32 extrule_id_sp;
+    int32 group_id;
+    int32 isTDM;
+    int32 isMSChoice;
+  ]
+
+proto_lounge_client::recv_commonbattle_state_update (0xbabe) (0x7ff75a0bd169)
+  int32 state;
+
+proto_lounge_client::recv_commonbattle_bracket_update (0xbabe) (0x7ff75a0bd4c4)
+  int32 index;
+
+proto_lounge_client::recv_commonbattle_entry_term (0xbabe) (0x7ff75a0bd81f)
+  int32 term_sec;
+
+proto_lounge_client::recv_commonbattle_booking_accept (0xbabe) (0x7ff75a0bdb7a)
+  int32 is_accept;
+
+proto_lounge_client::recv_commonbattle_booking_update (0xbabe) (0x7ff75a0bded7)
+  int32 fixed_team_num;
+
+proto_lounge_client::recv_commonbattle_round_start_interval (0xbabe) (0x7ff75a0be2c3)
+  uint16 node_id;
+  int32 wait_sec;
+
+proto_lounge_client::recv_commonbattle_get_bracket_r (0xbabe) (0x7ff75a0be7d3)
+  int32 result;
+  int32 index;
+  struct bracket -> [
+    int32 is_abort;
+    struct node -> [
+      uint16 node_id;
+      int32 isValid;
+      uint16 win_team_id;
+      int32 team_trA;
+      uint16 team_idA;
+      int32 team_trB;
+      uint16 team_idB;
+    ]
+  ]
+
+proto_lounge_client::recv_commonbattle_entry_info (0xbabe) (0x7ff75a0bed4e)
+  int32 rescode;
+  int32 bracket_idx;
+  int32 team_id;
+
+proto_lounge_client::recv_commonbattle_team_info_get_r (0xbabe) (0x7ff75a0bf477)
+  int32 result;
+  int32 team_id;
+  int32 troops;
+  struct pilots -> [
+    int32 pilot_id;
+    string name;
+    int32 level;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+  ]
+
+proto_lounge_client::recv_commonbattle_get_point_r (0xbabe) (0x7ff75a0bfa95)
+  int32 result;
+  struct cb_point -> [
+    int32 is_cb;
+    int32 is_reward_all;
+    int32 bef_cbpoint;
+    int32 aft_cbpoint;
+    struct bef_next -> [
+      int32 point;
+      int32 item_id;
+      int32 item_num;
+      int32 spc_bonus_exceeded_interval;
+    ]
+    struct aft_next -> [
+      int32 point;
+      int32 item_id;
+      int32 item_num;
+      int32 spc_bonus_exceeded_interval;
+    ]
+    int32 reward_item_ids;
+    int32 reward_item_nums;
+  ]
+
+proto_lounge_client::recv_season_class_update_battle_num (0xbabe) (0x7ff75a0bfe5d)
+  int32 sc_battle_num;
+
+proto_lounge_client::recv_pilot_pilotpass_get_r (0xbabe) (0x7ff75a0c0249)
+  int32 result;
+  struct info -> [
+    int32 pilotpass_point;
+    uint16 free_acquired_lv_max;
+    uint16 premium_acquired_lv_max;
+    int32 xwar_win_term_clear;
+    int32 is_acquired_plus;
+    uint16 daily_command_stack;
+    uint16 netcafe_command_stack;
+  ]
+
+proto_lounge_client::recv_pilot_pilotpass_season_get_r (0xbabe) (0x7ff75a0c0740)
+  int32 result;
+  int32 season_id;
+  struct info -> [
+    int32 pilotpass_point;
+    uint16 free_acquired_lv_max;
+    uint16 premium_acquired_lv_max;
+    int32 xwar_win_term_clear;
+    int32 is_acquired_plus;
+    uint16 daily_command_stack;
+    uint16 netcafe_command_stack;
+  ]
+
+proto_lounge_client::recv_pilot_pilotpass_update_r (0xbabe) (0x7ff75a0c1003)
+  int32 result;
+  int32 clear_command_id_list;
+  int32 time_over_command_id_list;
+  int32 netcafe_clear_command_id_list;
+
+proto_lounge_client::recv_pilot_pilotpass_notice (0xbabe) (0x7ff75a0c15ec)
+
+proto_lounge_client::recv_pilotpass_lv_reward_get_r (0xbabe) (0x7ff75a0c1947)
+  int32 result;
+  int32 present_count;
+
+proto_lounge_client::recv_pilotpass_point_update (0xbabe) (0x7ff75a0c1db7)
+  int32 pilot_id;
+  int32 pilotpass_point;
+
+proto_lounge_client::recv_pilotpass_acquired_lv_update (0xbabe) (0x7ff75a0c22c5)
+  int32 pilot_id;
+  uint16 free_lv_max;
+  uint16 premium_lv_max;
+
+proto_lounge_client::recv_pilotpass_is_acquired_plus_update (0xbabe) (0x7ff75a0c27bd)
+  int32 pilot_id;
+  int32 is_acquired_plus;
+
+proto_lounge_client::recv_pilotpass_plus_unlock_r (0xbabe) (0x7ff75a0c2b9e)
+  int32 result;
+
+proto_lounge_client::recv_pilotpass_command_get_r (0xbabe) (0x7ff75a0c2f18)
+  struct pcommand -> [
+    int32 id;
+    int32 val;
+    uint16 is_clear;
+    uint16 is_time_over;
+  ]
+
+proto_lounge_client::recv_pilotpass_command_stack_update (0xbabe) (0x7ff75a0c3395)
+  uint16 daily_command_stack;
+  uint16 netcafe_command_stack;
+
+proto_lounge_client::recv_custom_match_point_update_notice (0xbabe) (0x7ff75a0c3809)
+  int32 result;
+  int32 upd_point;
+

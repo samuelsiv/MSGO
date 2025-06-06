@@ -17,5 +17,5 @@ sealed class WorldServer : TcpServer
     protected override TcpSession CreateSession() => 
         new WorldSession(this);
     protected override void OnError(SocketError error) =>
-        Logger.Error("Auth Server caught an error with code {Error}", error);
+        Logger.Error("World Server caught an error with code {Error}", error);
 }

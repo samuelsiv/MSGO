@@ -1,0 +1,7 @@
+﻿proto_auth_client::recv_proto_version_check_r 
+proto_auth_client::recv_authenticate_r 
+proto_auth_client::recv_authenticate_bnpotp_input 
+proto_auth_client::recv_authenticate_you9otp_input 
+proto_auth_client::recv_worldlist_get_r 
+proto_auth_client::recv_worldlist_select_r 
+proto_auth_client::recv_overplay_resettime_get_r 

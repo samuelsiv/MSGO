@@ -14,5 +14,5 @@ public class WorldSession(TcpServer server) : BaseSession(server)
         PacketHandlerRegistry.HandlePacket(this, packet, (PacketRequest)packet.PacketId, rawData);
 
     protected override void OnError(SocketError error) =>
-        Logger.Error("World Server session caught an error with code {Error}", error);
+        Logger.Error("Battle Server session caught an error with code {Error}", error);
 }

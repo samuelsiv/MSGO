@@ -1,0 +1,1641 @@
+proto_auth_client::send_authenticate (0xf24b) (0x7ff759fa912e)
+  string login_id;
+  string login_pw;
+  string disk_uuid;
+  string mac_addr;
+
+proto_auth_client::send_authenticate_bnpotp_input_r (0x44cd) (0x7ff759fa93d0)
+  string input_otp;
+
+proto_auth_client::send_authenticate_you9otp_input_r (0x5c82) (0x7ff759fa95fb)
+  int32 otp_type;
+  string otp_matrix_code;
+  string input_otp;
+
+proto_auth_client::send_proto_version_check (0x34a9) (0x7ff759fa984e)
+  int32 version;
+  uint32 crc;
+  uint32 gentime;
+
+proto_auth_client::send_worldlist_get (0x8288) (0x7ff759fa9a3c)
+
+proto_auth_client::send_worldlist_select (0xa380) (0x7ff759fa9bee)
+  int32 world_id;
+
+proto_battle_client::send_access_to (0x2da4) (0x7ff75a015a20)
+  uint16 access_ent_id;
+  uint16 AI_ent_id;
+
+proto_battle_client::send_active_weapon_change (0xea5a) (0x7ff75a015c34)
+  int32 frame_count;
+  int32 equip_index;
+  uint16 AI_ent_id;
+
+proto_battle_client::send_active_weapon_mode_change (0x31d2) (0x7ff75a015e60)
+  uint16 mode;
+  uint16 AI_ent_id;
+
+proto_battle_client::send_authenticate (0xf24b) (0x7ff75a0160e2)
+  int32 userid;
+  int32 world_id;
+  int32 pilot_id;
+  int32 room_id;
+  string otp_battle;
+  int32 is_comeback;
+
+proto_battle_client::send_battleship_crash_impact (0x271f) (0x7ff75a0163a0)
+  uint16 from_ent_id;
+  uint16 to_ent_id;
+
+proto_battle_client::send_battleship_get_down (0xf4b9) (0x7ff75a01658f)
+  int32 reason;
+
+proto_battle_client::send_battleship_ride (0xba58) (0x7ff75a016760)
+  uint16 to_ent_id;
+
+proto_battle_client::send_bullet_supply_r (0xc84f) (0x7ff75a016940)
+  uint16 percent_val;
+  uint16 equip_idx;
+
+proto_battle_client::send_check_progress_quest (0xffff) (0x7ff75a016b0c)
+
+proto_battle_client::send_combat_operation_container_collect (0x6fa1) (0x7ff75a016cbe)
+  int32 destination;
+
+proto_battle_client::send_combat_operation_target_change (0xe742) (0x7ff75a016eb7)
+  uint16 target_x;
+  uint16 target_y;
+  uint16 target_z;
+
+proto_battle_client::send_commander_candidacy_inbattle (0x6c48) (0x7ff75a0170ac)
+
+proto_battle_client::send_commander_get_pilotinfo (0xcaaf) (0x7ff75a01726f)
+  int32 target_member;
+  uint16 target_ace;
+
+proto_battle_client::send_commander_list_get (0xdae0) (0x7ff75a01746e)
+  int32 team;
+  int32 troops;
+
+proto_battle_client::send_commander_order_assist (0x6636) (0x7ff75a01765f)
+  int32 type;
+
+proto_battle_client::send_commander_select (0xf79b) (0x7ff75a01782e)
+  int32 commander_id;
+
+proto_battle_client::send_commander_subcmdr_candidacy_inbattle (0x1e04) (0x7ff75a0179dc)
+
+proto_battle_client::send_commander_support_execute (0x6486) (0x7ff75a017c0f)
+  int32 support_type;
+  uint16 target_x;
+  uint16 target_y;
+  uint16 target_z;
+  int32 spt_spot_index;
+  int32 val;
+
+proto_battle_client::send_commander_support_hit_to (0xbcb4) (0x7ff75a017fd0)
+  uint16 ent_id;
+  int32 hit_team;
+  int32 hit_troops;
+  int32 support_type;
+  uint16 ent_ids;
+  uint16 hit_dirs;
+
+proto_battle_client::send_cpf_authenticate_r (0xffff) (0x7ff75a01834f)
+  uint32 data;
+
+proto_battle_client::send_custommatch_room_begin (0x397e) (0x7ff75a01853c)
+
+proto_battle_client::send_custommatch_room_breakup (0x3e94) (0x7ff75a0186cc)
+
+proto_battle_client::send_cutin_up (0x379b) (0x7ff75a0188d9)
+  int32 cutin_category_id;
+  uint16 AI_ent_id;
+  int32 to_world_id;
+  int32 to_pilot_id;
+  int32 to_range;
+
+proto_battle_client::send_daily_record_progress (0xedd6) (0x7ff75a018b2c)
+
+proto_battle_client::send_dynamic_taskforce_order_change_party (0xbca5) (0x7ff75a018ced)
+  int32 order_kind;
+  int32 order_param;
+
+proto_battle_client::send_dynamic_taskforce_order_issue (0x692b) (0x7ff75a018faf)
+  int32 order_kind;
+  int32 order_param;
+  int32 select_members;
+  uint16 select_npcs;
+
+proto_battle_client::send_emergency_escape (0xcfc8) (0x7ff75a01926c)
+
+proto_battle_client::send_emergency_self_destruct (0xf51e) (0x7ff75a0193fc)
+
+proto_battle_client::send_entity_deploy_arms_attach (0xffff) (0x7ff75a019610)
+  int32 arms_id;
+  uint16 attach_parent_ent_id;
+  uint16 attach_pos_x;
+  uint16 attach_pos_y;
+  uint16 attach_pos_z;
+
+proto_battle::send_entity_msma_fix (0x20f5) (0x7ff75a019901)
+  uint16 ent_id;
+  uint16 pos_x;
+  uint16 pos_y;
+  uint16 pos_z;
+  uint16 attach_parent_ent_id;
+  int32 is_using_ss;
+
+proto_battle_client::send_eqparts_exec_toggle (0x5a5d) (0x7ff75a019bc5)
+  int32 frame_count;
+  uint16 AI_ent_id;
+  uint16 group_id;
+
+proto_battle_client::send_eqparts_ready_cancel (0xddb7) (0x7ff75a019e05)
+  int32 frame_count;
+  uint16 AI_ent_id;
+  uint16 group_id;
+
+proto_battle_client::send_eqparts_ready_start (0xc166) (0x7ff75a01a062)
+  int32 frame_count;
+  uint16 AI_ent_id;
+  uint16 group_id;
+  uint32 reason;
+
+proto_battle_client::send_examination_progress (0x77c0) (0x7ff75a01a28c)
+
+proto_battle_client::send_force_exit_alert_info (0xefef) (0x7ff75a01a41c)
+
+proto_battle_client::send_funnel_snapshot_self (0x7916) (0x7ff75a01a619)
+  struct snapshot -> [
+    uint16 ent_id;
+    int32 wslot_idx;
+    string move_info;
+  ]
+
+proto_battle_client::send_game_client_signal (0xbdd2) (0x7ff75a01a7ee)
+  int32 sigval;
+
+proto_battle_client::send_game_mission_progress_get (0xffff) (0x7ff75a01a99c)
+
+proto_battle_client::send_game_resume_enter (0xcb97) (0x7ff75a01ab91)
+  int32 is_initial;
+  int32 script_thread;
+  string src;
+
+proto_battle_client::send_game_round_ready (0x2cab) (0x7ff75a01ad9c)
+
+proto_battle_client::send_msma_AI_arrive_move_end (0xb10a) (0x7ff75a01af50)
+  uint16 AI_ent_id;
+
+proto_battle_client::send_msma_AI_hate_control (0x6bcd) (0x7ff75a01b147)
+  uint16 AI_ent_id;
+  uint16 target_ent_id;
+  uint16 hate_adjust;
+
+proto_battle_client::send_msma_AI_move_stuckescape (0x434c) (0x7ff75a01b3c2)
+  uint16 AI_ent_id;
+  uint16 to_x;
+  uint16 to_y;
+  uint16 to_z;
+  uint16 msec;
+
+proto_battle_client::send_msma_AI_ping (0xffff) (0x7ff75a01b630)
+  uint16 AI_ent_id;
+
+proto_battle_client::send_msma_AI_set_stat (0x5456) (0x7ff75a01b8bc)
+  uint16 AI_ent_id;
+  int32 idx;
+  int32 num;
+
+proto_battle_client::send_msma_spawn_list_get (0xe041) (0x7ff75a01bb4c)
+
+proto_battle_client::send_msma_spawn_select (0xe650) (0x7ff75a01bd78)
+  int32 ms_index;
+  int32 post_index;
+  int32 spt_spot_index;
+  int32 is_btlship_ride;
+  int32 is_msma_ride;
+  uint16 respawn_ent_id;
+
+proto_battle_client::send_msma_spawn_warp_select (0x800a) (0x7ff75a01c05f)
+  int32 post_index;
+  int32 spt_spot_index;
+  int32 is_btlship_ride;
+  uint16 respawn_ent_id;
+
+proto_battle_client::send_msma_spawn_warp_start (0x7b52) (0x7ff75a01c2ae)
+  int32 is_cancel;
+
+proto_battle_client::send_object_put (0xcaae) (0x7ff75a01c521)
+  int32 frame_count;
+  uint16 target_x;
+  uint16 target_y;
+  uint16 target_z;
+  uint16 attach_parent_ent_id;
+  int32 is_initiation;
+  uint16 AI_ent_id;
+
+proto_battle_client::send_pos_move (0x421b) (0x7ff75a01caf0)
+  int32 frame_count;
+  uint16 pos_x;
+  uint16 pos_y;
+  uint16 pos_z;
+  uint16 dir;
+  uint16 dir_eye;
+  uint16 target_x;
+  uint16 target_y;
+  uint16 target_z;
+  int32 spbits;
+  uint16 spbits2;
+  uint16 lockon_ent_id;
+  uint32 in_water_index;
+  uint32 layer_index;
+  uint16 access_ent_id1;
+  uint16 access_ent_id2;
+  uint16 rideon_ent_id;
+  uint16 spot_ent_id;
+  uint16 AI_ent_id;
+  uint16 operate_ent_id;
+  uint32 is_under_water;
+  struct hack_check -> [
+    enum16 move_spd;
+    enum16 boost_gauge;
+    enum16 boost_recov;
+    enum16 boost_consume;
+    int32 clcheck_result;
+    int32 weapon_itemid;
+    int32 weapon_cooltime;
+    int32 weapon_rapidtime;
+    int32 weapon_reload;
+    int32 debugger_found;
+    int32 proc_ref_count;
+    int32 reserved1;
+    int32 reserved2;
+    uint32 weapon_bullet_speed;
+    enum16 weapon_range;
+    enum16 weapon_charge_time;
+    enum16 weapon_bullet_mgz;
+    enum16 weapon_bullet_all;
+    enum16 weapon_batch_fire;
+    uint32 weapon_fired;
+    enum16 weapon_bullet_hit;
+    enum16 wrestle_size;
+    int32 wrestle_hack_check_ex;
+    float32 fps;
+    int32 ai_num;
+    float32 perf_pre_chara;
+    float32 perf_chara;
+    float32 perf_ai;
+    float32 perf_last;
+    float32 perf_if;
+    float32 perf_rdr;
+  ]
+
+proto_battle_client::send_preset_voice_up (0x9f0d) (0x7ff75a01d192)
+  int32 voice_id;
+  uint16 AI_ent_id;
+  int32 to_world_id;
+  int32 to_pilot_id;
+  int32 is_party;
+  int32 is_use_textmsg;
+  string textmsg;
+  int32 is_cutin;
+  int32 is_voice;
+
+proto_battle_client::send_preset_voice_up_commander (0x34be) (0x7ff75a01d4de)
+  int32 voice_id;
+  uint16 AI_ent_id;
+
+proto_battle_client::send_proto_version_check (0x34a9) (0x7ff75a01d6ee)
+  int32 version;
+  uint32 crc;
+  uint32 gentime;
+
+proto_battle_client::send_repair_pack_supply_r (0xd2ae) (0x7ff75a01d90e)
+  int32 val;
+  uint16 equip_idx;
+
+proto_battle_client::send_rideable_msma_get_down (0xb015) (0x7ff75a01daff)
+  int32 reason;
+
+proto_battle_client::send_room_chat_editing (0xbaff) (0x7ff75a01dccf)
+  int32 is_editing;
+
+proto_battle_client::send_room_chat_up (0xbb1a) (0x7ff75a01deea)
+  string msg;
+  int32 is_party;
+  int32 is_cm_room;
+
+proto_battle_client::send_room_kick_master (0x444d) (0x7ff75a01e12c)
+  int32 world_id;
+  int32 pilot_id;
+
+proto_battle_client::send_room_kick_vote (0xffff) (0x7ff75a01e341)
+  int32 target_world_id;
+  int32 target_pilot_id;
+  int32 kick_reason;
+
+proto_battle_client::send_room_kick_vote_get_enable_pilots (0xcf71) (0x7ff75a01e53c)
+
+proto_battle_client::send_roomlobby_exit (0xd97d) (0x7ff75a01e6cc)
+
+proto_battle_client::send_roomlobby_game_ready (0x2761) (0x7ff75a01e87e)
+  int32 stat;
+
+proto_battle_client::send_roomlobby_game_start (0xf741) (0x7ff75a01ea2c)
+
+proto_battle_client::send_roomlobby_pilot_mindex_update (0x9b19) (0x7ff75a01ebdf)
+  int32 member_index;
+
+proto_battle_client::send_roomlobby_xwar_commander_lot (0xa537) (0x7ff75a01edaf)
+  int32 is_lot;
+
+proto_battle_client::send_save_message (0x1c33) (0x7ff75a01efa0)
+  string msg;
+
+proto_battle_client::send_tumble_ukemi (0xedbc) (0x7ff75a01f18e)
+  uint16 AI_ent_id;
+  int32 tmp;
+
+proto_battle_client::send_weapon_fire__air_bomb (0xc90d) (0x7ff75a01f43e)
+  int32 frame_count;
+  uint16 target_x;
+  uint16 target_y;
+  uint16 target_z;
+  int32 shot0_drop1_impact2;
+  int32 fx_opt;
+  int32 airbomb_id;
+  uint16 AI_ent_id;
+
+proto_battle_client::send_weapon_fire__air_bomb_intercepted (0xe1c1) (0x7ff75a01f753)
+  uint16 ent_id;
+  int32 airbomb_id;
+  int32 arms_id;
+
+proto_battle_client::send_weapon_fire__bit (0xa4c9) (0x7ff75a01fb1b)
+  int32 frame_count;
+  int32 shot_bit_id;
+  uint16 shot_ent_id;
+  int32 shot_alive;
+  uint16 launch_x;
+  uint16 launch_y;
+  uint16 launch_z;
+  uint16 target_x;
+  uint16 target_y;
+  uint16 target_z;
+  uint16 target_ent_id;
+  uint16 msec;
+  int32 release0_shot1;
+  int32 fx_opt;
+  uint16 AI_ent_id;
+
+proto_battle_client::send_weapon_fire__bit_reflect (0xa0ea) (0x7ff75a02007a)
+  int32 frame_count;
+  int32 itemid;
+  uint16 launch_x;
+  uint16 launch_y;
+  uint16 launch_z;
+  uint16 target_x;
+  uint16 target_y;
+  uint16 target_z;
+  int32 charge_lv;
+  uint16 AI_ent_id;
+  uint16 reflect_ent_id;
+
+proto_battle_client::send_weapon_fire__camera (0xe314) (0x7ff75a02045b)
+  int32 frame_count;
+  uint16 ent_ids;
+  uint16 AI_ent_id;
+
+proto_battle_client::send_weapon_fire__damage_field (0x8898) (0x7ff75a0208e2)
+  int32 frame_count;
+  uint16 launch_x;
+  uint16 launch_y;
+  uint16 launch_z;
+  uint16 target1_x;
+  uint16 target1_y;
+  uint16 target1_z;
+  uint16 target2_x;
+  uint16 target2_y;
+  uint16 target2_z;
+  uint16 target_ent_id;
+  uint16 msec;
+  int32 shot0_impact1;
+  int32 fx_opt;
+  int32 impact_grenade_id;
+  int32 parent_grenade_id;
+  int32 charge_lv;
+  uint16 AI_ent_id;
+
+proto_battle_client::send_weapon_fire__deploy_arms (0xbfa9) (0x7ff75a020eb1)
+  int32 frame_count;
+  uint16 target_x;
+  uint16 target_y;
+  uint16 target_z;
+  uint16 target_ent_id;
+  int32 state;
+  int32 fx_opt;
+  int32 impact_arms_id;
+  uint16 AI_ent_id;
+  int32 is_gmk;
+  int32 index;
+
+proto_battle_client::send_weapon_fire__for_myself (0x36ac) (0x7ff75a0212f1)
+  int32 frame_count;
+  uint16 target_x;
+  uint16 target_y;
+  uint16 target_z;
+  uint16 rcnt_bullet_mgz;
+  uint16 rcnt_bullet_all;
+  int32 begin1_end0;
+  uint16 AI_ent_id;
+
+proto_battle_client::send_weapon_fire__funnel (0xfbc1) (0x7ff75a02168d)
+  int32 from_ent_id;
+  int32 wslot_idx;
+  struct fire_points -> [
+    uint16 x;
+    uint16 y;
+    uint16 z;
+  ]
+
+proto_battle_client::send_weapon_fire__grenade (0xd2c3) (0x7ff75a021b87)
+  int32 frame_count;
+  uint16 launch_x;
+  uint16 launch_y;
+  uint16 launch_z;
+  uint16 target1_x;
+  uint16 target1_y;
+  uint16 target1_z;
+  uint16 target2_x;
+  uint16 target2_y;
+  uint16 target2_z;
+  uint16 target_ent_id;
+  uint16 msec;
+  int32 shot0_impact1;
+  int32 fx_opt;
+  int32 impact_grenade_id;
+  int32 parent_grenade_id;
+  int32 charge_lv;
+  int32 ent_id;
+  uint16 AI_ent_id;
+  int32 impact_wall;
+  int32 salvo_slot;
+  int32 action;
+
+proto_battle_client::send_weapon_fire__hand_throw (0x7c0c) (0x7ff75a022299)
+  int32 frame_count;
+  uint16 launch_x;
+  uint16 launch_y;
+  uint16 launch_z;
+  uint16 target_x;
+  uint16 target_y;
+  uint16 target_z;
+  uint16 target_ent_id;
+  uint16 msec;
+  int32 shot0_impact1;
+  int32 fx_opt;
+  int32 impact_grenade_id;
+  int32 charge_lv;
+  uint16 AI_ent_id;
+  int32 salvo_slot;
+
+proto_battle_client::send_weapon_fire__hand_throw_bound (0x3af6) (0x7ff75a0227da)
+  int32 frame_count;
+  int32 grenade_id;
+  uint16 hit_x;
+  uint16 hit_y;
+  uint16 hit_z;
+  uint16 vec_x;
+  uint16 vec_y;
+  uint16 vec_z;
+  uint16 vec_power;
+  uint16 AI_ent_id;
+
+proto_battle_client::send_weapon_fire__shot_rapid (0xa404) (0x7ff75a022c04)
+  int32 frame_count;
+  uint16 target_x;
+  uint16 target_y;
+  uint16 target_z;
+  uint16 rcnt_bullet_mgz;
+  uint16 rcnt_bullet_all;
+  int32 begin1_end0;
+  uint16 AI_ent_id;
+  int32 salvo_slot;
+
+proto_battle_client::send_weapon_fire__shot_single (0x7ca0) (0x7ff75a023004)
+  int32 frame_count;
+  uint16 target_x;
+  uint16 target_y;
+  uint16 target_z;
+  uint16 rcnt_bullet_mgz;
+  uint16 rcnt_bullet_all;
+  int32 charge_lv;
+  uint16 AI_ent_id;
+  int32 salvo_slot;
+
+proto_battle_client::send_weapon_fire__shot_single_special (0x11a9) (0x7ff75a023343)
+  int32 frame_count;
+  int32 itemid;
+  uint16 AI_ent_id;
+
+proto_battle_client::send_weapon_fire__snipe_beam (0xc3bd) (0x7ff75a023621)
+  int32 frame_count;
+  uint16 target_x;
+  uint16 target_y;
+  uint16 target_z;
+  uint16 rcnt_bullet_mgz;
+  uint16 rcnt_bullet_all;
+  int32 begin1_end0;
+  uint16 AI_ent_id;
+
+proto_battle_client::send_weapon_fire__start_homing (0xbee3) (0x7ff75a02399e)
+  int32 frame_count;
+  int32 grenade_id;
+  uint16 pos_x;
+  uint16 pos_y;
+  uint16 pos_z;
+  uint16 target_ent_id;
+
+proto_battle_client::send_weapon_fire__wrestle (0x2adc) (0x7ff75a023d42)
+  int32 frame_count;
+  uint16 dir_h;
+  uint16 dir_v;
+  uint16 msec;
+  int32 wrestle_id;
+  int32 charge_lv;
+  uint16 AI_ent_id;
+  int32 action;
+  uint16 chase_ent_id;
+  int32 is_dp_damage_cut;
+
+proto_battle_client::send_weapon_fire_prepare__destruct_r (0xa8fe) (0x7ff75a0243c3)
+  int32 frame_count;
+  int32 weapon_itemid;
+  int32 fire_id;
+  uint16 ent_ids;
+  uint16 hit_pos_x;
+  uint16 hit_pos_y;
+  uint16 hit_pos_z;
+  uint16 hit_dirs;
+  enum16 hit_distance;
+  uint16 body_regions;
+  uint16 AI_ent_id;
+
+proto_battle_client::send_weapon_hit_to (0x770d) (0x7ff75a024e5e)
+  int64 phash;
+  int32 frame_count;
+  int32 weapon_itemid;
+  int32 fire_id;
+  uint16 ent_ids;
+  uint16 hit_pos_x;
+  uint16 hit_pos_y;
+  uint16 hit_pos_z;
+  uint16 hit_dirs;
+  enum16 hit_distance;
+  enum16 body_distance;
+  uint16 body_regions;
+  int32 charge_lv;
+  uint16 AI_ent_id;
+  uint16 instate_from_ent_id;
+  int32 create_frame_count;
+  int32 is_down_range;
+  int32 is_wrestle_first_high_lockon;
+
+proto_battle_client::send_wrestle_chase_move_end (0x6007) (0x7ff75a02565e)
+  int32 frame_count;
+  uint16 AI_ent_id;
+
+proto_battle_client::send_wrestle_chase_move_start (0xffff) (0x7ff75a025932)
+  int32 frame_count;
+  uint16 dir_h;
+  int32 wrestle_id;
+  int32 chase_time_msec;
+  uint16 target_ent_id;
+  uint16 target_pos_x;
+  uint16 target_pos_y;
+  uint16 target_pos_z;
+  uint16 AI_ent_id;
+
+proto_battle_client::send_xwar_commander_subcmdr_lot (0xbb6d) (0x7ff75a025c4f)
+  int32 is_lot;
+
+proto_lounge_client::send_activity_request (0xffff) (0x7ff75a0cb4dc)
+
+proto_lounge_client::send_adop_ignore_list_get (0xa085) (0x7ff75a0cb66c)
+
+proto_lounge_client::send_authenticate (0xf24b) (0x7ff75a0cb848)
+  int32 userid;
+  string otp;
+
+proto_lounge_client::send_block_list_add (0xecda) (0x7ff75a0cba9f)
+  int32 pilotid;
+  int32 world_id;
+  string to_pilot_name;
+  int32 send_sysmes;
+
+proto_lounge_client::send_block_list_get_detail_xworld (0x19a4) (0x7ff75a0cbccc)
+
+proto_lounge_client::send_block_list_get_idwlist (0x921b) (0x7ff75a0cbe5c)
+
+proto_lounge_client::send_block_list_remove (0x753a) (0x7ff75a0cc06f)
+  int32 pilotid;
+  int32 world_id;
+  string to_pilot_name;
+  int32 send_sysmes;
+
+proto_lounge_client::send_bnid_mkhash_get (0xbb73) (0x7ff75a0cc29c)
+
+proto_lounge_client::send_btlroom_change_mission (0xeb14) (0x7ff75a0cc496)
+  string room_name;
+  int32 mission_id;
+  int32 is_lock;
+
+proto_lounge_client::send_btlroom_commander_cheer (0xe9c0) (0x7ff75a0cc69c)
+
+proto_lounge_client::send_btlroom_coop_roomlist_get (0xdfb2) (0x7ff75a0cc82c)
+
+proto_lounge_client::send_btlroom_create (0x6df1) (0x7ff75a0ccb4e)
+  int32 matching_type;
+  string room_name;
+  string room_pw;
+  int32 mission_id;
+  int32 extrule_id;
+  int32 is_lock;
+  int32 is_vsclan;
+  int32 is_ev_caravan;
+  int32 enter_teamside;
+  int32 is_onlineevent;
+  struct custommatch_info -> [
+    int32 is_custommatch;
+    int32 owner_world_id;
+    int32 owner_pilot_id;
+    int32 flag_levellimit;
+  ]
+
+proto_lounge_client::send_btlroom_enter (0x61af) (0x7ff75a0ccfb7)
+  int32 matching_type;
+  int32 room_id;
+  string room_pw;
+  int32 is_audience;
+  int32 enter_teamside;
+  int32 extrule_id;
+  int32 mission_id;
+
+proto_lounge_client::send_btlroom_ev_caravan_mission_start (0xddd4) (0x7ff75a0cd28e)
+  int32 room_id;
+
+proto_lounge_client::send_btlroom_get (0x7abc) (0x7ff75a0cd45e)
+  int32 room_type;
+
+proto_lounge_client::send_btlroom_invite (0x9ddd) (0x7ff75a0cd63d)
+  int32 pilot_id;
+  int32 is_gm_camera;
+
+proto_lounge_client::send_btlroom_invite_refuse (0xc4b0) (0x7ff75a0cd851)
+  int32 room_id;
+  int32 pilot_id;
+  int32 reason;
+
+proto_lounge_client::send_btlroom_member_detail_get (0xd4e5) (0x7ff75a0cda6e)
+  int32 room_id;
+
+proto_lounge_client::send_btlroom_quick_start (0xd12d) (0x7ff75a0cdc9d)
+  int32 matching_type;
+  int32 is_coop;
+  int32 mission_id;
+  string room_name_new;
+
+proto_lounge_client::send_bugtrace_report (0x181a) (0x7ff75a0cdf81)
+  int32 occured_time;
+  unknown-string pc;
+  string stack;
+  int32 excode;
+  string exinfo;
+
+proto_lounge_client::send_channel_list_get (0x3e0b) (0x7ff75a0ce1ec)
+
+proto_lounge_client::send_channel_list_select (0x2830) (0x7ff75a0ce39e)
+  int32 channel_id;
+
+proto_lounge_client::send_channellobby_enter (0xa3b2) (0x7ff75a0ce54c)
+
+proto_lounge_client::send_channellobby_members_get (0xd377) (0x7ff75a0ce6fe)
+  int32 is_simple;
+
+proto_lounge_client::send_channellobby_scene_transition (0xc475) (0x7ff75a0ce8ce)
+  int32 destination;
+
+proto_lounge_client::send_chargepoint_charge_url_get (0xffc6) (0x7ff75a0cea7c)
+
+proto_lounge_client::send_chargepoint_get (0xaae5) (0x7ff75a0cec0c)
+
+proto_lounge_client::send_chargepoint_price_list_get (0x7ccb) (0x7ff75a0ced9c)
+
+proto_lounge_client::send_chat_all_up (0xf277) (0x7ff75a0cef70)
+  string msg;
+
+proto_lounge_client::send_chat_clan_up (0x3e7e) (0x7ff75a0cf170)
+  string msg;
+
+proto_lounge_client::send_chat_custommatch_up (0xdca4) (0x7ff75a0cf370)
+  string msg;
+
+proto_lounge_client::send_chat_dcteam_up (0xffff) (0x7ff75a0cf570)
+  string msg;
+
+proto_lounge_client::send_chat_party_up (0xb1b6) (0x7ff75a0cf770)
+  string msg;
+
+proto_lounge_client::send_chat_whisper_up (0x16bd) (0x7ff75a0cf989)
+  string to_pilot_name;
+  string msg;
+
+proto_lounge_client::send_chat_world_up (0x90f3) (0x7ff75a0cfbb0)
+  string msg;
+
+proto_lounge_client::send_clan_create (0xa5bc) (0x7ff75a0cfdf3)
+  int32 npc_id;
+  string clan_name;
+  int32 is_active;
+  int32 clan_kind;
+
+proto_lounge_client::send_clan_emblem_update (0x979c) (0x7ff75a0d0074)
+  int32 emb_base;
+  int32 emb_parts1;
+  int32 emb_parts2;
+
+proto_lounge_client::send_clan_info_get_other (0x4550) (0x7ff75a0d029d)
+  int32 clan_id;
+  int32 clan_kind;
+
+proto_lounge_client::send_clan_info_get_self (0xfde7) (0x7ff75a0d048f)
+  int32 clan_kind;
+
+proto_lounge_client::send_clan_introduction_set (0xdd4c) (0x7ff75a0d068b)
+  struct intro_info -> [
+    int32 active_time_bits;
+    int32 play_style;
+    string feature_word;
+    string notice_body;
+  ]
+  int32 clan_kind;
+
+proto_lounge_client::send_clan_invite_pilotlist_get (0x49d1) (0x7ff75a0d08a5)
+  int32 page;
+  struct sort_info -> [
+    int32 sort_type;
+    int32 is_class_filter;
+    int32 class_filter_begin;
+    int32 class_filter_end;
+    int32 is_time_filter;
+    int32 time_filter_begin;
+    int32 time_filter_end;
+    int32 is_bonus_filter;
+    int32 bonus_filter;
+  ]
+
+proto_lounge_client::send_clan_kick_member (0xe1db) (0x7ff75a0d0a9d)
+  int32 pilot_id_kick;
+  int32 clan_kind;
+
+proto_lounge_client::send_clan_leader_change (0x25a0) (0x7ff75a0d0cd3)
+  int32 pilot_id_new;
+  string pilot_name_new;
+  int32 clan_kind;
+
+proto_lounge_client::send_clan_leave (0xffff) (0x7ff75a0d0f23)
+  int32 clan_id;
+  int32 clan_kind;
+  int32 is_GMtool;
+
+proto_lounge_client::send_clan_memberlist_get (0xc6e3) (0x7ff75a0d113f)
+  int32 clan_kind;
+
+proto_lounge_client::send_clan_msgboard_msg_delete (0xa791) (0x7ff75a0d131d)
+  int64 msg_id;
+  int32 clan_kind;
+
+proto_lounge_client::send_clan_msgboard_msg_insert (0x45e3) (0x7ff75a0d1575)
+  int64 parent_msgid;
+  uint16 kind;
+  string body;
+  int32 clan_kind;
+
+proto_lounge_client::send_clan_msgboard_msglist_get (0x1027) (0x7ff75a0d17dd)
+  int32 last_get;
+  int32 clan_kind;
+
+proto_lounge_client::send_clan_msgboard_news_get (0x7a7c) (0x7ff75a0d19cf)
+  int32 clan_kind;
+
+proto_lounge_client::send_clan_msgboard_nicecount_add (0xc3df) (0x7ff75a0d1bad)
+  int64 msg_id;
+  int32 clan_kind;
+
+proto_lounge_client::send_clan_mshipbid_get_list (0xffff) (0x7ff75a0d1d9f)
+  int32 clan_kind;
+
+proto_lounge_client::send_clan_mshipbid_request (0xcc9f) (0x7ff75a0d1f7d)
+  int32 clan_id;
+  int32 clan_kind;
+
+proto_lounge_client::send_clan_mshipbid_request_cancel (0x817c) (0x7ff75a0d216f)
+  int32 clan_kind;
+
+proto_lounge_client::send_clan_mshipbid_response (0x2a35) (0x7ff75a0d2362)
+  int32 pilot_id_applicant;
+  int32 is_ok;
+  int32 clan_kind;
+
+proto_lounge_client::send_clan_npc_update (0xffff) (0x7ff75a0d257e)
+  int32 npc_id;
+
+proto_lounge_client::send_clan_npclist_get (0xf4e7) (0x7ff75a0d272c)
+
+proto_lounge_client::send_clan_rokaku_ms_deck_check (0x93ec) (0x7ff75a0d28bc)
+
+proto_lounge_client::send_clan_rokaku_ms_deck_set (0x8196) (0x7ff75a0d2a7c)
+  unknown-string uniq_msid;
+  int32 decktype;
+
+proto_lounge_client::send_clan_rokaku_tree_get (0x39dc) (0x7ff75a0d2c7c)
+  int32 clan_id;
+  int32 page;
+
+proto_lounge_client::send_clan_rokaku_use_point (0x9370) (0x7ff75a0d2ec7)
+  int32 tree_id;
+  int32 node_no;
+  int32 idx_no;
+  int32 point_use;
+  int32 is_supply;
+
+proto_lounge_client::send_clan_search (0x9ee0) (0x7ff75a0d3177)
+  string clan_name;
+  int32 clan_kind;
+  int32 search_kind;
+
+proto_lounge_client::send_clan_search_random (0xd77c) (0x7ff75a0d339f)
+  int32 clan_kind;
+
+proto_lounge_client::send_clan_search_sortfilter_get (0x2749) (0x7ff75a0d3596)
+  int32 clan_kind;
+  struct sort_info -> [
+    enum16 filter_type;
+    int32 lv_under;
+    int32 lv_upper;
+    int32 member_under;
+    int32 member_upper;
+    int32 rokaku_under;
+    int32 rokaku_upper;
+    enum16 ranking_under;
+    enum16 ranking_upper;
+    int32 recruit_value;
+    int32 time_value;
+    int32 style_value;
+  ]
+
+proto_lounge_client::send_clan_shop_buy (0x50d8) (0x7ff75a0d37b1)
+  int32 shopitemid;
+  int32 num;
+  int32 total_price;
+
+proto_lounge_client::send_clan_subleader_set (0xcbd9) (0x7ff75a0d39f2)
+  int32 pilot_id_sub;
+  int32 is_set;
+  int32 clan_kind;
+
+proto_lounge_client::send_clan_text_notice_set (0xc59b) (0x7ff75a0d3c41)
+  string body;
+  int32 clan_kind;
+
+proto_lounge_client::send_clan_text_offer_set (0x55d6) (0x7ff75a0d3eab)
+  int32 is_active;
+  string subj;
+  string body;
+  int32 clan_kind;
+
+proto_lounge_client::send_cmdline_exec (0x51ef) (0x7ff75a0d4130)
+  string cmd;
+
+proto_lounge_client::send_commonbattle_get_bracket (0xd7e7) (0x7ff75a0d430e)
+  int32 index;
+
+proto_lounge_client::send_commonbattle_get_point (0x584b) (0x7ff75a0d44bc)
+
+proto_lounge_client::send_commonbattle_team_info_get (0x133b) (0x7ff75a0d466e)
+  int32 team_id;
+
+proto_lounge_client::send_cpf_authenticate_r (0xffff) (0x7ff75a0d487f)
+  uint32 data;
+
+proto_lounge_client::send_dailycup_get_bracket (0xba10) (0x7ff75a0d4a8e)
+  int32 index;
+
+proto_lounge_client::send_dailycup_get_point (0x5721) (0x7ff75a0d4c3c)
+
+proto_lounge_client::send_dailycup_get_troop_pilot_result (0x9dc3) (0x7ff75a0d4dcc)
+
+proto_lounge_client::send_dailycup_team_info_get (0x7609) (0x7ff75a0d4f7e)
+  int32 team_id;
+
+proto_lounge_client::send_datafile_download (0xf86a) (0x7ff75a0d5180)
+  string filepath;
+  int32 hashval;
+
+proto_lounge_client::send_deckcost_extend (0xfd25) (0x7ff75a0d538c)
+  int32 use_bc;
+  int32 token_id;
+
+proto_lounge_client::send_exchange_play_bonus (0x5ffe) (0x7ff75a0d558c)
+  int32 reward_id;
+  int32 tab_category;
+
+proto_lounge_client::send_friend_history_get_xworld (0xe2b9) (0x7ff75a0d575c)
+
+proto_lounge_client::send_friend_list_get_detail (0xcda1) (0x7ff75a0d58ec)
+
+proto_lounge_client::send_friend_list_mail_accept (0xba4e) (0x7ff75a0d5aac)
+  int64 mailid;
+  int32 pilotid;
+
+proto_lounge_client::send_friend_list_remove (0xa30c) (0x7ff75a0d5c9e)
+  int32 pilotid;
+
+proto_lounge_client::send_friend_xworld_search (0x2ee7) (0x7ff75a0d5e8d)
+  string to_pilot_name;
+
+proto_lounge_client::send_gacha_effect_stop (0xd191) (0x7ff75a0d603c)
+
+proto_lounge_client::send_gacha_enter (0x6e89) (0x7ff75a0d61ee)
+  int32 gacha_type;
+
+proto_lounge_client::send_gacha_exec (0xad81) (0x7ff75a0d63e2)
+  int32 gacha_id;
+  int32 exec_type;
+  int32 is_bundle;
+
+proto_lounge_client::send_gacha_exec_w_buy_ticket (0xf5c9) (0x7ff75a0d66b6)
+  int32 shopitemid;
+  int32 id_type;
+  int32 num;
+  uint32 tab_type;
+  int32 is_cp;
+  int32 total_price;
+  int32 gacha_id;
+  int32 is_bundle;
+
+proto_lounge_client::send_gacha_leave (0x2e37) (0x7ff75a0d698c)
+
+proto_lounge_client::send_gacha_lineup (0xff32) (0x7ff75a0d6b3e)
+  int32 gacha_type;
+
+proto_lounge_client::send_gacha_prize_lineup (0xc61e) (0x7ff75a0d6d0e)
+  int32 gacha_id;
+
+proto_lounge_client::send_gacha_reset (0x11aa) (0x7ff75a0d6ede)
+  int32 gacha_id;
+
+proto_lounge_client::send_get_special_a_info (0x6c57) (0x7ff75a0d708c)
+
+proto_lounge_client::send_goldharo_get_detail_list (0x71fd) (0x7ff75a0d721c)
+
+proto_lounge_client::send_heroms_exp_get (0x76f2) (0x7ff75a0d73f1)
+  int32 pilot_id;
+  int32 world_id;
+  int32 favms_id;
+
+proto_lounge_client::send_heroms_set (0xd8a6) (0x7ff75a0d760e)
+  unknown-string heroms_uniqid;
+
+proto_lounge_client::send_item_buyback_delete_term_get (0x3c26) (0x7ff75a0d77bc)
+
+proto_lounge_client::send_item_init_get (0x947e) (0x7ff75a0d794c)
+
+proto_lounge_client::send_item_redemption (0xe3d6) (0x7ff75a0d7b23)
+  int64 uniqid;
+  uint16 num;
+  int32 total_price;
+
+proto_lounge_client::send_item_sort_list (0x416d) (0x7ff75a0d7d40)
+  uint16 inv_place;
+
+proto_lounge_client::send_item_use_uniqid_in_battle (0xc4a2) (0x7ff75a0d7f0e)
+  int64 uniqid;
+
+proto_lounge_client::send_item_use_uniqid_in_lobby (0x457b) (0x7ff75a0d80ee)
+  int64 uniqid;
+  uint16 num;
+
+proto_lounge_client::send_itemcode_input (0x6389) (0x7ff75a0d82fd)
+  string code;
+
+proto_lounge_client::send_mail_delete (0x3c13) (0x7ff75a0d852d)
+  int32 box_type;
+  int64 mailids;
+
+proto_lounge_client::send_mail_get_body (0xe85d) (0x7ff75a0d877c)
+  int32 box_type;
+  int64 mailid;
+
+proto_lounge_client::send_mail_get_box (0x85bf) (0x7ff75a0d897d)
+  int32 box_type;
+  int32 force_present_get;
+
+proto_lounge_client::send_mail_get_present (0x7d9b) (0x7ff75a0d8b91)
+  int64 mailid;
+  int32 attach_type;
+  int32 attach_id;
+
+proto_lounge_client::send_mail_get_present_body (0x3ed4) (0x7ff75a0d8dbc)
+  int32 box_type;
+  int64 mailid;
+
+proto_lounge_client::send_mail_post (0xffff) (0x7ff75a0d9030)
+  string to_pilot_name;
+  int32 kind;
+  string subject;
+  string body;
+
+proto_lounge_client::send_mail_sell_present (0x27b7) (0x7ff75a0d92c1)
+  int64 mailid;
+  int32 attach_type;
+  int32 attach_id;
+
+proto_lounge_client::send_msma_adop_decide (0x7f7b) (0x7ff75a0d94de)
+  int32 delete_wid;
+
+proto_lounge_client::send_msma_adop_opened (0xdfc4) (0x7ff75a0d968c)
+
+proto_lounge_client::send_msma_advanced_custom_steps_update (0xde13) (0x7ff75a0d9863)
+  int64 uniqid_ms;
+  uint16 exceed_method;
+  int32 ms_plan_id;
+
+proto_lounge_client::send_msma_breakup (0xdada) (0x7ff75a0d9a7e)
+  int64 uniqid_ms;
+
+proto_lounge_client::send_msma_buildup (0x9883) (0x7ff75a0d9cad)
+  int64 uniqid_ms;
+  int32 ticket_id;
+  uint16 usenum;
+  uint16 param_idx;
+  int32 is_advanced_custom;
+
+proto_lounge_client::send_msma_buildup_complete (0xffff) (0x7ff75a0d9f7d)
+  int64 uniqid_ms;
+  int32 ticket_id;
+  uint16 usenum;
+  uint16 param_idx;
+  int32 is_advanced_custom;
+
+proto_lounge_client::send_msma_buildup_estimate (0x958a) (0x7ff75a0da24d)
+  int64 uniqid_ms;
+  int32 ticket_id;
+  uint16 usenum;
+  uint16 param_idx;
+  int32 is_advanced_custom;
+
+proto_lounge_client::send_msma_buildup_reset (0x34f7) (0x7ff75a0da4be)
+  int64 uniqid_ms;
+
+proto_lounge_client::send_msma_buyback (0xc6e2) (0x7ff75a0da69c)
+  int64 uniqid_ms;
+  int32 price;
+
+proto_lounge_client::send_msma_color_change (0x60fc) (0x7ff75a0da89c)
+  int64 uniqid_ms;
+  int32 color;
+
+proto_lounge_client::send_msma_color_unlock (0x2e33) (0x7ff75a0daab1)
+  int64 uniqid_ms;
+  int32 color_id;
+  int32 use_gp;
+
+proto_lounge_client::send_msma_create (0xb567) (0x7ff75a0dacf3)
+  int32 ms_plan_id;
+  int32 ticket_id;
+  uint16 usenum;
+
+proto_lounge_client::send_msma_create_complete (0xff05) (0x7ff75a0daf33)
+  int32 ms_plan_id;
+  int32 ticket_id;
+  uint16 usenum;
+
+proto_lounge_client::send_msma_create_estimate (0x6921) (0x7ff75a0db173)
+  int32 ms_plan_id;
+  int32 ticket_id;
+  uint16 usenum;
+
+proto_lounge_client::send_msma_decal_change (0x72f1) (0x7ff75a0db3b1)
+  int64 uniqid_ms;
+  int32 decal;
+  int64 uniqid_decal;
+
+proto_lounge_client::send_msma_deckslot_change (0xf969) (0x7ff75a0db5f5)
+  int64 uniqid;
+  uint16 decktype;
+  uint16 deckslot;
+
+proto_lounge_client::send_msma_energy_charge (0xcfdb) (0x7ff75a0db832)
+  int64 uniqid_ms;
+  int32 use_bc;
+  int32 price;
+
+proto_lounge_client::send_msma_energy_charge_deck (0xbdc5) (0x7ff75a0dba5d)
+  int32 use_bc;
+  int32 price;
+
+proto_lounge_client::send_msma_equip_all_change (0xeb98) (0x7ff75a0dbc78)
+  int64 uniqid_ms;
+  struct equip_set -> [
+    unknown-string uniq_id;
+    uint16 slot;
+    int32 eq_weapon;
+    int32 eq_shield;
+    int32 eq_special;
+    int32 eq_modules;
+    int32 eq_bonus_modules;
+    string setname;
+    int32 sp_parts;
+    int32 exceed_eq_modules;
+  ]
+
+proto_lounge_client::send_msma_equip_bonus_modules_update (0x1ad9) (0x7ff75a0dbe90)
+  int64 uniqid_ms;
+  int32 eq_bonus_modules;
+
+proto_lounge_client::send_msma_equip_modules_update (0xf669) (0x7ff75a0dc0ff)
+  int64 uniqid_ms;
+  int32 eq_modules;
+  int32 eq_advanced_custom_modules;
+
+proto_lounge_client::send_msma_equip_shield_change (0xea39) (0x7ff75a0dc3fc)
+  int64 uniqid_ms;
+  int32 item_id;
+
+proto_lounge_client::send_msma_equip_special_change (0xdc1a) (0x7ff75a0dc5fc)
+  int64 uniqid_ms;
+  int32 item_id;
+
+proto_lounge_client::send_msma_equip_weapon_change (0xffff) (0x7ff75a0dc813)
+  int64 uniqid_ms;
+  uint16 eq_slot;
+  int32 item_id;
+
+proto_lounge_client::send_msma_equip_weapon_exchange (0x9138) (0x7ff75a0dca55)
+  int64 uniqid_ms;
+  uint16 eq_slot1;
+  uint16 eq_slot2;
+
+proto_lounge_client::send_msma_equipset_del (0xe410) (0x7ff75a0dcc7e)
+  int64 uniqid_ms;
+  uint16 slot;
+
+proto_lounge_client::send_msma_equipset_store (0x9527) (0x7ff75a0dce98)
+  int64 uniqid_ms;
+  struct equip_set -> [
+    unknown-string uniq_id;
+    uint16 slot;
+    int32 eq_weapon;
+    int32 eq_shield;
+    int32 eq_special;
+    int32 eq_modules;
+    int32 eq_bonus_modules;
+    string setname;
+    int32 sp_parts;
+    int32 exceed_eq_modules;
+  ]
+
+proto_lounge_client::send_msma_equipset_switch (0xf5ac) (0x7ff75a0dd08e)
+  int64 uniqid_ms;
+  uint16 slot;
+
+proto_lounge_client::send_msma_get_buyback_list (0x5c1e) (0x7ff75a0dd25c)
+
+proto_lounge_client::send_msma_init_get (0x16ac) (0x7ff75a0dd3ec)
+
+proto_lounge_client::send_msma_is_favorite_update (0x4ccb) (0x7ff75a0dd5ac)
+  int64 uniqid;
+  int32 is_favorite;
+
+proto_lounge_client::send_msma_missionunit_get_list (0xdca1) (0x7ff75a0dd77c)
+
+proto_lounge_client::send_msma_missionunit_store (0x33cc) (0x7ff75a0dd97b)
+  struct missionunit_set -> [
+    uint16 deck_type;
+    uint16 deck_set;
+    int32 missionunit_id;
+  ]
+
+proto_lounge_client::send_msma_mschoice_decision (0x7632) (0x7ff75a0ddba3)
+  int32 set_index;
+  int32 choice_index;
+
+proto_lounge_client::send_msma_mschoice_weapon_change (0x1980) (0x7ff75a0ddebb)
+  int32 deck_index;
+  int32 msma_id;
+  int32 weapon_id;
+
+proto_lounge_client::send_msma_msset_apply (0x7306) (0x7ff75a0de130)
+  uint16 deck_type;
+  uint16 slot;
+
+proto_lounge_client::send_msma_msset_del (0xbc92) (0x7ff75a0de330)
+  uint16 deck_type;
+  uint16 slot;
+
+proto_lounge_client::send_msma_msset_get (0x9a9d) (0x7ff75a0de4fc)
+
+proto_lounge_client::send_msma_msset_store (0xa76e) (0x7ff75a0de6c7)
+  struct ms_set -> [
+    unknown-string uniq_id;
+    uint16 deck_type;
+    uint16 deck_slot;
+    string setname;
+    unknown-string msma_uniq_ids;
+    uint16 equip_set_slots;
+  ]
+
+proto_lounge_client::send_msma_newmark_delete (0xc636) (0x7ff75a0de88e)
+  int64 uniqid;
+
+proto_lounge_client::send_msma_overhaul (0xcef4) (0x7ff75a0dea9c)
+  int64 uniqid_ms;
+  int32 ms_plan_id;
+  int32 ms_plan_num;
+  int32 sp_parts;
+
+proto_lounge_client::send_msma_overhaul_change (0x64de) (0x7ff75a0decec)
+  int64 uniqid_ms;
+  int32 sp_parts;
+
+proto_lounge_client::send_msma_plan_sort_list (0x96ac) (0x7ff75a0deeec)
+  int32 msma_sort_type;
+  int32 msma_sort_order;
+
+proto_lounge_client::send_msma_sort_list (0x2c17) (0x7ff75a0df0ec)
+  int32 msma_sort_type;
+  int32 msma_sort_order;
+
+proto_lounge_client::send_msma_weapon_buildup (0x5fab) (0x7ff75a0df33b)
+  int64 uniqid_ms;
+  int32 item_id;
+  int32 ticket_id;
+  uint16 usenum;
+  uint16 param_target;
+
+proto_lounge_client::send_msma_weapon_buildup_complete (0x6199) (0x7ff75a0df60b)
+  int64 uniqid_ms;
+  int32 item_id;
+  int32 ticket_id;
+  uint16 usenum;
+  uint16 param_target;
+
+proto_lounge_client::send_msma_weapon_buildup_estimate (0xf7bd) (0x7ff75a0df8db)
+  int64 uniqid_ms;
+  int32 item_id;
+  int32 ticket_id;
+  uint16 usenum;
+  uint16 param_target;
+
+proto_lounge_client::send_msma_weapon_buildup_extra_cnt_update (0xdf37) (0x7ff75a0dfb5e)
+  int64 uniqid_ms;
+  uint16 weapon_buildup_extra_cnt;
+
+proto_lounge_client::send_msma_weapon_buildup_reset (0x8deb) (0x7ff75a0dfd5c)
+  int64 uniqid_ms;
+  int32 item_id;
+
+proto_lounge_client::send_msma_weapon_unlock (0x550a) (0x7ff75a0dff8c)
+  int64 uniqid_ms;
+  int32 item_id;
+  int32 use_gp;
+  int32 use_bc;
+
+proto_lounge_client::send_msma_weapon_unlock_complete (0xa28f) (0x7ff75a0e020c)
+  int64 uniqid_ms;
+  int32 item_id;
+  int32 use_gp;
+  int32 use_bc;
+
+proto_lounge_client::send_msma_weapon_unlock_estimate (0x34ab) (0x7ff75a0e048c)
+  int64 uniqid_ms;
+  int32 item_id;
+  int32 use_gp;
+  int32 use_bc;
+
+proto_lounge_client::send_party_booking_ready (0xc40d) (0x7ff75a0e06dd)
+  int32 ready_ok;
+  int32 client_bogo_version;
+
+proto_lounge_client::send_party_create (0x645d) (0x7ff75a0e0913)
+  int32 is_recruiting;
+  string comment;
+  int32 party_type;
+
+proto_lounge_client::send_party_enter (0x1f3e) (0x7ff75a0e0b3e)
+  int32 party_id;
+
+proto_lounge_client::send_party_info_edit (0x9226) (0x7ff75a0e0d53)
+  int32 is_recruiting;
+  string comment;
+  int32 party_type;
+
+proto_lounge_client::send_party_invite (0x9471) (0x7ff75a0e0f7e)
+  int32 pilot_id;
+
+proto_lounge_client::send_party_invite_refuse (0x6e16) (0x7ff75a0e118c)
+  int32 party_id;
+  int32 channel_id;
+  int32 pilot_id;
+  int32 reason;
+
+proto_lounge_client::send_party_leave (0x5f80) (0x7ff75a0e13ac)
+
+proto_lounge_client::send_party_member_kick (0x7ae0) (0x7ff75a0e155e)
+  int32 pilot_id;
+
+proto_lounge_client::send_party_recruit_detail_get (0x16ae) (0x7ff75a0e173c)
+  int32 channel_id;
+  int32 party_id;
+
+proto_lounge_client::send_party_recruit_list_get (0xffff) (0x7ff75a0e192e)
+  int32 party_type;
+
+proto_lounge_client::send_pilot_avatar_edit (0x43f2) (0x7ff75a0e1b28)
+  struct avatar -> [
+    int32 avatar_id;
+    int32 gender;
+    int32 face;
+    int32 skincolor;
+    enum16 clothes;
+    uint32 hair;
+    int32 accessory;
+    int32 frame;
+    int32 voice;
+    enum16 byword;
+  ]
+  int32 is_reset;
+
+proto_lounge_client::send_pilot_avatar_parts_unlock (0x4e94) (0x7ff75a0e1d41)
+  int32 kind;
+  int32 custom_id;
+  int32 cond_id;
+
+proto_lounge_client::send_pilot_avatar_voice_unlock (0xad79) (0x7ff75a0e1f6d)
+  int32 custom_id;
+  int32 use_bc;
+
+proto_lounge_client::send_pilot_bot_checkcode_request_r (0x93ee) (0x7ff75a0e217d)
+  string code;
+
+proto_lounge_client::send_pilot_clanchallenge_get (0xa91e) (0x7ff75a0e232c)
+
+proto_lounge_client::send_pilot_comment_edit (0xcb9b) (0x7ff75a0e24fd)
+  string comment;
+
+proto_lounge_client::send_pilot_create (0xfd3e) (0x7ff75a0e26fa)
+  struct pilot -> [
+    int32 pilot_id;
+    string name;
+    int32 troops;
+    int32 level;
+    int32 mil_class;
+    uint16 byword;
+    int32 cmdr_fame;
+    uint16 rate_vslocal;
+    uint16 rate_vslocal_4ev;
+    uint16 rate_vslocal_clan;
+    int32 level_point;
+    struct avatar -> [
+      int32 avatar_id;
+      int32 gender;
+      int32 face;
+      int32 skincolor;
+      enum16 clothes;
+      uint32 hair;
+      int32 accessory;
+      int32 frame;
+      int32 voice;
+      enum16 byword;
+    ]
+    int32 clan_id;
+    string clan_name;
+    int32 clan_emb_base;
+    int32 clan_emb_parts1;
+    int32 clan_emb_parts2;
+    int32 cupteam_id;
+    string cupteam_name;
+    int32 accum_point;
+    int32 rank;
+    int32 base_accump;
+    int32 req_accump;
+    int32 penalty;
+  ]
+  int32 slot;
+
+proto_lounge_client::send_pilot_dailybattlebonus_get (0xa7cf) (0x7ff75a0e28cc)
+
+proto_lounge_client::send_pilot_delete (0x6142) (0x7ff75a0e2abd)
+  int32 troops;
+  int32 slot;
+  int32 pilot_id;
+  int32 del_kind;
+
+proto_lounge_client::send_pilot_evflag_3_get (0xb681) (0x7ff75a0e2cdc)
+
+proto_lounge_client::send_pilot_evflag_3_set (0xbd2d) (0x7ff75a0e2e8e)
+  int64 evflag3;
+
+proto_lounge_client::send_pilot_examination_interval_skip (0xc0ee) (0x7ff75a0e303c)
+
+proto_lounge_client::send_pilot_exit (0xe0c9) (0x7ff75a0e31cc)
+
+proto_lounge_client::send_pilot_favms_get (0xe9a2) (0x7ff75a0e338c)
+  int32 pilot_id;
+  int32 world_id;
+
+proto_lounge_client::send_pilot_list_get (0x60cd) (0x7ff75a0e355c)
+
+proto_lounge_client::send_pilot_module_unlock (0xe41f) (0x7ff75a0e370e)
+  int32 module_id;
+
+proto_lounge_client::send_pilot_monthlybonus_get (0xedbb) (0x7ff75a0e38bc)
+
+proto_lounge_client::send_pilot_personal_emblem_unlock (0x9e46) (0x7ff75a0e3a7c)
+  int32 emblem_id;
+  int32 use_gp;
+
+proto_lounge_client::send_pilot_pilotpass_get (0x6abc) (0x7ff75a0e3c4c)
+
+proto_lounge_client::send_pilot_pilotpass_update (0xffff) (0x7ff75a0e3ddc)
+
+proto_lounge_client::send_pilot_record_get (0x48f2) (0x7ff75a0e3fb2)
+  int32 pilot_id;
+  int32 world_id;
+  int32 is_checkmedal;
+
+proto_lounge_client::send_pilot_rename (0x498b) (0x7ff75a0e4274)
+  int32 troops;
+  int32 slot;
+  int32 pilot_id;
+  string bef_pilot_name;
+  string pilot_name;
+  int32 is_check_only;
+
+proto_lounge_client::send_pilot_rookie_get (0x28d8) (0x7ff75a0e453c)
+  int32 pilot_id;
+  int32 world_id;
+
+proto_lounge_client::send_pilot_select (0xf705) (0x7ff75a0e476d)
+  int32 troops;
+  int32 pilot_id;
+  int32 is_tutorial_skip;
+  int32 dbg_comeback_disable;
+
+proto_lounge_client::send_pilot_troopchallenge_get (0xe77b) (0x7ff75a0e498c)
+
+proto_lounge_client::send_pilot_tutorial_flag_set (0xdee6) (0x7ff75a0e4b3e)
+  int64 tuto_flag;
+
+proto_lounge_client::send_pilot_tutorial_step_get (0x3128) (0x7ff75a0e4cec)
+
+proto_lounge_client::send_pilot_tutorial_step_next (0x3f68) (0x7ff75a0e4e9e)
+  int32 tuto_step_now;
+
+proto_lounge_client::send_pilot_unreached_notify_r (0x7bd7) (0x7ff75a0e506e)
+  int32 notify_type;
+
+proto_lounge_client::send_pilotcard_get (0x2f63) (0x7ff75a0e524c)
+  int32 pilot_id;
+  int32 world_id;
+
+proto_lounge_client::send_pilotpass_command_get (0x5001) (0x7ff75a0e541c)
+
+proto_lounge_client::send_pilotpass_lv_reward_get (0x87d3) (0x7ff75a0e55ac)
+
+proto_lounge_client::send_pilotpass_plus_unlock (0x12ca) (0x7ff75a0e573c)
+
+proto_lounge_client::send_player_navi_exchange (0x65fd) (0x7ff75a0e58ee)
+  int32 navi_id;
+
+proto_lounge_client::send_player_navi_get_list (0xf0c4) (0x7ff75a0e5a9c)
+
+proto_lounge_client::send_player_navi_unlock (0xfc2b) (0x7ff75a0e5c5c)
+  int32 navi_id;
+  int32 unlockBy;
+
+proto_lounge_client::send_proto_version_check (0x34a9) (0x7ff75a0e5e6e)
+  int32 version;
+  uint32 crc;
+  uint32 gentime;
+
+proto_lounge_client::send_quest_clear (0x9765) (0x7ff75a0e607e)
+  int32 quest_id;
+
+proto_lounge_client::send_quest_clienttrigger (0x7b73) (0x7ff75a0e624e)
+  int32 trigger;
+
+proto_lounge_client::send_ranking_clan_get (0xffff) (0x7ff75a0e6488)
+  struct order -> [
+    uint16 kind;
+    uint16 term;
+    uint16 filter;
+    uint16 reason;
+    uint16 troops;
+  ]
+  int32 clan_kind;
+
+proto_lounge_client::send_ranking_clan_get_page (0xf0fa) (0x7ff75a0e66fd)
+  struct order -> [
+    uint16 kind;
+    uint16 term;
+    uint16 filter;
+    uint16 reason;
+    uint16 troops;
+  ]
+  int32 page;
+  int32 clan_kind;
+
+proto_lounge_client::send_ranking_elite_pilot_get_page (0x8bdf) (0x7ff75a0e6987)
+  struct order -> [
+    uint16 kind;
+    uint16 term;
+    uint16 filter;
+    uint16 reason;
+    uint16 troops;
+  ]
+  int32 page;
+
+proto_lounge_client::send_ranking_init_get (0xffff) (0x7ff75a0e6b4c)
+
+proto_lounge_client::send_ranking_pilot_get (0xd9ae) (0x7ff75a0e6d55)
+  struct order -> [
+    uint16 kind;
+    uint16 term;
+    uint16 filter;
+    uint16 reason;
+    uint16 troops;
+  ]
+
+proto_lounge_client::send_ranking_pilot_get_page (0x3faf) (0x7ff75a0e6f87)
+  struct order -> [
+    uint16 kind;
+    uint16 term;
+    uint16 filter;
+    uint16 reason;
+    uint16 troops;
+  ]
+  int32 page;
+
+proto_lounge_client::send_replay_auth_get_downloadkey (0xf20b) (0x7ff75a0e714c)
+
+proto_lounge_client::send_result_add_inventory (0x9935) (0x7ff75a0e72dc)
+
+proto_lounge_client::send_result_item_fullopen (0xa53b) (0x7ff75a0e746c)
+
+proto_lounge_client::send_result_itemlist_get (0x421e) (0x7ff75a0e75fc)
+
+proto_lounge_client::send_result_open_item (0x2d19) (0x7ff75a0e77ae)
+  int32 acc_index;
+
+proto_lounge_client::send_save_message (0x1c33) (0x7ff75a0e79c9)
+  string msg;
+  int32 type;
+  int32 is_save_db;
+
+proto_lounge_client::send_season_class_up_reward_get (0x17e0) (0x7ff75a0e7bcc)
+
+proto_lounge_client::send_tech_research_panel_unlock_request (0xcfad) (0x7ff75a0e949e)
+  int32 panel_id;
+
+proto_lounge_client::send_update_check_progress_quest_id (0x522b) (0x7ff75a0e966e)
+  int32 quest_id;
+
+proto_lounge_client::send_xwar_booking_cancel (0xbedc) (0x7ff75a0e983e)
+  int32 matching_type;
+
+proto_lounge_client::send_xwar_booking_info_get (0xfc4b) (0x7ff75a0e9a0e)
+  int32 matching_type;
+
+proto_lounge_client::send_xwar_booking_option_get (0x1b98) (0x7ff75a0e9bec)
+  int32 matching_type;
+  int32 matching_request_flag;
+
+proto_lounge_client::send_xwar_booking_regist (0x2eff) (0x7ff75a0e9e70)
+  int32 matching_type;
+  int32 matching_request_flag;
+  int32 matching_battlerule_flag;
+  int32 matching_extrule_flag;
+  int32 mission_select_type;
+  int32 mission_select_value;
+  int32 client_bogo_version;
+
+proto_lounge_client::send_xwar_booking_room_enter (0x846a) (0x7ff75a0ea13c)
+  int32 matching_type;
+  int32 room_id;
+
+proto_lounge_client::send_xwar_forcegauge_get (0x4e88) (0x7ff75a0ea30c)
+

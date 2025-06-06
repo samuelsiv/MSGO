@@ -1,0 +1,6 @@
+﻿proto_auth_client::send_proto_version_check 
+proto_auth_client::send_authenticate 
+proto_auth_client::send_authenticate_bnpotp_input_r 
+proto_auth_client::send_authenticate_you9otp_input_r 
+proto_auth_client::send_worldlist_get 
+proto_auth_client::send_worldlist_select 

@@ -1,0 +1,12 @@
+using MSGO.Core.Packets;
+using MSGO.Core.Types.Game;
+
+namespace MSGO.AuthServer.Packets.Requests;
+
+public class {}Request : BasePacket
+{
+    public LoginRequest(byte[] data) : base(data)
+    {
+{Params}
+    }
+}
